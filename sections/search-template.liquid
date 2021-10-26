@@ -109,6 +109,7 @@
 
       <div class="search-matrix">
         {% for item in search.results %}
+        {% if item.type == 'SHOPSTORM_HIDDEN_PRODUCT' %}{% continue %}{% endif %}
           <div class="product_row clearfix">
             {% assign featured_image = false %}
 
