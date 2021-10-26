@@ -1616,7 +1616,7 @@ var header = {
               }
             },
             onStick: function() {
-              $(".sticky_nav .mini_cart").css("height", $(".sticky_nav .main_nav").height());
+//               $(".sticky_nav .mini_cart").css("height", $(".sticky_nav .main_nav").height());
               $(".sticky_nav .cart_content").css("top", $(".sticky_nav .main_nav").height());
             },
             onUnstick: function() {
