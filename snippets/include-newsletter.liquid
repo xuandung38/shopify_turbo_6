@@ -37,7 +37,7 @@
               data-sizes="100vw"
             {% endif %}
            
-            {% if template.name == "cart" %} style="display: none;" {% endif %}>
+            {% if section.settings.show_in_cart and template.name == "cart" %} style="display: none;" {% endif %}>
       
         <div class="container">
           <div class="{% if newsletter_section_text_align == "center" %}offset-by-three{% elsif newsletter_section_text_align == "right" %} offset-by-six{% endif %} ten columns section_form">
