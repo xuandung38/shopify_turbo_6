@@ -2208,7 +2208,8 @@
           "1589303119803-1": {
             "type": "collection",
             "settings": {
-              "feature_collection": ""
+              "feature_collection": "coffee-mug",
+              "image": "shopify:\/\/shop_images\/drinkware_0fa63976-7f2d-4f41-b062-9bcd5bcd3c40.jpg"
             }
           },
           "1589303119803-2": {
