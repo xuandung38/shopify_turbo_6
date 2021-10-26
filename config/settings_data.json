@@ -791,7 +791,8 @@
               "newsletter_text": "<p>Subscribe to get 10% off your order and get updated about our latest arrivals and special offers<\/p>",
               "show_firstname": false,
               "show_lastname": false,
-              "show_social": false
+              "show_social": false,
+              "show_in_cart": false
             }
           }
         },
@@ -886,6 +887,7 @@
           "wide_display": true,
           "display_first_name": false,
           "display_last_name": false,
+          "show_in_cart": true,
           "newsletter_title": "Get 10% off your order today!",
           "newsletter_text": "<p>Subscribe to get updated about our latest arrivals and special offers<\/p>",
           "newsletter_section_text_align": "center"
@@ -2221,6 +2223,7 @@
           "wide_display": true,
           "display_first_name": false,
           "display_last_name": false,
+          "show_in_cart": false,
           "newsletter_title": "Get 10% off your order today!",
           "newsletter_text": "<p>Subscribe to get updated about our latest arrivals and special offers<\/p>",
           "newsletter_section_text_align": "center"
