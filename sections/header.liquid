@@ -79,7 +79,7 @@
       {% endif %}
       {% if section.settings.show_cart %}
         <div class="cart_container">
-          <a href="{{ routes.cart_url }}" class="{% if section.settings.cart_icon == "cart" %}icon-cart{% else %}icon-bag{% endif %} mini_cart dropdown_link" title="{{ 'layout.general.cart' | t | escape }}" data-no-instant> <span class="cart_count">{{ cart.item_count }}</span></a>
+          <a href="{{ routes.cart_url }}" class="{% if section.settings.cart_icon == "cart" %}icon-cart{% else %}icon-bag{% endif %} mini_cart dropdown_link" title="{{ 'layout.general.cart' | t | escape }}" data-no-instant> <span class="cart_count">{% include 'product-customizer-helper' with 'cart-item-count' %}</span></a>
         </div>
       {% endif %}
     </div>
@@ -197,7 +197,7 @@
       {% if section.settings.show_cart %}
         <div class="cart_container clearfix">
           <a href="{{ routes.cart_url }}" class="{% if section.settings.cart_icon == "cart" %}icon-cart{% else %}icon-bag{% endif %} mini_cart dropdown_link" data-no-instant>
-            <span class="cart_count">{{ cart.item_count }}</span>
+            <span class="cart_count">{% include 'product-customizer-helper' with 'cart-item-count' %}</span>
           </a>
           {% unless settings.cart_action == 'ajax' and template contains 'cart' %}
             <div class="tos_warning cart_content animated fadeIn">
