@@ -52,6 +52,11 @@
       {% endfor %}
     </div>
   {% endif %}
+  
+    
+  {% include 'product-customizer' %}
+  
+  
   {% if product.available %}
     {% if settings.display_inventory_left %}
       <div class="items_left">
