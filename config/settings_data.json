@@ -2190,7 +2190,6 @@
       },
       "1589303119803": {
         "type": "collection-list",
-        "disabled": true,
         "blocks": {
           "1589303132398": {
             "type": "collection",
@@ -2215,13 +2214,8 @@
           "1589303119803-2": {
             "type": "collection",
             "settings": {
-              "feature_collection": ""
-            }
-          },
-          "1589303130725": {
-            "type": "collection",
-            "settings": {
-              "feature_collection": ""
+              "feature_collection": "necklace",
+              "image": "shopify:\/\/shop_images\/necklace_8d35f4be-2624-45f1-a234-efe7e7cf278d.jpg"
             }
           }
         },
@@ -2229,25 +2223,23 @@
           "1589303132398",
           "1589303119803-0",
           "1589303119803-1",
-          "1589303119803-2",
-          "1589303130725"
+          "1589303119803-2"
         ],
         "settings": {
           "title": "SHOP FOR GIFTS",
           "align_height": false,
           "collection_height": 250,
-          "frontpage_collections_per_row": 5
+          "frontpage_collections_per_row": 4
         }
       },
       "1589303609407": {
         "type": "newsletter",
-        "disabled": true,
         "settings": {
           "wide_display": true,
           "display_first_name": false,
           "display_last_name": false,
-          "newsletter_title": "Get fresh trends and unique gift ideas delivered right to your inbox.",
-          "newsletter_text": "<p>Don't you worry! We hate spam, too.<\/p>",
+          "newsletter_title": "Get 10% off your order today!",
+          "newsletter_text": "<p>Subscribe to get updated about our latest arrivals and special offers<\/p>",
           "newsletter_section_text_align": "center"
         }
       },
@@ -2264,13 +2256,20 @@
           "pagination_limit": 18,
           "toggle": false
         }
+      },
+      "1635234982069a6619": {
+        "type": "judgeme_carousel_section",
+        "settings": {
+          "maxwidth": 1080
+        }
       }
     },
     "content_for_index": [
       "1488497250346",
       "1589302562773",
       "1589303119803",
-      "1589303609407"
+      "1589303609407",
+      "1635234982069a6619"
     ]
   }
 }
