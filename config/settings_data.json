@@ -2245,14 +2245,31 @@
       "list-collections-template": {
         "type": "list-collections-template",
         "settings": {
-          "image": "",
           "image_darken": false,
           "collection_breadcrumb": true,
           "display_collection_title": false,
           "align_height": false,
           "collection_height": 200,
+          "collections_per_row": 4,
+          "pagination_limit": 24,
+          "toggle": false
+        }
+      },
+      "collection-sub-collections-template": {
+        "type": "collection-sub-collections-template",
+        "settings": {
+          "wide_display": true,
+          "featured_collection_image": false,
+          "image_darken": false,
+          "collection_breadcrumb": true,
+          "display_collection_title": false,
+          "collection_tags": false,
+          "collection_sort": false,
+          "align_height": false,
+          "collection_height": 200,
           "collections_per_row": 3,
-          "pagination_limit": 18,
+          "products_per_row": 3,
+          "pagination_limit": 48,
           "toggle": false
         }
       }
