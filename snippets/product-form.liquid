@@ -116,7 +116,7 @@
         </svg>
       </button>
       {% if show_payment_button %}
-        {{ form | payment_button }}
+        {% if product.metafields.product_customizer == empty %}<br>    {{ form | payment_button }} <br>{% endif %}
       {% endif %}
     </div>
   </div>
