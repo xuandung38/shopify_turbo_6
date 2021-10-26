@@ -98,10 +98,10 @@
     {% if collection.next_product %}<link rel="next" href="{{ collection.next_product }}">{% endif %}
     {% include 'judgeme_core' %}
   {% include 'teeinblue-scripts' %}
-  
+  {{ 'shopstorm-apps.scss.css' | asset_url | stylesheet_tag }}
+  {% render 'shopstorm-scripttags' %}
 </head>
-
-  {% if template contains "index" %}
+{% if template contains "index" %}
     {% assign feature_image = true %}
   {% elsif template contains "collection" %}
     {% assign feature_image = true %}
@@ -267,6 +267,7 @@
     <!-- **BEGIN** Hextom USB Integration // Main Include - DO NOT MODIFY -->
     {% render 'hextom_usb_main', product: product, customer: customer %}
     <!-- **END** Hextom USB Integration // Main Include - DO NOT MODIFY -->
+   {% render 'product-customizer-asw' %}
   </body>
 </html>
 {% endcapture %}
