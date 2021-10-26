@@ -886,8 +886,8 @@
           "wide_display": true,
           "display_first_name": false,
           "display_last_name": false,
-          "newsletter_title": "Subscribe Today!",
-          "newsletter_text": "",
+          "newsletter_title": "Get 10% off your order today!",
+          "newsletter_text": "<p>Subscribe to get updated about our latest arrivals and special offers<\/p>",
           "newsletter_section_text_align": "center"
         }
       },
