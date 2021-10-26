@@ -1,0 +1,78 @@
+{% comment %}
+Product grouping
+{% endcomment %}
+{% if section.settings.product_grouping_thumbnails or section.settings.product_grouping_products %}
+{% for tag in group_tags %}
+<script>               
+var similarProducts = [];
+  (function() {  
+    let requestUrl = "/collections/all/{{ tag }}?view=json";
+    let request = new XMLHttpRequest();
+    request.open("GET", requestUrl);
+    request.onload = function() {
+        if (request.status >= 200 && request.status < 300) {
+            let products = JSON.parse(request.response);
+
+            // Sort products A-Z
+            products.sort(function(a, b){
+              if(a.title < b.title) { return -1; }
+              if(a.title > b.title) { return 1; }
+              return 0;
+            });
+            $.each(products, function(key, value) {   
+              similarProducts.push(value);
+            });                     
+
+        };
+    
+
+      similarProducts = [...new Map(similarProducts.map(item =>
+            [item['id'], item])).values()];
+
+      console.log('similarProducts', similarProducts)
+      {% if section.settings.product_grouping_products %}
+      $('#productSelect').empty();
+        $.each(similarProducts, function(key, value) {   
+      $('#productSelect')
+            .append(`
+              <a href="${value.url}">
+            <button class="btn">${value.title}</button>
+                </a>
+              `)
+            .find('.btn')
+            .last()
+            .addClass(value.id === {{ product.id }} ? "btn-active" : "")
+            
+
+        });
+        
+
+        $('#productGroup').removeClass('is-hidden');
+
+        {% endif %}
+
+        {% if section.settings.product_grouping_thumbnails %}
+          $('#productGroupThumbnails').empty();
+          $.each(similarProducts, function(key, value) {
+            $('#productGroupThumbnails')
+            .append(`
+              <a class="productGroupThumbnail" href="${value.url}">
+              <img src="${value.thumbnail}" alt="${value.title}" class="productGroupThumbnailImage">
+                </a>
+              `)
+            .find('.productGroupThumbnailImage')
+            .last()
+            .addClass(value.id === {{ product.id }} ? "active" : "")
+
+          });
+
+      {% endif %}  
+      };
+      request.send();            
+  })();        
+</script>
+{% endfor %}
+{% endif %}
+{% comment %}
+End Product grouping
+{% endcomment %}
