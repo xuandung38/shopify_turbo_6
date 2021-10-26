@@ -219,6 +219,9 @@
   </div>
 </div>
 
+  {% if section.settings.related_products_position == "above" and section.settings.display_related_products %}
+    {% include 'related-products' %}
+  {% endif %}
   <div class="product-details__blocks clearfix">
     {% if section.blocks.size > 0 %}
       {% for block in section.blocks %}
