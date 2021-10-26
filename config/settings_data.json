@@ -803,7 +803,7 @@
         ],
         "settings": {
           "copyright_text": "",
-          "display_designed_by": true,
+          "display_designed_by": false,
           "display_payment_methods": true
         }
       },
