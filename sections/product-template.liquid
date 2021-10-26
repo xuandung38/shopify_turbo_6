@@ -286,8 +286,11 @@
         </div>
       </div>
 
+      {% if section.settings.display_related_products %}
+        {% include 'related-products' %}
+      {% endif %}
       {% if section.settings.display_recently_viewed %}
-        {% include 'include-recently-viewed' %}
+        {% include 'recently-viewed' %}
       {% endif %}
       <div data-product-recommendations-container></div>
 
