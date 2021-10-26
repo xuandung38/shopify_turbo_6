@@ -30,7 +30,7 @@
 
           {% elsif block.type == 'newsletter' %}
 
-          <div class="newsletter_section" {% if template.name == "cart" %} style="display: none;" {% endif %}>
+          <div class="newsletter_section" {% if template.name != "index" %} style="display: none;" {% endif %}>
 
             {% if block.settings.title != blank %}
               <h6>{{ block.settings.title }}</h6>
