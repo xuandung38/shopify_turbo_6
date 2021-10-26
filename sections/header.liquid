@@ -196,7 +196,7 @@
       
       {% if section.settings.show_cart %}
         <div class="cart_container clearfix">
-          <a href="{{ routes.cart_url }}" class="{% if section.settings.cart_icon == "cart" %}icon-cart{% else %}icon-bag{% endif %} mini_cart dropdown_link" data-no-instant>
+          <a href="{{ routes.cart_url }}" class="{% if section.settings.cart_icon == "cart" %}icon-cart{% else %}icon-bag{% endif %} mini_cart dropdown_link" data-no-instant style="height: auto;">
             <span class="cart_count">{% include 'product-customizer-helper' with 'cart-item-count' %}</span>
           </a>
           {% unless settings.cart_action == 'ajax' and template contains 'cart' %}
