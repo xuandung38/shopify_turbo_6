@@ -54,10 +54,10 @@
   {% endif %}
   
     
-  {% include 'product-customizer' %}
   
   
   {% if product.available %}
+  {% include 'product-customizer' %}
     {% if settings.display_inventory_left %}
       <div class="items_left">
         {% if variant.inventory_management != blank and variant.inventory_quantity > 0 %}
