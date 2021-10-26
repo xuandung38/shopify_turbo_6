@@ -928,22 +928,6 @@
       },
       "cart-template": {
         "type": "cart-template",
-        "blocks": {
-          "1541433160810": {
-            "type": "featured_collection",
-            "settings": {
-              "title": "Don't forget to check out our new arrivals!",
-              "collection_description": true,
-              "collection": "",
-              "collection_style": "grid",
-              "products_per": 3,
-              "products_limit": 3
-            }
-          }
-        },
-        "block_order": [
-          "1541433160810"
-        ],
         "settings": {
           "display_special_instructions": false,
           "display_savings": true,
