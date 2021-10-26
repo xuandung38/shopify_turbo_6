@@ -9313,9 +9313,9 @@ span.icon-down-arrow {
   float: right;
   padding-top: 3px;
 
-  @include respond-to('widescreen-up'){
+/*   @include respond-to('widescreen-up'){
     margin-left: 15px;
-  }
+  } */
 }
 
 .menu-position--block .menu li.search_container {
