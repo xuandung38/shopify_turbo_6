@@ -126,11 +126,11 @@
                 <strong>{{ 'cart.general.total' | t }}:</strong>
                 {% if item.line_level_discount_allocations.size > 0 %}
                   <span class="money">
-                    {{ item.final_line_price | money }}
+                    {% include 'product-customizer-helper' with 'item-line-price', items: cart.items %}
                   </span>
                 {% endif %}
                 <span class="money {% if item.line_level_discount_allocations.size > 0 %}was_price{% endif %}">
-                  {{ item.original_line_price | money }}
+                  {% include 'product-customizer-helper' with 'item-line-price', items: cart.items %}
                 </span>
               </p>
 
