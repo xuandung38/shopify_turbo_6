@@ -1,5 +1,5 @@
 <div class="product-details">
-  <span class="title" itemprop="name">{{ product.title }}</span>
+  <span class="title" itemprop="name">{{ product.title  | truncate: 70}}</span>
   
 	<div class="loox-rating" data-id="{{ product.id }}"
          data-rating="{{ product.metafields.loox.avg_rating }}"
