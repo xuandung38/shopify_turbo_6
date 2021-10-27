@@ -2387,13 +2387,13 @@ select.currencies {
 .feature_image .header .menu a.active,
 .header_bar a.active,
 .feature_image .header .menu a:focus {
-  color: #9d8661;
+  color: #e7c589;
 }
 
 .menu li a[href]:hover,
 .menu li a:focus,
 .menu a[href]:hover span {
-  color: #9d8661;
+  color: #e7c589;
 }
 
 .menu a.top_link,
@@ -2404,11 +2404,11 @@ select.currencies {
 .menu a.top_link:hover,
 .menu a.dropdown_link:hover,
 .menu a.active_link {
-  border-bottom: solid 1px #9d8661;
+  border-bottom: solid 1px #e7c589;
 }
 
 .feature_image a.top_link:hover {
-  border-bottom: solid 1px #9d8661;
+  border-bottom: solid 1px #e7c589;
 }
 
 .menu a span {
@@ -6122,7 +6122,7 @@ div.container.gallery-content {
       background: #ffffff;
     }
     a:hover .title {
-      color: #9d8661;
+      color: #e7c589;
     }
     a:hover span {
       color: #000000;
@@ -7907,7 +7907,7 @@ $promoBannerHeight: 30px;
 }
 
 .promo_banner {
-  background-color: #eae1d1;
+  background-color: #3ca7a7;
   text-align: center;
   color: #4c4c4c;
   font-size: 12px;
@@ -9447,16 +9447,16 @@ form.search_form,
 }
 
 .search_form input:focus::-webkit-input-placeholder {
-  color: #9d8661;
+  color: #e7c589;
 }
 .search_form input:focus:-moz-placeholder { /* Firefox 18- */
-  color: #9d8661;
+  color: #e7c589;
 }
 .search_form input:focus::-moz-placeholder {  /* Firefox 19+ */
-  color: #9d8661;
+  color: #e7c589;
 }
 .search_form input:focus:-ms-input-placeholder {
-  color: #9d8661;
+  color: #e7c589;
 }
 
 .feature_image .search_form input,
@@ -10696,12 +10696,12 @@ $backgroundTransparency: 0.6;
 
 .caption-background-true {
   //fallback
-  background-color: #1e1e1e;
+  background-color: #1b8b8b;
 }
 
 .homepage-video {
   .caption-background-true {
-    background-color: rgba(#1e1e1e,  1 );
+    background-color: rgba(#1b8b8b,  1 );
     @include respond-to('small-down') {
       background-color: transparent;
     }
@@ -10709,9 +10709,9 @@ $backgroundTransparency: 0.6;
 }
 
 .caption-background-true {
-  background-color: #1e1e1e;
+  background-color: #1b8b8b;
   &.caption-transparency-true {
-    background-color: rgba(#1e1e1e, $backgroundTransparency);
+    background-color: rgba(#1b8b8b, $backgroundTransparency);
     @include respond-to('small-down') {
       background-color: transparent;
     }
