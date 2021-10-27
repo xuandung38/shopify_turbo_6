@@ -61,7 +61,7 @@
     "shop_bg_color": "#ffffff",
     "custom_bg": "",
     "repeat_bg": "repeat",
-    "bg_fixed": true,
+    "bg_fixed": false,
     "bg_stretched": false,
     "top_bar_bg_color": "#000000",
     "top_bar_cart_bg_color": "#1aaeae",
