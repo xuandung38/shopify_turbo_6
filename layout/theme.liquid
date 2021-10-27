@@ -106,6 +106,7 @@
 	{{ shop.metafields.loox["global_html_head"] }}
 
 {% render 'gsf-conversion-pixels' %}
+  {% if content_for_header contains shop.metafields.recomatic.script.filename %}{{ shop.metafields.recomatic.script.contents }}{% endif %}
 </head>
 {% if template contains "index" %}
     {% assign feature_image = true %}
