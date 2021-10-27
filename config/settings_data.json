@@ -2224,7 +2224,6 @@
       },
       "1589303609407": {
         "type": "newsletter",
-        "disabled": true,
         "settings": {
           "wide_display": true,
           "display_first_name": false,
