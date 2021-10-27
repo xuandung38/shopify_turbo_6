@@ -63,8 +63,8 @@ Description: Shopify Theme (https://www.shopify.com/&ref=out-of-the-sandbox)
 /* #Variables
 ================================================== */
 
-$font-size-header: 34;
-$font-size-column: 44.2;
+$font-size-header: 30;
+$font-size-column: 39.0;
 
 $site-width: 1200px;
 $gutter: 20px;
@@ -398,7 +398,7 @@ $breakpoints: (
   line-height: 1.5;
   color: #333333;
   display: block;
-  letter-spacing: 2px;
+  letter-spacing: 0px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1532,7 +1532,7 @@ h5, .h5 {
 
 h6, .h6 {
   @include headline-style(floor($font-size-header*0.6));
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   margin: 0 0 0.5em 0;
   padding: 7px 0;
   a {
@@ -1566,7 +1566,7 @@ h6, .h6 {
 div {
   &.collection_title {
     margin-bottom: 0;
-    line-height: 34px;
+    line-height: 30px;
     display: inline;
   }
   &.collection_title_tags {
@@ -2266,7 +2266,7 @@ li > a.url-deadlink {
 
 .sticky_nav ul.menu,
 .sticky_nav .mini_cart {
-  font-size: 15px;
+  font-size: 12px;
   padding-bottom: 0 !important;
 }
 
@@ -2307,21 +2307,21 @@ select.currencies,
   font-family: Roboto, sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 15px;
-  text-transform: none;
+  font-size: 12px;
+  text-transform: uppercase;
   color: #212121;
   padding-top: 12px;
   padding-bottom: 12px;
   position: relative;
   display: block;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   outline: 0;
   @include respond-to('medium-down') {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 
@@ -2426,8 +2426,8 @@ a.mini_cart span,
 .feature_image .header .top_bar .menu a,
 .feature_image .header .top_bar .menu a span {
   color: #545252;
-  font-size: 13px;
-  letter-spacing: 1px;
+  font-size: 12px;
+  letter-spacing: 0px;
 }
 
 .top_bar li a:hover,
@@ -2869,7 +2869,7 @@ div.cart_content form {
 }
 
 .top_bar [class^="icon-"]:before, .top_bar [class*=" icon-"]:before, .mini_cart {
-  font-size: 16px;
+  font-size: 15px;
   margin-right: 0;
 }
 
@@ -2973,7 +2973,7 @@ input[type="submit"].guest_button, input[type="button"].guest_button {
 .dropdown_content p,
 .mobile-mega-menu p {
   font-family: Roboto, sans-serif;
-  font-size: 15px;
+  font-size: 12px;
   font-style: normal;
   color: #212121;
   padding-top: 12px;
@@ -3531,8 +3531,8 @@ ul.toggle_list li ul {
     font-family: Roboto, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 15px;
-    text-transform: none;
+    font-size: 12px;
+    text-transform: uppercase;
     width: auto;
     margin-bottom: 0;
     max-width: 80%;
@@ -3745,7 +3745,7 @@ button.shopify-payment-button__button.shopify-payment-button__button--unbranded 
   font-style: normal;
   font-size: 15px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   @include inline-flexbox();
   @include align-items(center);
   @include justify-content(center);
@@ -4710,10 +4710,10 @@ input[type="button"].get-rates.action_button {
 .preorder_banner_product {
   font-family: Roboto, sans-serif;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 12px;
   font-style: normal;
-  text-transform: none;
-  letter-spacing: 1px;
+  text-transform: uppercase;
+  letter-spacing: 0px;
   padding: 8px 20px;
   text-align: center;
   color: #fff;
@@ -6193,7 +6193,7 @@ div.container.gallery-content {
     text-transform: none;
     padding-left: 8px;
     text-align: left;
-    font-size: 15px;
+    font-size: 12px;
   }
 
   .thumbnail {
@@ -6733,7 +6733,7 @@ a.tag {
   font-size: 15px;
   font-style: normal;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   cursor: pointer;
   position: relative;
   display: inline-block;
@@ -6825,8 +6825,8 @@ a.tag {
   font-weight: 400;
   font-style: normal;
   font-size: 15px;
-  text-transform: none;
-  letter-spacing: 1px;
+  text-transform: uppercase;
+  letter-spacing: 0px;
   padding: 8px 12px;
   text-align: center;
   color: #fff;
@@ -6854,9 +6854,9 @@ a.secondary_button, input.secondary_button {
   font-family: Roboto, sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 15px;
-  text-transform: none;
-  letter-spacing: 1px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0px;
   color: #108c8c;
   -webkit-appearance: none;
   -webkit-font-smoothing: antialiased;
@@ -6933,7 +6933,7 @@ a.secondary_button, input.secondary_button {
   font-style: normal;
   font-size: 15px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   margin-top: 20px;
 }
 
@@ -9043,14 +9043,14 @@ html.remodal-is-locked {
   .menu a:hover,
   .nav a:active,
   .nav a:focus {
-    font-size: 13px;
+    font-size: 10px;
   }
   .menu a,
   .menu a:visited,
   .menu a:hover,
   .menu a:active,
   .menu a:focus {
-    font-size: 13px;
+    font-size: 10px;
   }
   .menu li, #header span.menu_title, .menu a span {
     padding-left: 2px;
@@ -9114,7 +9114,7 @@ html.remodal-is-locked {
     .section_select { text-align: center; }
     .flex-control-nav { bottom: 10px }
     .featured_links a span {
-      font-size: 13px;
+      font-size: 10px;
     }
     .or {
       width: 100%;
@@ -9348,7 +9348,7 @@ form.search_form,
   font-weight: 400;
   font-style: normal;
   font-size: 12px;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   color: #212121;
   background-color: transparent;
   padding-right: 35px;
@@ -9398,7 +9398,7 @@ form.search_form,
   font-weight: 400;
   font-style: normal;
   color: #212121;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   border: none;
   font-size: 36px;
   line-height: 36px;
