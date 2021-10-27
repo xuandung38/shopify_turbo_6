@@ -2,5 +2,6 @@
   The contents of the product.recently-viewed.liquid template can be found in /sections/product-recently-viewed-template.liquid
 {% endcomment %}
 
+<div id="looxReviews" data-product-id="{{product.id}}" class="loox-reviews-default">{{ product.metafields.loox.reviews }}</div>
 {% section 'product-recently-viewed-template' %}
 {% section 'product-recommendations' %}
