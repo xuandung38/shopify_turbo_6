@@ -104,6 +104,8 @@
   {% render 'shopstorm-scripttags' %}
 
 	{{ shop.metafields.loox["global_html_head"] }}
+
+{% render 'gsf-conversion-pixels' %}
 </head>
 {% if template contains "index" %}
     {% assign feature_image = true %}
