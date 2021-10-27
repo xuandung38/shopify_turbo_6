@@ -63,7 +63,7 @@
     "repeat_bg": "repeat",
     "bg_fixed": true,
     "bg_stretched": false,
-    "top_bar_bg_color": "#108c8c",
+    "top_bar_bg_color": "#000000",
     "top_bar_cart_bg_color": "#1aaeae",
     "minicart_bg_color": "#ffffff",
     "banner_placeholder_background_color": "#8c8b8b",

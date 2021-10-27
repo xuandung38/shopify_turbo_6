@@ -2129,7 +2129,7 @@ li > a.url-deadlink {
 
 .top_bar {
   height: 40px;
-  background-color: #108c8c;
+  background-color: #000000;
   padding: 0 0 0 10px;
   .social_icons {
     float: left;
@@ -2360,7 +2360,7 @@ select.currencies {
   padding-top: 0;
   padding-bottom: 0;
   cursor: pointer;
-  @if (lightness(#108c8c) > 50) {
+  @if (lightness(#000000) > 50) {
     background-image: url(//cdn.shopify.com/s/files/1/0131/8512/2362/t/37/assets/select.png?v=16344380165374518789); // Lighter background
   } @else {
     background-image: url(//cdn.shopify.com/s/files/1/0131/8512/2362/t/37/assets/select_light.png?v=15313613251379577686); // Darker background
