@@ -218,7 +218,7 @@
     "disqus_enabled": false,
     "disqus_shortname": "",
     "checkout_header_image": "",
-    "checkout_logo_image": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/payment_method.jpg",
     "checkout_logo_position": "left",
     "checkout_logo_size": "medium",
     "checkout_body_background_image": "",
