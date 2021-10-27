@@ -923,7 +923,7 @@
           "product_grouping_thumbnails": false,
           "display_related_products": true,
           "related_products_style": "grid",
-          "related_products_limit": 12,
+          "related_products_limit": 11,
           "products_per": 4,
           "display_recently_viewed": false,
           "rv_title": "Recently Viewed Items",
