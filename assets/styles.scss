@@ -1580,6 +1580,7 @@ div {
 .promo_banner,
 .title {
   @include headline-style;
+  text-align: left;
 }
 
 .title.center.blog a {
