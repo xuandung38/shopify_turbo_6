@@ -179,7 +179,7 @@
     "currency_format": "money_format",
     "supported_currencies": "USD CAD AUD GBP EUR JPY",
     "default_currency": "USD",
-    "mailchimp_link": "",
+    "mailchimp_link": "https:\/\/manage.kmail-lists.com\/subscriptions\/subscribe?a=HLrvFC&g=Ve2YGK",
     "secondary_newsletter_banner": true,
     "newsletter_popup": false,
     "newsletter_popup_close": false,
