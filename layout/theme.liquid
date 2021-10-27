@@ -100,6 +100,8 @@
   {% include 'teeinblue-scripts' %}
   {{ 'shopstorm-apps.scss.css' | asset_url | stylesheet_tag }}
   {% render 'shopstorm-scripttags' %}
+
+	{{ shop.metafields.loox["global_html_head"] }}
 </head>
 {% if template contains "index" %}
     {% assign feature_image = true %}
@@ -268,7 +270,9 @@
     {% render 'hextom_usb_main', product: product, customer: customer %}
     <!-- **END** Hextom USB Integration // Main Include - DO NOT MODIFY -->
    {% render 'product-customizer-asw' %}
-  </body>
+  
+	{{ shop.metafields.loox["global_html_body"] }}
+</body>
 </html>
 {% endcapture %}
 {% assign content = content | replace_first: '<!DOCTYPE', '!DOCTYPE' | split: ' <' %}
