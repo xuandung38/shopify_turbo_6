@@ -791,8 +791,7 @@
               "newsletter_text": "<p>Subscribe to get 10% off your order and get updated about our latest arrivals and special offers<\/p>",
               "show_firstname": false,
               "show_lastname": false,
-              "show_social": false,
-              "show_in_cart": false
+              "show_social": false
             }
           }
         },
@@ -920,6 +919,8 @@
           "video_looping": false,
           "enable_shopify_product_badges": true,
           "review_position": "below_gallery",
+          "product_grouping_products": false,
+          "product_grouping_thumbnails": false,
           "display_recently_viewed": false,
           "rv_title": "Recently Viewed Items",
           "rv_products_style": "grid",
@@ -2121,7 +2122,7 @@
       "product-recommendations": {
         "type": "product-recommendations",
         "settings": {
-          "show_product_recommendations": false,
+          "show_product_recommendations": true,
           "product_recommendations_style": "grid",
           "product_recommendations_heading": "You may also like",
           "products_per_row": 4,
