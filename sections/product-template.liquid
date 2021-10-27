@@ -253,8 +253,18 @@
   {% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: true, product: product %}
 {% comment %}End automatically added Judge.me widget{% endcomment %}
         
-<div id="looxReviews" data-product-id="{{product.id}}" class="loox-reviews-default">{{ product.metafields.loox.reviews }}</div>
-</div>
+        <div style="clear: both;"></div>
+        <div class="container">
+          <div class="related-products__title sixteen columns"> 
+            <h4 class="title center"> Reviews </h4> 
+            <div class="feature_divider">
+            <div id="looxReviews" data-product-id="{{product.id}}" class="loox-reviews-default">{{ product.metafields.loox.reviews }}</div>
+    		</div>
+          </div> 
+          <div class="clear">
+          </div>
+        </div>
+      </div>
 
       {% if product.description contains "<!-- split -->"  %}
         <br class="clear" />
