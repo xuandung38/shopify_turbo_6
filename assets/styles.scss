@@ -7402,6 +7402,10 @@ $swatch-label-size: 34px;
     bottom: 0;
     margin: auto;
   }
+  .swatch .swatch-element.soldout {
+    
+    display:none;
+  }
 
   .swatch .swatch-element .crossed-out { display:none; }
   .swatch .swatch-element.soldout .crossed-out {
