@@ -16,6 +16,8 @@
     <title>
       {% if template contains "index" %}{{ page_title }}{% else %}{{ page_title }}{% if current_tags %} {{ 'general.meta.tagged_html' | t: tags: meta_tags }}{% endif %}{% if current_page != 1 %} {{ 'general.meta.page' | t: page_number: current_page }}{% endif %}{% unless page_title contains shop.name %} - {{ shop.name }}{% endunless %}{% endif %}
     </title>
+  {% include "win_ads" %}
+
 
     <link rel="preconnect dns-prefetch" href="https://fonts.shopifycdn.com" />
     <link rel="preconnect dns-prefetch" href="https://cdn.shopify.com" />
