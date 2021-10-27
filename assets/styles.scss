@@ -6781,6 +6781,34 @@ a.tag {
 
 
 
+.product-wrap {
+  position: relative;
+  &:hover .quick_shop {
+    opacity: 1;
+    transform: none;
+  }
+  &:hover .thumbnail-overlay {
+    opacity: 1;
+  }
+}
+
+.thumbnail-overlay {
+  .info {
+    @include vertical-alignment;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    pointer-events: none;
+  }
+  .quick_shop {
+    pointer-events: all;
+    margin-top: 0;
+  }
+}
+
+
+
 /* Product banners */
 
 .new {

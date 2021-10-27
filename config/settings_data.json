@@ -148,7 +148,7 @@
     "size_chart": "",
     "enable_shopify_review_comments": false,
     "enable_shopify_collection_badges": false,
-    "quick_shop_enabled": false,
+    "quick_shop_enabled": true,
     "quick_shop_style": "popup",
     "product_thumbs": true,
     "gallery_arrows": true,
