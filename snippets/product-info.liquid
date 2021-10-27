@@ -4,7 +4,7 @@
 	<div class="loox-rating" data-id="{{ product.id }}"
          data-rating="{{ product.metafields.loox.avg_rating }}"
          data-raters="{{ product.metafields.loox.num_reviews }}"
-         data-pattern="[rating] ([count] Review(s))"></div>
+         data-pattern="[rating] ([count])"></div>
 
 {% comment %}Start automatically added Judge.me widget{% endcomment %}
   {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
