@@ -2387,13 +2387,13 @@ select.currencies {
 .feature_image .header .menu a.active,
 .header_bar a.active,
 .feature_image .header .menu a:focus {
-  color: #e7c589;
+  color: #108c8c;
 }
 
 .menu li a[href]:hover,
 .menu li a:focus,
 .menu a[href]:hover span {
-  color: #e7c589;
+  color: #108c8c;
 }
 
 .menu a.top_link,
@@ -2404,11 +2404,11 @@ select.currencies {
 .menu a.top_link:hover,
 .menu a.dropdown_link:hover,
 .menu a.active_link {
-  border-bottom: solid 1px #e7c589;
+  border-bottom: solid 1px #108c8c;
 }
 
 .feature_image a.top_link:hover {
-  border-bottom: solid 1px #e7c589;
+  border-bottom: solid 1px #108c8c;
 }
 
 .menu a span {
@@ -6122,7 +6122,7 @@ div.container.gallery-content {
       background: #ffffff;
     }
     a:hover .title {
-      color: #e7c589;
+      color: #108c8c;
     }
     a:hover span {
       color: #000000;
@@ -9447,16 +9447,16 @@ form.search_form,
 }
 
 .search_form input:focus::-webkit-input-placeholder {
-  color: #e7c589;
+  color: #108c8c;
 }
 .search_form input:focus:-moz-placeholder { /* Firefox 18- */
-  color: #e7c589;
+  color: #108c8c;
 }
 .search_form input:focus::-moz-placeholder {  /* Firefox 19+ */
-  color: #e7c589;
+  color: #108c8c;
 }
 .search_form input:focus:-ms-input-placeholder {
-  color: #e7c589;
+  color: #108c8c;
 }
 
 .feature_image .search_form input,
