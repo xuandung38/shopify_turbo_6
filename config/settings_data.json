@@ -919,7 +919,7 @@
           "video_looping": false,
           "enable_shopify_product_badges": true,
           "review_position": "below_gallery",
-          "product_grouping_products": false,
+          "product_grouping_products": true,
           "product_grouping_thumbnails": false,
           "display_related_products": true,
           "related_products_style": "grid",
