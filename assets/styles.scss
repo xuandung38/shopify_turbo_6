@@ -1895,7 +1895,7 @@ body.is-active {
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
     a span {
-      color: #808080;
+      color: #fcfcfc;
       display: inline-block;
       padding-left: 4px;
       position: relative;
@@ -2046,7 +2046,7 @@ li > a.url-deadlink {
   position: absolute !important;
   height: 1px !important;
   width: 100%;
-  background: #808080;
+  background: #fcfcfc;
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -2129,7 +2129,7 @@ li > a.url-deadlink {
 
 .top_bar {
   height: 40px;
-  background-color: #ffffff;
+  background-color: #108c8c;
   padding: 0 0 0 10px;
   .social_icons {
     float: left;
@@ -2360,7 +2360,7 @@ select.currencies {
   padding-top: 0;
   padding-bottom: 0;
   cursor: pointer;
-  @if (lightness(#ffffff) > 50) {
+  @if (lightness(#108c8c) > 50) {
     background-image: url(//cdn.shopify.com/s/files/1/0131/8512/2362/t/37/assets/select.png?v=16344380165374518789); // Lighter background
   } @else {
     background-image: url(//cdn.shopify.com/s/files/1/0131/8512/2362/t/37/assets/select_light.png?v=15313613251379577686); // Darker background
@@ -2425,7 +2425,7 @@ a.mini_cart,
 a.mini_cart span,
 .feature_image .header .top_bar .menu a,
 .feature_image .header .top_bar .menu a span {
-  color: #808080;
+  color: #fcfcfc;
   font-size: 13px;
   letter-spacing: 1px;
 }
@@ -2459,7 +2459,7 @@ a.mini_cart span,
   float: right;
   text-align: center;
   cursor: pointer;
-  background-color: #252f3d;
+  background-color: #1aaeae;
   padding-left: 5px;
   padding-right: 5px;
   margin-left: 5px;
@@ -11072,7 +11072,7 @@ input[type="button"].highlight-false--dark {
   .gallery-cell {
     width: 100%;
     
-      background-color: #666666;
+      background-color: #8c8b8b;
     
     @include respond-to('small-down') {
       background-color: transparent;
@@ -11645,7 +11645,7 @@ $delay: 0;
   position: relative;
   overflow: hidden;
   
-    background-color: #666666;
+    background-color: #8c8b8b;
   
 
   @include respond-to('small-down') {
@@ -11693,7 +11693,7 @@ $delay: 0;
   overflow: hidden;
   transition: height 0.3s ease-in-out;
   
-    background-color: #666666;
+    background-color: #8c8b8b;
   
   @include respond-to('small-down') {
     background-color: transparent;
