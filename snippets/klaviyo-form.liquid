@@ -9,7 +9,7 @@
   <div class="container">
     <div class="sixteen columns">
 {% endif %}
-    <div class="klaviyo" {% if do_not_show_here %} style="display: none;" {% endif %}>
+    <div class="klaviyo"  style="{% if do_not_show_here %}display: none;{% endif %} background-color: {{ section.settings.background_color }} " >
       <div class="klaviyo-form-{{ section.settings.klaviyo_api_key }}"></div>
     </div>
 
