@@ -1,8 +1,8 @@
 {% if type == 'block' %}
   {% assign wide_display = block.settings.wide_display %}
+  {% assign do_not_show_here = section.settings.do_not_show_here %}
 {% else %}
   {% assign wide_display = section.settings.wide_display %}
-  {% assign do_not_show_here = section.settings.do_not_show_here %}
 {% endif %}
 
 {% if wide_display == false %}
