@@ -1125,35 +1125,7 @@
       },
       "search-template": {
         "type": "search-template",
-        "blocks": {
-          "1497477982637": {
-            "type": "text",
-            "settings": {
-              "title": "Sidebar content",
-              "text": "<p>You can now include <strong>recently viewed items<\/strong> in your sidebar, along with other optional content blocks like menus and text like this..<\/p>"
-            }
-          },
-          "1497506426736": {
-            "type": "menu",
-            "settings": {
-              "custom_menu_linklist": ""
-            }
-          },
-          "1497477975629": {
-            "type": "recently_viewed",
-            "settings": {
-              "sidebar_rv_title": "Recently Viewed",
-              "sidebar_rv_per": 3
-            }
-          }
-        },
-        "block_order": [
-          "1497477982637",
-          "1497506426736",
-          "1497477975629"
-        ],
         "settings": {
-          "image": "",
           "image_darken": false,
           "search_breadcrumb": true,
           "search_term": "Search...",
