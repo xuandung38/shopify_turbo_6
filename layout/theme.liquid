@@ -202,7 +202,9 @@
     {% unless template contains 'index' or settings.secondary_newsletter_banner == false %}
       {% section 'newsletter' %}
     {% endunless %}
-
+    
+    {% section 'kaviyo-mkt' %}
+    
     {% section 'footer' %}
 
     {% if settings.size_chart != blank and template contains 'product' %}
