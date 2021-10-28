@@ -1,3 +1,18 @@
-<div class="klaviyo">
-  <div class="klaviyo-form-{{settings.klaviyo_api_key}}"></div>
+{% if type == 'block' %}
+  {% assign wide_display = block.settings.wide_display %}
+{% else %}
+  {% assign wide_display = section.settings.wide_display %}
+{% endif %}
+
+{% if wide_display == false %}
+  <div class="container">
+    <div class="sixteen columns">
+{% endif %}
+    <div class="klaviyo">
+      <div class="klaviyo-form-{{settings.klaviyo_api_key}}"></div>
+    </div>
+
+{% if wide_display == false %}
+  </div>
 </div>
+{% endif %}
