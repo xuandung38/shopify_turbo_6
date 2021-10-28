@@ -1,0 +1,41 @@
+{% comment %}
+** Newsletter - homepage partial **
+- Draggable section
+{% endcomment %}
+
+{% include 'klaviyo-form' %}
+
+{% schema %}
+
+{
+  "name": "Klaviyo Marketing",
+  "class": "klaviyo-section",
+  "settings": [
+    {
+    "type": "checkbox",
+    "id": "do_not_show_here",
+    "label": "Don't Show Here",
+     "default": false
+    },
+    {
+      "type": "text",
+      "id": "klaviyo_api_key",
+      "label": "Klaviyo Apikey",
+      "default": "S9QAS3"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#333333"
+    }
+  ],
+  "presets": [{
+    "name": "Klaviyo Marketing",
+    "category": "Promotional",
+    "settings": {
+    }
+  }]
+}
+
+{% endschema %}
