@@ -2275,9 +2275,9 @@
       "16354070648c80a9b4": {
         "type": "klaviyo-mkt",
         "settings": {
-          "wide_display": true,
-          "do_not_show_here": false,
-          "klaviyo_api_key": "S9QAS3"
+          "do_not_show_here": true,
+          "klaviyo_api_key": "S9QAS3",
+          "background_color": "#3ca7a7"
         }
       }
     },
