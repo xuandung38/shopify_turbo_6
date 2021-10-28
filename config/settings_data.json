@@ -124,7 +124,7 @@
     "mega_menu_5": false,
     "search_option": "products",
     "search_pagination_type": "basic_pagination",
-    "enable_autocomplete": true,
+    "enable_autocomplete": false,
     "search_to_display": 5,
     "align_height": false,
     "collection_height": 200,
