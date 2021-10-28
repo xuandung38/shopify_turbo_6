@@ -2264,13 +2264,20 @@
           "pagination_limit": 48,
           "toggle": false
         }
+      },
+      "16353960949cbab35d": {
+        "type": "custom-html",
+        "settings": {
+          "custom_html": "<div class=\"klaviyo-form-S9QAS3\"><\/div>"
+        }
       }
     },
     "content_for_index": [
       "1488497250346",
       "1589302562773",
       "1589303119803",
-      "1589303609407"
+      "1589303609407",
+      "16353960949cbab35d"
     ]
   }
 }
