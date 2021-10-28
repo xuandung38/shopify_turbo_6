@@ -1,16 +1,16 @@
 {% if type == 'block' %}
   {% assign wide_display = block.settings.wide_display %}
-  {% assign do_not_show_here = block.settings.do_not_show_here %}
+  {% assign do_not_show_here = block.settings.is_disable %}
 {% else %}
   {% assign wide_display = section.settings.wide_display %}
-  {% assign do_not_show_here = section.settings.do_not_show_here %}
+  {% assign do_not_show_here = section.settings.is_disable %}
 {% endif %}
 
 {% if wide_display == false %}
   <div class="container">
     <div class="sixteen columns">
 {% endif %}
-    <div class="klaviyo"  style="{% if do_not_show_here %}display: none;{% endif %} background-color: {{ section.settings.background_color }} " >
+    <div class="klaviyo"  style="{% if is_disable %}display: none;{% endif %} background-color: {{ section.settings.background_color }} " >
       <div class="klaviyo-form-{{ section.settings.klaviyo_api_key }}"></div>
     </div>
 
