@@ -2268,7 +2268,7 @@
       "16353960949cbab35d": {
         "type": "custom-html",
         "settings": {
-          "custom_html": "<div class=\"cs-bg-gray\">\n<div class=\"klaviyo-form-S9QAS3\"><\/div>\n<div><\/div>\n<\/div>"
+          "custom_html": "<div class=\"cs-bg-gray\">\n<div class=\"klaviyo-form-S9QAS3\"><\/div>\n<div>\n\n<style>.cs-bg-gray{\n background-color: var(--shopify-editor-setting-newsletter_section_background_color);\n  color: var(--shopify-editor-setting-newsletter_section_color); }\n  .newsletter_section h2 {\n    color: var(--shopify-editor-setting-newsletter_section_color);\n    margin-top: 0;\n}<\/style>\n<\/div>\n<\/div>"
         }
       }
     },
