@@ -3,6 +3,7 @@
   {% assign background_color = block.settings.background_color %}
   {% assign do_not_show_here = block.settings.is_disable %}
 {% else %}
+  {% assign disable_in_cart = section.settings.disable_in_cart %}
   {% assign wide_display = section.settings.wide_display %}
   {% assign background_color = section.settings.background_color %}
   {% assign do_not_show_here = section.settings.is_disable %}
@@ -12,7 +13,7 @@
   <div class="container">
     <div class="sixteen columns">
 {% endif %}
-    <div class="klaviyo"  style="{% if is_disable %} display: none;{% endif %} background-color: {{ section.settings.background_color }} " >
+    <div class="klaviyo"  style="{% if is_disable or disable_in_cart %} display: none;{% endif %} background-color: {{ section.settings.background_color }} " >
       <div class="klaviyo-form-{{ section.settings.klaviyo_api_key }}"></div>
     </div>
 
