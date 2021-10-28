@@ -3,26 +3,7 @@
 - Draggable section
 {% endcomment %}
 
-{% if type == 'block' %}
-  {% assign wide_display = block.settings.wide_display %}
-  {% assign show_here = block.settings.do_not_show_here %}
-{% else %}
-  {% assign wide_display = settings.wide_display %}
-  {% assign show_here = settings.do_not_show_here %}
-{% endif %}
-
-{% if wide_display == false %}
-  <div class="container">
-    <div class="sixteen columns">
-{% endif %}
-    <div class="klaviyo" {% if show_here %} style="display: none;" {% endif %}>
-      <div class="klaviyo-form-{{ settings.klaviyo_api_key }}"></div>
-    </div>
-
-{% if wide_display == false %}
-  </div>
-</div>
-{% endif %}
+{% include 'klaviyo-form' %}
 
 {% schema %}
 
