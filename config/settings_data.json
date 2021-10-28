@@ -925,7 +925,7 @@
           "related_products_style": "grid",
           "related_products_limit": 11,
           "products_per": 4,
-          "display_recently_viewed": false,
+          "display_recently_viewed": true,
           "rv_title": "Recently Viewed Items",
           "rv_products_style": "grid",
           "rv_max_display": 4,
