@@ -876,7 +876,7 @@
           "collection_tags": false,
           "collection_sort": false,
           "products_per_row": 4,
-          "pagination_limit": 12,
+          "pagination_limit": 28,
           "toggle": false
         }
       },
