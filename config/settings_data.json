@@ -2272,12 +2272,12 @@
           "custom_html": "<div class=\"cs-bg-gray\">\n<div class=\"klaviyo-form-S9QAS3\"><\/div>\n<div><\/div>\n<\/div>"
         }
       },
-      "16354070648c80a9b4": {
-        "type": "klaviyo-mkt",
+      "kaviyomkt": {
+        "type": "kaviyomkt",
         "settings": {
           "do_not_show_here": false,
           "klaviyo_api_key": "S9QAS3",
-          "background_color": "#3ca7a7"
+          "background_color": "#03a196"
         }
       }
     },
@@ -2286,8 +2286,7 @@
       "1589302562773",
       "1589303119803",
       "1589303609407",
-      "16353960949cbab35d",
-      "16354070648c80a9b4"
+      "16353960949cbab35d"
     ]
   }
 }
