@@ -112,7 +112,7 @@
                 {% for discount_allocation in item.line_level_discount_allocations %}
                   <p class="meta cart__item--discount">
                     <span class="label">{{ 'cart.general.discount' | t }}:</span>
-                    {{ discount_allocation.discount_application.title }} (-<span class="">{{ discount_allocation.amount | money }}</span>)
+                    {{ discount_allocation.discount_application.title }} (-<span class="money">{{ discount_allocation.amount | money }}</span>)
                   </p>
                 {% endfor %}
               {% endif %}
@@ -126,7 +126,7 @@
               <p class="price_total">
                 <strong>{{ 'cart.general.total' | t }}:</strong>
                 {% if item.line_level_discount_allocations.size > 0 %}
-                  <span class="">
+                  <span class="money">
                     {% include 'product-customizer-helper' with 'item-line-price', items: cart.items %}
                   </span>
                 {% endif %}
@@ -151,7 +151,7 @@
               {% for discount_application in cart.cart_level_discount_applications %}
                 <span class="cart_discounts--title">{{ discount_application.title }}</span>
                 <span class="cart_discounts--price">
-                  -<span class="">{{ discount_application.total_allocated_amount | money }}</span>
+                  -<span class="money">{{ discount_application.total_allocated_amount | money }}</span>
                 </span>
               {% endfor %}
 
@@ -161,10 +161,7 @@
 
             <p class="cart_subtotal js-cart_subtotal">
               <span class="right">
-                
-<span class="saso-cart-original-total"><span class="">{{ cart.total_price | money }}</span></span>
-<span class="saso-cart-total"></span>
-
+                <span class="money">{{ cart.total_price | money }}</span>
               </span>
               <span>{{ 'cart.general.subtotal' | t }}</span>
             </p>
@@ -172,7 +169,7 @@
             {% if section.settings.display_savings and total_saving > 0 or section.settings.display_savings and cart.total_discount > 0 %}
               <p class="cart_savings js-cart_savings sale">
                 <span class="right">
-                  <span class="">{{ total_saving | plus: cart.total_discount | money }}</span>
+                  <span class="money">{{ total_saving | plus: cart.total_discount | money }}</span>
                 </span>
                 <span>{{ 'layout.general.savings' | t }}</span>
               </p>
