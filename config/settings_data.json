@@ -921,14 +921,14 @@
           "review_position": "below_gallery",
           "product_grouping_products": true,
           "product_grouping_thumbnails": false,
-          "display_related_products": true,
+          "display_related_products": false,
           "related_products_style": "slider",
           "related_products_limit": 4,
           "products_per": 4,
           "display_recently_viewed": true,
           "rv_title": "Recently Viewed Items",
-          "rv_products_style": "grid",
-          "rv_max_display": 4,
+          "rv_products_style": "slider",
+          "rv_max_display": 8,
           "rv_per": 4,
           "toggle": false
         }
