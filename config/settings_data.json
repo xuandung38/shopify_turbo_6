@@ -2275,10 +2275,10 @@
       "kaviyomkt": {
         "type": "kaviyomkt",
         "settings": {
-          "do_not_show_here": false,
+          "is_disable": false,
           "disable_in_cart": true,
           "klaviyo_api_key": "S9QAS3",
-          "background_color": "#03a196"
+          "background_color": "#62fdf3"
         }
       }
     },
