@@ -2267,9 +2267,8 @@
       },
       "16353960949cbab35d": {
         "type": "custom-html",
-        "disabled": true,
         "settings": {
-          "custom_html": "<div class=\"klaviyo-form-S9QAS3\"><\/div>"
+          "custom_html": "<div class=\"cs-bg-gray\">\n<div class=\"klaviyo-form-S9QAS3\"><\/div>\n<div><\/div>\n<\/div>"
         }
       }
     },
