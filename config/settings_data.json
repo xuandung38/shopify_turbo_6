@@ -117,7 +117,7 @@
     "footer_logo_font_size": 20,
     "footer_heading_font_size": 18,
     "footer_font_size": 14,
-    "mega_menu_1": false,
+    "mega_menu_1": true,
     "mega_menu_2": false,
     "mega_menu_3": false,
     "mega_menu_4": false,
@@ -1514,10 +1514,10 @@
           "1497370093035": {
             "type": "column",
             "settings": {
-              "richtext_top": "",
+              "richtext_top": "<p>Occasions<\/p>",
               "image_caption_top": "Over-ear headphones",
               "image_link_top": "shopify:\/\/collections\/over-ear-headphones",
-              "menu_1": "",
+              "menu_1": "our-family-panda-shop",
               "menu_1_link": "",
               "menu_2": "",
               "menu_2_link": "",
