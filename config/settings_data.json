@@ -1567,7 +1567,7 @@
               "richtext_top": "",
               "image_caption_top": "",
               "image_link_top": "",
-              "menu_1": "drinkware",
+              "menu_1": "gifts-for-couples",
               "menu_1_link": "",
               "menu_2": "",
               "menu_2_link": "",
@@ -1586,7 +1586,7 @@
               "richtext_top": "",
               "image_caption_top": "",
               "image_link_top": "",
-              "menu_1": "wall-art",
+              "menu_1": "gifts-for-dad",
               "menu_1_link": "",
               "menu_2": "",
               "menu_2_link": "",
@@ -1605,7 +1605,7 @@
               "richtext_top": "",
               "image_caption_top": "",
               "image_link_top": "",
-              "menu_1": "home-living",
+              "menu_1": "gifts-for-mom",
               "menu_1_link": "",
               "menu_2": "",
               "menu_2_link": "",
@@ -1624,7 +1624,7 @@
               "richtext_top": "",
               "image_caption_top": "",
               "image_link_top": "",
-              "menu_1": "apparel",
+              "menu_1": "gifts-for-family",
               "menu_1_link": "",
               "menu_2": "",
               "menu_2_link": "",
@@ -2187,13 +2187,90 @@
       "mega-menu-3": {
         "type": "mega-menu-3",
         "blocks": {
+          "bc6ea5d5-109f-414d-a68f-9896268812c0": {
+            "type": "column",
+            "settings": {
+              "richtext_top": "",
+              "image_caption_top": "",
+              "image_link_top": "",
+              "menu_1": "apparel",
+              "menu_1_link": "",
+              "menu_2": "",
+              "menu_2_link": "",
+              "menu_3": "",
+              "menu_3_link": "",
+              "menu_4": "",
+              "menu_4_link": "",
+              "image_caption_bottom": "",
+              "image_link_bottom": "",
+              "richtext_bottom": ""
+            }
+          },
           "mega-menu-3-0": {
             "type": "column",
             "settings": {
               "richtext_top": "",
               "image_caption_top": "",
               "image_link_top": "",
-              "menu_1": "occasion",
+              "menu_1": "drinkware",
+              "menu_1_link": "",
+              "menu_2": "",
+              "menu_2_link": "",
+              "menu_3": "",
+              "menu_3_link": "",
+              "menu_4": "",
+              "menu_4_link": "",
+              "image_caption_bottom": "",
+              "image_link_bottom": "",
+              "richtext_bottom": ""
+            }
+          },
+          "e95e6835-8792-4a62-b7ff-eac701040606": {
+            "type": "column",
+            "settings": {
+              "richtext_top": "",
+              "image_caption_top": "",
+              "image_link_top": "",
+              "menu_1": "wall-art",
+              "menu_1_link": "",
+              "menu_2": "",
+              "menu_2_link": "",
+              "menu_3": "",
+              "menu_3_link": "",
+              "menu_4": "",
+              "menu_4_link": "",
+              "image_caption_bottom": "",
+              "image_link_bottom": "",
+              "richtext_bottom": ""
+            }
+          },
+          "5d1fc08f-8ec0-484f-98f0-25f90c91da65": {
+            "type": "column",
+            "settings": {
+              "richtext_top": "",
+              "image_caption_top": "",
+              "image_link_top": "",
+              "menu_1": "home-living",
+              "menu_1_link": "",
+              "menu_2": "",
+              "menu_2_link": "",
+              "menu_3": "",
+              "menu_3_link": "",
+              "menu_4": "",
+              "menu_4_link": "",
+              "image_caption_bottom": "",
+              "image_link_bottom": "",
+              "richtext_bottom": ""
+            }
+          },
+          "77df4973-d143-4583-a8b2-2ddbb7f8498e": {
+            "type": "column",
+            "disabled": true,
+            "settings": {
+              "richtext_top": "",
+              "image_caption_top": "",
+              "image_link_top": "",
+              "menu_1": "",
               "menu_1_link": "",
               "menu_2": "",
               "menu_2_link": "",
@@ -2208,7 +2285,11 @@
           }
         },
         "block_order": [
-          "mega-menu-3-0"
+          "bc6ea5d5-109f-414d-a68f-9896268812c0",
+          "mega-menu-3-0",
+          "e95e6835-8792-4a62-b7ff-eac701040606",
+          "5d1fc08f-8ec0-484f-98f0-25f90c91da65",
+          "77df4973-d143-4583-a8b2-2ddbb7f8498e"
         ],
         "settings": {
           "parent": "Product Type"
