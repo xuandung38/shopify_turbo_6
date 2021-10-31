@@ -748,7 +748,7 @@
           "logo_mobile": "shopify:\/\/shop_images\/logo_family_panda_Christmas_secondary_2_400x100_05a3d5ca-6477-4339-ba73-4c3d358b1e76.png",
           "main_linklist": "main-menu-2",
           "main_linklist2": "",
-          "vertical_menu": true,
+          "vertical_menu": false,
           "search_enabled": true,
           "fixed_header": true,
           "logo_position": "left",
@@ -1514,10 +1514,10 @@
           "1497370093035": {
             "type": "column",
             "settings": {
-              "richtext_top": "<p>Occasions<\/p>",
+              "richtext_top": "<p>Gift For<\/p>",
               "image_caption_top": "Over-ear headphones",
               "image_link_top": "shopify:\/\/collections\/over-ear-headphones",
-              "menu_1": "our-family-panda-shop",
+              "menu_1": "gift-for",
               "menu_1_link": "",
               "menu_2": "",
               "menu_2_link": "",
