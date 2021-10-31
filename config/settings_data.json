@@ -1676,33 +1676,13 @@
               "image_link_bottom": "",
               "richtext_bottom": ""
             }
-          },
-          "1497369875065": {
-            "type": "column",
-            "settings": {
-              "richtext_top": "",
-              "image_caption_top": "",
-              "image_link_top": "",
-              "menu_1": "",
-              "menu_1_link": "",
-              "menu_2": "",
-              "menu_2_link": "",
-              "menu_3": "",
-              "menu_3_link": "",
-              "menu_4": "",
-              "menu_4_link": "",
-              "image_caption_bottom": "",
-              "image_link_bottom": "",
-              "richtext_bottom": ""
-            }
           }
         },
         "block_order": [
           "1497369953263",
           "1497331215349",
           "1497369901739",
-          "1497369814235",
-          "1497369875065"
+          "1497369814235"
         ],
         "settings": {
           "parent": "Product Type"
@@ -2351,7 +2331,7 @@
           "mega-menu-3-4"
         ],
         "settings": {
-          "parent": ""
+          "parent": "Occasion"
         }
       },
       "mega-menu-4": {
