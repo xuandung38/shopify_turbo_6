@@ -1572,9 +1572,9 @@
             "type": "column",
             "settings": {
               "richtext_top": "",
-              "image_caption_top": "New Product Colors for 2020",
-              "image_link_top": "shopify:\/\/collections\/headphones",
-              "menu_1": "",
+              "image_caption_top": "",
+              "image_link_top": "",
+              "menu_1": "gifts-for-family",
               "menu_1_link": "",
               "menu_2": "",
               "menu_2_link": "",
