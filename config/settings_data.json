@@ -119,7 +119,7 @@
     "footer_font_size": 14,
     "mega_menu_1": true,
     "mega_menu_2": true,
-    "mega_menu_3": false,
+    "mega_menu_3": true,
     "mega_menu_4": false,
     "mega_menu_5": false,
     "search_option": "products",
