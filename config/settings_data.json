@@ -2233,7 +2233,7 @@
               "richtext_top": "<p>Add description, images, menus and links to your mega menu<\/p>",
               "image_caption_top": "",
               "image_link_top": "",
-              "menu_1": "",
+              "menu_1": "occasion",
               "menu_1_link": "",
               "menu_2": "",
               "menu_2_link": "",
@@ -2441,7 +2441,7 @@
           "mega-menu-4-4"
         ],
         "settings": {
-          "parent": ""
+          "parent": "Help center"
         }
       },
       "mega-menu-5": {
