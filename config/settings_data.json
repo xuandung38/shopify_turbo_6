@@ -2230,7 +2230,7 @@
           "mega-menu-3-0": {
             "type": "column",
             "settings": {
-              "richtext_top": "<p>Add description, images, menus and links to your mega menu<\/p>",
+              "richtext_top": "",
               "image_caption_top": "",
               "image_link_top": "",
               "menu_1": "occasion",
@@ -2260,7 +2260,7 @@
           "mega-menu-4-0": {
             "type": "column",
             "settings": {
-              "richtext_top": "<p>Add description, images, menus and links to your mega menu<\/p>",
+              "richtext_top": "",
               "image_caption_top": "",
               "image_link_top": "",
               "menu_1": "help-center",
