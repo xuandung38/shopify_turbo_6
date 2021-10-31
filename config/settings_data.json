@@ -120,7 +120,7 @@
     "mega_menu_1": true,
     "mega_menu_2": true,
     "mega_menu_3": true,
-    "mega_menu_4": true,
+    "mega_menu_4": false,
     "mega_menu_5": false,
     "search_option": "products",
     "search_pagination_type": "basic_pagination",
@@ -2251,35 +2251,11 @@
           "mega-menu-3-0"
         ],
         "settings": {
-          "parent": "Occasion"
+          "parent": "Product Type"
         }
       },
       "mega-menu-4": {
         "type": "mega-menu-4",
-        "blocks": {
-          "mega-menu-4-0": {
-            "type": "column",
-            "settings": {
-              "richtext_top": "",
-              "image_caption_top": "",
-              "image_link_top": "",
-              "menu_1": "help-center",
-              "menu_1_link": "",
-              "menu_2": "",
-              "menu_2_link": "",
-              "menu_3": "",
-              "menu_3_link": "",
-              "menu_4": "",
-              "menu_4_link": "",
-              "image_caption_bottom": "",
-              "image_link_bottom": "",
-              "richtext_bottom": ""
-            }
-          }
-        },
-        "block_order": [
-          "mega-menu-4-0"
-        ],
         "settings": {
           "parent": ""
         }
