@@ -290,10 +290,3 @@
 {% endcapture %}
 {% assign content = content | replace_first: '<!DOCTYPE', '!DOCTYPE' | split: ' <' %}
 {% for html in content %}{% assign htmlblock = html | strip | prepend: ' <' %}{{htmlblock | replace: ' </', '</' | replace: 'judge78d7ca7fme', '<' }}{% endfor %}
-.drawer__nav-link--top-level + .drawer__nav-toggle-btn {
-    position: absolute;
-    width: 98%;
-    height: 58px;
-    text-align: right;
-    left: 0;
-}
