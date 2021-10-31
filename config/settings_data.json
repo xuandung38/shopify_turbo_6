@@ -1514,7 +1514,7 @@
           "1497370093035": {
             "type": "column",
             "settings": {
-              "richtext_top": "<p>Daisy<\/p>",
+              "richtext_top": "",
               "image_caption_top": "",
               "image_link_top": "",
               "menu_1": "gifts-for-couples",
@@ -1595,7 +1595,7 @@
           "1497291371532"
         ],
         "settings": {
-          "parent": "https:\/\/familypanda.co\/"
+          "parent": "cart"
         }
       },
       "mega-menu-2": {
