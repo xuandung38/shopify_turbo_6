@@ -1517,7 +1517,7 @@
               "richtext_top": "",
               "image_caption_top": "",
               "image_link_top": "",
-              "menu_1": "gifts-for-couples",
+              "menu_1": "christmas-gift-for",
               "menu_1_link": "",
               "menu_2": "",
               "menu_2_link": "",
@@ -1536,46 +1536,8 @@
               "richtext_top": "",
               "image_caption_top": "",
               "image_link_top": "",
-              "menu_1": "gifts-for-dad",
+              "menu_1": "product-type",
               "menu_1_link": "shopify:\/\/collections",
-              "menu_2": "",
-              "menu_2_link": "",
-              "menu_3": "",
-              "menu_3_link": "",
-              "menu_4": "",
-              "menu_4_link": "",
-              "image_caption_bottom": "",
-              "image_link_bottom": "",
-              "richtext_bottom": ""
-            }
-          },
-          "1497370229534": {
-            "type": "column",
-            "settings": {
-              "richtext_top": "",
-              "image_caption_top": "",
-              "image_link_top": "",
-              "menu_1": "gifts-for-mom",
-              "menu_1_link": "",
-              "menu_2": "",
-              "menu_2_link": "",
-              "menu_3": "",
-              "menu_3_link": "",
-              "menu_4": "",
-              "menu_4_link": "",
-              "image_caption_bottom": "",
-              "image_link_bottom": "",
-              "richtext_bottom": ""
-            }
-          },
-          "1497291371532": {
-            "type": "column",
-            "settings": {
-              "richtext_top": "",
-              "image_caption_top": "",
-              "image_link_top": "",
-              "menu_1": "gifts-for-family",
-              "menu_1_link": "",
               "menu_2": "",
               "menu_2_link": "",
               "menu_3": "",
@@ -1590,9 +1552,7 @@
         },
         "block_order": [
           "1497370093035",
-          "1497292597591",
-          "1497370229534",
-          "1497291371532"
+          "1497292597591"
         ],
         "settings": {
           "parent": "🎄 Christmas"
