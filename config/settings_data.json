@@ -120,7 +120,7 @@
     "mega_menu_1": true,
     "mega_menu_2": true,
     "mega_menu_3": true,
-    "mega_menu_4": false,
+    "mega_menu_4": true,
     "mega_menu_5": false,
     "search_option": "products",
     "search_pagination_type": "basic_pagination",
