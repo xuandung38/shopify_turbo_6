@@ -290,22 +290,14 @@
 {% endcapture %}
 {% assign content = content | replace_first: '<!DOCTYPE', '!DOCTYPE' | split: ' <' %}
 {% for html in content %}{% assign htmlblock = html | strip | prepend: ' <' %}{{htmlblock | replace: ' </', '</' | replace: 'judge78d7ca7fme', '<' }}{% endfor %}
-.mobile-nav li {
-position: relative;
-}
-.mobile-nav--has-dropdown .icon-arrow-down {
+@media only screen and (max-width: 767px) {
+.mobile-nav__toggle {
+width: 100%;
     position: absolute;
-    width: 100%;
+    left: 0;
     text-align: right;
-  	-ms-transform: none;
-    -webkit-transform: none;
-    transform: none;
 }
-.mobile-nav--button.nav-active:before {
-    color: #fff;
-    position: absolute;
-    right: 17px;
-    -ms-transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
+.mobile-nav__toggle button {
+    float: right;
+}
 }
