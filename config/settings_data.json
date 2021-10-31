@@ -1514,8 +1514,8 @@
           "1497370093035": {
             "type": "column",
             "settings": {
-              "richtext_top": "<p>Gift For<\/p>",
-              "image_caption_top": "Over-ear headphones",
+              "richtext_top": "",
+              "image_caption_top": "",
               "image_link_top": "",
               "menu_1": "gift-for",
               "menu_1_link": "",
@@ -1595,7 +1595,7 @@
           "1497291371532"
         ],
         "settings": {
-          "parent": "Headphones"
+          "parent": "Gift For"
         }
       },
       "mega-menu-2": {
