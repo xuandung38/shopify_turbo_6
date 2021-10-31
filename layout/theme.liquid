@@ -290,14 +290,10 @@
 {% endcapture %}
 {% assign content = content | replace_first: '<!DOCTYPE', '!DOCTYPE' | split: ' <' %}
 {% for html in content %}{% assign htmlblock = html | strip | prepend: ' <' %}{{htmlblock | replace: ' </', '</' | replace: 'judge78d7ca7fme', '<' }}{% endfor %}
-@media only screen and (max-width: 767px) {
-.mobile-nav__toggle {
-width: 100%;
+.drawer__nav-link--top-level + .drawer__nav-toggle-btn {
     position: absolute;
-    left: 0;
+    width: 98%;
+    height: 58px;
     text-align: right;
-}
-.mobile-nav__toggle button {
-    float: right;
-}
+    left: 0;
 }
