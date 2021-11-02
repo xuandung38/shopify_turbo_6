@@ -175,6 +175,28 @@
                </div>
                <div class="text"><strong> Arrives by <span class="js-shipping-time">Nov 11 -  18</span></strong> if you order today. Hooray!</div>
             </div>
+          <style>
+            .estimated-delivery {
+              display: flex;
+              align-items: center;
+            }
+            .estimated-delivery .hurry-icon {
+              flex: 0 0 50px;
+            }
+            .estimated-delivery .text {
+              padding-left: 10px;
+              font-size: 14px;
+            }
+            .estimated-delivery .js-shipping-time {
+              text-decoration: underline;
+              text-decoration-style: dashed;
+              text-underline-position: under;
+              text-decoration-color: inherit;
+            }
+            .eta-note {
+              font-style: italic;
+            }
+          </style>
           {% if section.settings.product_description_position == "top" %}
             {% if product.description != blank %}
               <div class="description">
