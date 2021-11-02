@@ -910,7 +910,7 @@
           "display_type": false,
           "display_tags": false,
           "display_social_buttons": true,
-          "product_description_position": "bottom_left",
+          "product_description_position": "bottom",
           "display_savings": false,
           "show_payment_button": false,
           "product_images_position": "left",
