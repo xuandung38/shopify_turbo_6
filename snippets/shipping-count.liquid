@@ -30,9 +30,7 @@
   }
 </style>
 <script>
-  $(function() {
-    showEstimatedDelivery();
-});
+$( document ).ready( showEstimatedDelivery ); 
 
 function showEstimatedDelivery() {
     const estDelEls = document.querySelectorAll(".estimate-shipping-time");
