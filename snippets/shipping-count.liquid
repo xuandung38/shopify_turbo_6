@@ -30,25 +30,23 @@
   }
 </style>
 <script>
-  
-
-function showEstimatedDelivery() {
-    const estDelEls = document.querySelectorAll(".estimate-shipping-time");
-    if (!estDelEls || !estDelEls.length) {
-        return;
-    }
-    const [minDate, maxDate] = estimatedDeliveryRange();
-    const [minFormat, maxFormat] = [formatDate(minDate), formatDate(maxDate)];
-    let estimatedDelivery
-    if (minFormat === maxFormat) {
-        estimatedDelivery = minFormat;
-    } else {
-        estimatedDelivery = `${minFormat} &mdash; ${maxFormat}`;
-    }
-    document.querySelectorAll(".estimate-shipping-time").forEach((el) => {
-        el.innerHTML = estimatedDelivery;
-    })
-}
+  (function() {
+   const estDelEls = document.querySelectorAll(".estimate-shipping-time");
+      if (!estDelEls || !estDelEls.length) {
+          return;
+      }
+      const [minDate, maxDate] = estimatedDeliveryRange();
+      const [minFormat, maxFormat] = [formatDate(minDate), formatDate(maxDate)];
+      let estimatedDelivery
+      if (minFormat === maxFormat) {
+          estimatedDelivery = minFormat;
+      } else {
+          estimatedDelivery = `${minFormat} &mdash; ${maxFormat}`;
+      }
+      document.querySelectorAll(".estimate-shipping-time").forEach((el) => {
+          el.innerHTML = estimatedDelivery;
+      })
+  });
 
 const SATURDAY = 6
 const SUNDAY = 0
