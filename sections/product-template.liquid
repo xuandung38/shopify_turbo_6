@@ -70,97 +70,16 @@
           {% include 'product-images', video_looping: section.settings.video_looping, set_product_height: section.settings.set_product_height %}
        
           
-          <div class="tabs">
-            <input name="tabs" type="radio" id="tab-1" checked="checked" class="input" />
-             <label for="tab-1" class="label">Description</label>
-             <div class="panel">
-                {% if product.description != blank %}
-                  {{ product.description | split: '<!-- split -->' | first }}
-               {% endif %}
-            </div>
-
-             <input name="tabs" type="radio" id="tab-2" class="input" />
-             <label for="tab-2" class="label">Shipping & Refund</label>
-             <div class="panel">
-                  <h1>Two</h1>
-                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam non aut ea tempora cum consequatur, corrupti consectetur quasi at recusandae?</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit neque, obcaecati nulla tempore adipisci iure totam! Qui voluptatem iusto nobis.</p>
-             </div>
-
-             <input name="tabs" type="radio" id="tab-3" class="input" />
-             <label for="tab-3" class="label">Why Choose Us</label>
-             <div class="panel">
-                  <h1>Three</h1>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam cum, expedita sunt velit autem dolor fugit consequatur placeat voluptas quibusdam ducimus excepturi quia a distinctio! Nesciunt accusantium quaerat in laborum!</p>
-             </div>
-        </div>
-          <style>
-            * {
-                 box-sizing: border-box;
-            }
-
-            .tabs {
-                 display: flex;
-                 flex-wrap: wrap;
-                 max-width: 700px;
-            }
-
-            .tabs .input {
-                 position: absolute;
-                 opacity: 0;
-            }
-
-            .tabs .label {
-                 width: 100%;
-                 padding: 20px 30px;
-                 cursor: pointer;
-                 font-weight: bold;
-                 font-size: 18px;
-                 color: #7f7f7f;
-                 transition: background 0.1s, color 0.1s;
-            }
-
-            .tabs .label:hover {
-                 background: #d8d8d8;
-            }
-
-            .tabs .label:active {
-                 background: #ccc;
-            }
-
-            .tabs .input:focus + .label {
-                 z-index: 1;
-            }
-
-            .tabs .input:checked + .label {
-                 border-bottom: solid #000;
-                 color: #000;
-            }
-
-            .tabs .panel {
-                 display: none;
-                 padding: 20px 30px 30px;
-                 background: #fff;
-            }
-
-            @media (min-width: 600px) {
-                 .tabs .label {
-                      width: auto;
-                 }
-
-                 .tabs .panel {
-                      order: 99;
-                 }
-            }
-
-            .tabs .input:checked + .label + .panel {
-                 display: block;
-              	 width: 100%;
-            }
-
-          </style>
+        
 <!-- Original at https://kyusuf.com/post/completely-css-tabs/ -->
-         
+          {% if section.settings.product_description_position == "bottom_left" %}
+            {% if product.description != blank %}
+              <div class="description">
+                {{ product.description | split: '<!-- split -->' | first }}
+              </div>
+              
+            {% endif %}
+          {% endif %}
         </div>
 
         <div class="seven columns medium-down--one-whole  {% if section.settings.product_images_position == 'left' %}omega{% else %}alpha{% endif %}">
