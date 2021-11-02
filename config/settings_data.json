@@ -932,6 +932,7 @@
           "rv_per": 4,
           "toggle": false,
           "display_estimated_delivery": true,
+          "ed_icon": "shopify:\/\/shop_images\/delivery.png",
           "ed_min_workday": 6,
           "ed_max_workday": 10
         }
