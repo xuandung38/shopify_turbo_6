@@ -68,12 +68,16 @@
 
         <div class="nine product__images columns medium-down--one-whole {% if section.settings.product_images_position == 'left' %}alpha{% else %}omega{% endif %}">
           {% include 'product-images', video_looping: section.settings.video_looping, set_product_height: section.settings.set_product_height %}
-           {% if product.description != blank %}
+       
+          
+          {% if section.settings.product_description_position == "bot_right" %}
+            {% if product.description != blank %}
               <div class="description">
                 {{ product.description | split: '<!-- split -->' | first }}
               </div>
               
             {% endif %}
+          {% endif %}
         </div>
 
         <div class="seven columns medium-down--one-whole  {% if section.settings.product_images_position == 'left' %}omega{% else %}alpha{% endif %}">
