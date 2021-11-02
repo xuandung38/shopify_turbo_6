@@ -930,7 +930,10 @@
           "rv_products_style": "slider",
           "rv_max_display": 8,
           "rv_per": 4,
-          "toggle": false
+          "toggle": false,
+          "display_estimated_delivery": true,
+          "ed_min_workday": 6,
+          "ed_max_workday": 10
         }
       },
       "cart-template": {
