@@ -30,10 +30,8 @@
   }
 </style>
 <script>
-$( document ).ready( showEstimatedDelivery ); 
-
-function showEstimatedDelivery() {
-    const estDelEls = document.querySelectorAll(".estimate-shipping-time");
+window.addEventListener('load', function () {
+ const estDelEls = document.querySelectorAll(".estimate-shipping-time");
     if (!estDelEls || !estDelEls.length) {
         return;
     }
@@ -48,7 +46,7 @@ function showEstimatedDelivery() {
     document.querySelectorAll(".estimate-shipping-time").forEach((el) => {
         el.innerHTML = estimatedDelivery;
     })
-}
+}, false);
 
 const SATURDAY = 6
 const SUNDAY = 0
