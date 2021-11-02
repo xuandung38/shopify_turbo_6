@@ -69,7 +69,14 @@
         <div class="nine product__images columns medium-down--one-whole {% if section.settings.product_images_position == 'left' %}alpha{% else %}omega{% endif %}">
           {% include 'product-images', video_looping: section.settings.video_looping, set_product_height: section.settings.set_product_height %}
         </div>
-
+{% if product.description contains "<!-- split -->"  %}
+        <br class="clear" />
+        <div class="section clearfix">
+          <div class="description">
+            {{ product.description | split: '<!-- split -->' | last }}
+          </div>
+        </div>
+      {% endif %}
         <div class="seven columns medium-down--one-whole  {% if section.settings.product_images_position == 'left' %}omega{% else %}alpha{% endif %}">
 
           {% assign collection_handles = product.collections | map: 'handle' %}
@@ -263,14 +270,7 @@
         {% comment %}End automatically added Judge.me widget{% endcomment %}
         
 
-      {% if product.description contains "<!-- split -->"  %}
-        <br class="clear" />
-        <div class="section clearfix">
-          <div class="description">
-            {{ product.description | split: '<!-- split -->' | last }}
-          </div>
-        </div>
-      {% endif %}
+      
 
       {% if section.settings.review_position == "below_gallery" %}
         <div class="shopify-reviews reviewsVisibility--{{settings.enable_shopify_review_comments}}">
