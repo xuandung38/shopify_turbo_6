@@ -121,9 +121,6 @@
             <a href="javascript:;" class="size_chart" data-fancybox data-src="#size-chart{{product.id}}" data-type="inline" data-no-instant>{{ 'products.product.size_chart' | t }} <span class="icon-right-arrow"></span></a>
           {% endif %}
           
-         {% if section.settings.display_estimated_delivery %}
-         	  {% include 'shipping-count' %}
-     	 {% endif %}
           
           <!-- Group Product -->
           {% if section.settings.product_grouping_products and has_group_tags %}
@@ -171,6 +168,12 @@
               </div>
             </div>
           {% endif %}
+          
+          
+         {% if section.settings.display_estimated_delivery %}
+         	  {% include 'shipping-count' %}
+     	 {% endif %}
+          
           {% if section.settings.product_description_position == "top" %}
             {% if product.description != blank %}
               <div class="description">
