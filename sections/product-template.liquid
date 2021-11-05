@@ -288,11 +288,6 @@
             * {
                  box-sizing: border-box;
             }
-	
-            #fm-product-tabs{ 
-              
-                 display: none;
-            }
             
             .tabs {
                  display: flex;
@@ -343,9 +338,6 @@
             }
 
             @media (min-width: 600px) {
-               .tabs {
-              	 	margin-top: calc(-500px / 2);
-                 }
                  .tabs .label {
                       width: auto;
                  }
@@ -457,7 +449,7 @@
       if($(window).width() > 600) {
         var marginTopNTab = document.getElementById('fm-product-thumb').offsetHeight - document.getElementById('fm-product-form').offsetHeight + 40;
         console.log('marginTopNTab:', marginTopNTab);
-        document.getElementById('fm-product-tabs').style.cssText = "margin-top: "+ marginTopNTab+ "px; display: block;";
+        document.getElementById('fm-product-tabs').style.cssText = "margin-top: "+ marginTopNTab+ "px;";
       }
 }, false);
               
