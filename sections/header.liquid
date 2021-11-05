@@ -202,8 +202,9 @@
           <a href="{{ routes.cart_url }}" class="{% if section.settings.cart_icon == "cart" %}icon-cart{% else %}icon-bag{% endif %} {% if section.settings.show_mini_cart %}mini_cart dropdown_link{% endif %}" data-no-instant style="height: auto;">
             <span class="cart_count">{% include 'product-customizer-helper' with 'cart-item-count' %}</span>
           </a>
-           {% if section.settings.show_mini_cart %}
             {% unless settings.cart_action == 'ajax' and template contains 'cart' %}
+
+            {% if section.settings.show_mini_cart %}
               <div class="tos_warning cart_content animated fadeIn">
                 <div class="js-empty-cart__message {% if cart.item_count > 0 %}hidden{% endif %}">
                   <p class="empty_cart">{{ 'layout.general.empty_cart' | t }}</p>
@@ -360,8 +361,8 @@
                   </ul>
                 </form>
               </div>
+            {% endif %}
             {% endunless %}
-          {% endif %}
         </div>
       {% endif %}
       {% comment %}
@@ -578,8 +579,8 @@
     {
       "type": "checkbox",
       "id": "show_mini_cart",
-      "label": "Show mimi cart",
-      "default": false
+      "label": "Show mini cart",
+      "default": true
     },
     {
       "type": "select",
