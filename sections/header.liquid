@@ -81,7 +81,7 @@
 
         
           <div class="cart_container">
-            <a href="{{ routes.cart_url }}" class="{% if section.settings.cart_icon == "cart" %}icon-cart{% else %}icon-bag{% endif %} {% if section.settings.show_mini_cart %}mini_cart dropdown_link
+            <a href="{{ routes.cart_url }}" class="{% if section.settings.cart_icon == "cart" %}icon-cart{% else %}icon-bag{% endif %} mini_cart {% if section.settings.show_mini_cart %}dropdown_link
         {% endif %}" title="{{ 'layout.general.cart' | t | escape }}" data-no-instant> <span class="cart_count">{% include 'product-customizer-helper' with 'cart-item-count' %}</span></a>
           </div>
       {% endif %}
@@ -199,7 +199,7 @@
       
       {% if section.settings.show_cart %}
         <div class="cart_container clearfix">
-          <a href="{{ routes.cart_url }}" class="{% if section.settings.cart_icon == "cart" %}icon-cart{% else %}icon-bag{% endif %} {% if section.settings.show_mini_cart %}mini_cart dropdown_link{% endif %}" data-no-instant style="height: auto;">
+          <a href="{{ routes.cart_url }}" class="{% if section.settings.cart_icon == "cart" %}icon-cart{% else %}icon-bag{% endif %} mini_cart {% if section.settings.show_mini_cart %} dropdown_link{% endif %}" data-no-instant style="height: auto;">
             <span class="cart_count">{% include 'product-customizer-helper' with 'cart-item-count' %}</span>
           </a>
             {% unless settings.cart_action == 'ajax' and template contains 'cart' %}
