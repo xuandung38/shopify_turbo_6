@@ -449,7 +449,7 @@
   
               
   window.addEventListener('load', function () {
- 		let marginTopNTab = document.getElementById('fm-product-thumb').offsetHeight - document.getElementById('fm-product-form').offsetHeight;
+ 		let marginTopNTab = document.getElementById('fm-product-thumb').offsetHeight - document.getElementById('fm-product-form').offsetHeight + 40;
       console.log('marginTopNTab:', marginTopNTab);
       document.getElementById('fm-product-tabs').style.cssText = "margin-top: "+marginTopNTab+"px";
 }, false);
