@@ -446,6 +446,13 @@
   window.ShopifyXR=window.ShopifyXR||function(){(ShopifyXR.q=ShopifyXR.q||[]).push(arguments)}
     {% assign models = product.media | where: 'media_type', 'model' | json %}
     ShopifyXR('addModels', {{ models }});
+              
+    $(document).ready(function(){
+      let marginTopNTab = document.getElementById('fm-product-thumb').offsetHeight - document.getElementById('fm-product-form').offsetHeight + 200;
+      console.log(marginTopNTab);
+    });
+              
+              
 </script>
 {% schema %}
 
