@@ -453,7 +453,7 @@
     ShopifyXR('addModels', {{ models }});
   
               
-  window.addEventListener('load', function () {
+  window.addEventListener('DOMContentLoaded', function () {
       var marginTopNTab = document.getElementById('fm-product-thumb').offsetHeight - document.getElementById('fm-product-form').offsetHeight + 40;
       console.log('marginTopNTab:', marginTopNTab);
       document.getElementById('fm-product-tabs').style.cssText = "margin-top: "+ marginTopNTab+ "px; display: block;";
