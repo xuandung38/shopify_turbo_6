@@ -56,6 +56,7 @@
             <div class="eleven columns small-down--four-fifths omega cart_content_info cart__item--content">
               <h3 class="cart__item--title">
                 <a href="{{ item.url }}">{{ item.product.title }}
+                {% include 'product-customizer-helper' %}
               <!-- **BEGIN** Hextom USB Integration // Cart Include - DO NOT MODIFY -->
                   {% render 'hextom_usb_cart', item: item %}
                   <!-- **END** Hextom USB Integration // Cart Include - DO NOT MODIFY -->
