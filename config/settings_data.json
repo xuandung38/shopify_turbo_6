@@ -740,7 +740,7 @@
           "social_icons_header": false,
           "phone_number": "Email us : support@familypanda.co",
           "top_bar_menu": "",
-          "show_cart": false,
+          "show_cart": true,
           "cart_icon": "cart",
           "logo_display_width": 150,
           "logo": "shopify:\/\/shop_images\/logo_panda_400_x_100_ca821ba0-f15b-4ab1-95a9-bd318b2850a4.png",
