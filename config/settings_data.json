@@ -911,7 +911,7 @@
           "display_type": false,
           "display_tags": false,
           "display_social_buttons": true,
-          "product_description_position": "bottom",
+          "product_description_position": "disable",
           "display_savings": false,
           "show_payment_button": false,
           "product_images_position": "left",
@@ -935,7 +935,10 @@
           "display_estimated_delivery": true,
           "ed_icon": "shopify:\/\/shop_images\/delivery.png",
           "ed_min_workday": 6,
-          "ed_max_workday": 10
+          "ed_max_workday": 10,
+          "display_tab_info": true,
+          "ti_shipping_and_refund": "<p>Text area can be used for special announcements or general information.<\/p>",
+          "ti_why_choose_us": "<p>Text area can be used for special announcements or general information.<\/p>"
         }
       },
       "cart-template": {
