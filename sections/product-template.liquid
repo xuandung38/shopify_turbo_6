@@ -289,6 +289,10 @@
                  box-sizing: border-box;
             }
 	
+            #fm-product-tabs{ 
+              
+                 display: none;
+            }
             
             .tabs {
                  display: flex;
@@ -452,7 +456,7 @@
   window.addEventListener('load', function () {
       var marginTopNTab = document.getElementById('fm-product-thumb').offsetHeight - document.getElementById('fm-product-form').offsetHeight + 40;
       console.log('marginTopNTab:', marginTopNTab);
-      document.getElementById('fm-product-tabs').style.cssText = "margin-top: "+ marginTopNTab+ "px";
+      document.getElementById('fm-product-tabs').style.cssText = "margin-top: "+ marginTopNTab+ "px; display: block;";
 }, false);
               
               
