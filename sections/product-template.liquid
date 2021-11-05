@@ -288,10 +288,7 @@
             * {
                  box-sizing: border-box;
             }
-			
-            #fm-product-tabs {
-                 display: none;
-            }
+	
             
             .tabs {
                  display: flex;
@@ -455,7 +452,6 @@
   window.addEventListener('load', function () {
       let marginTopNTab = document.getElementById('fm-product-thumb').offsetHeight - document.getElementById('fm-product-form').offsetHeight + 40;
       console.log('marginTopNTab:', marginTopNTab);
-      document.getElementById('fm-product-tabs').style.display = 'block';
       document.getElementById('fm-product-tabs').style.margin-top = marginTopNTab+"px";
 }, false);
               
