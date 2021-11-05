@@ -66,14 +66,14 @@
           >
       <div class="section product_section clearfix js-product_section {% if section.settings.product_images_position == 'right' %}align_right--images{% endif %}" data-rv-handle="{{ product.handle }}">
 
-        <div class="nine product__images columns medium-down--one-whole {% if section.settings.product_images_position == 'left' %}alpha{% else %}omega{% endif %}">
+        <div id="fm-product-thumb"  class="nine product__images columns medium-down--one-whole {% if section.settings.product_images_position == 'left' %}alpha{% else %}omega{% endif %}">
           {% include 'product-images', video_looping: section.settings.video_looping, set_product_height: section.settings.set_product_height %}
        	
           
 <!-- Original at https://kyusuf.com/post/completely-css-tabs/ -->
         </div>
 
-        <div class="seven columns medium-down--one-whole  {% if section.settings.product_images_position == 'left' %}omega{% else %}alpha{% endif %}">
+        <div id="fm-product-form" class="seven columns medium-down--one-whole  {% if section.settings.product_images_position == 'left' %}omega{% else %}alpha{% endif %}">
 
           {% assign collection_handles = product.collections | map: 'handle' %}
           {% assign variant = product.selected_or_first_available_variant %}
@@ -261,8 +261,8 @@
           <!-- Group Product -->
         </div>
       
-        <div class="columns medium-down--one-whole  {% if section.settings.product_images_position == 'left' %}omega{% else %}alpha{% endif %}">
-		{% if section.settings.display_tab_info == true %}
+		    {% if section.settings.display_tab_info == true %}
+        <div id="fm-product-tabs"  class="columns medium-down--one-whole  {% if section.settings.product_images_position == 'left' %}omega{% else %}alpha{% endif %}">
           <div class="tabs">
             <input name="tabs" type="radio" id="tab-1" checked="checked" class="input" />
              <label for="tab-1" class="label">Description</label>
@@ -357,8 +357,8 @@
 
           </style>
           
-        {% endif %}	
         </div>
+        {% endif %}	
         {% comment %}Start automatically added Judge.me widget{% endcomment %}
           {% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: true, product: product %}
         {% comment %}End automatically added Judge.me widget{% endcomment %}
