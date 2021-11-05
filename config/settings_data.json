@@ -850,11 +850,32 @@
               "text_align": "center",
               "mobile_image_crop": "none"
             }
+          },
+          "a9eb43e4-0535-44d1-9419-5121ecc7b60f": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Family_Panda_Banner_1800x1000_de559b9c-3b70-4b3d-b7df-c57cd0e7511c.jpg",
+              "pretext": "",
+              "title": "",
+              "subtitle": "",
+              "caption_background": false,
+              "caption_background_transparency": false,
+              "button1": "",
+              "button1_link": "https:\/\/familypanda.co\/pages\/e-message-cards",
+              "button1_highlight": false,
+              "button2": "",
+              "button2_link": "",
+              "button2_highlight": false,
+              "text_position": "center",
+              "text_align": "center",
+              "mobile_image_crop": "none"
+            }
           }
         },
         "block_order": [
           "1489599925759",
-          "1489594068647"
+          "1489594068647",
+          "a9eb43e4-0535-44d1-9419-5121ecc7b60f"
         ],
         "settings": {
           "wide_display": false,
