@@ -78,9 +78,12 @@
         <a href="{{ routes.search_url }}" class="icon-search dropdown_link" title="{{ 'general.search.title' | t | escape }}" data-dropdown-rel="search"></a>
       {% endif %}
       {% if section.settings.show_cart %}
-        <div class="cart_container">
-          <a href="{{ routes.cart_url }}" class="{% if section.settings.cart_icon == "cart" %}icon-cart{% else %}icon-bag{% endif %} mini_cart dropdown_link" title="{{ 'layout.general.cart' | t | escape }}" data-no-instant> <span class="cart_count">{% include 'product-customizer-helper' with 'cart-item-count' %}</span></a>
-        </div>
+
+        
+          <div class="cart_container">
+            <a href="{{ routes.cart_url }}" class="{% if section.settings.cart_icon == "cart" %}icon-cart{% else %}icon-bag{% endif %} {% if section.settings.show_mini_cart %}mini_cart dropdown_link
+        {% endif %}" title="{{ 'layout.general.cart' | t | escape }}" data-no-instant> <span class="cart_count">{% include 'product-customizer-helper' with 'cart-item-count' %}</span></a>
+          </div>
       {% endif %}
     </div>
 
@@ -569,6 +572,12 @@
       "id": "show_cart",
       "label": "Show cart",
       "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_mini_cart",
+      "label": "Show mimi cart",
+      "default": false
     },
     {
       "type": "select",
