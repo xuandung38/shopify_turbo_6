@@ -91,3 +91,13 @@
    </style>
 
 </div>
+
+<script>        
+window.addEventListener('load', function () {
+      if($(window).width() > 600) {
+        var marginTopNTab = ((document.getElementById('fm-product-thumb').offsetHeight - document.getElementById('fm-product-form').offsetHeight) - 200);
+        console.log('marginTopNTab:', marginTopNTab);
+        document.getElementById('fm-product-tabs').style.cssText = "margin-top: "+ marginTopNTab+ "px;";
+      }
+}, false);
+</script>
