@@ -245,7 +245,12 @@
               {% endif %}
             </div>
           {% endif %}
-
+			
+         {% if section.settings.show_trust_badge %}
+          <div class="meta">
+         	  {% include 'trust-badge' %}
+          </div>
+     	 {% endif %}
           <div class="meta">
             {% if section.settings.display_social_buttons %}
               {% include "social-buttons" with "product" %}
@@ -879,6 +884,33 @@
       "id": "ti_why_choose_us",
       "label": "Content Why Choose Us",
 	  "default": "<p>Text area can be used for special announcements or general information.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Trust Bage"
+    },
+    {
+      "type": "paragraph",
+      "content": "Cài đặt trust bage"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_trust_bage",
+      "label": "Show trust bage box",
+      "default": false
+    },
+
+      {
+        "type": "image_picker",
+        "id": "trust_bage_img",
+        "label": "Icon",
+        "info": "Trust bage image"
+      },
+    {
+      "type": "html",
+      "id": "trust_bage_text",
+      "label": "Trust bage content",
+      "default": "<p>Text area can be used for special announcements or general information.</p>"
     }
   ],
   "blocks": [
