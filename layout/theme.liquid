@@ -322,6 +322,12 @@
 
 {% render 'special-offers' %}
 
+{% comment %}
+<!--     Đoạn này gây lỗi cho customily -->
+{% render 'oneclickupsellapp-theme', oneclickupsellapp: oneclickupsellapp %}
+    
+{% endcomment %}
+    
 {% assign oneclickupsellapp = true %}
 {% include 'adroll' %}
 </body>
