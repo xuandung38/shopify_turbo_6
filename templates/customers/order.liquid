@@ -37,9 +37,9 @@
       </thead>
       <tbody>
         {% for line_item in order.line_items %}
-        <tr id="{{ line_item.id }}" style="{% include 'product-customizer-helper' with 'hide-pricing-item-row', item: line_item %}">
+        <tr id="{{ line_item.id }}">
           <td>
-            {{ line_item.title | link_to: line_item.product.url }} {% include 'product-customizer-helper', item: line_item %}
+            {{ line_item.title | link_to: line_item.product.url }}
             {% if line_item.fulfillment %}
               <div class="note">
                 {% assign created_at = line_item.fulfillment.created_at | date: "%b %d" %}
@@ -56,7 +56,7 @@
               <span class="money">{{ line_item.final_price | money }}</span>
               {% if line_item.line_level_discount_allocations != blank %}
                 <span class="money {% if line_item.line_level_discount_allocations != blank %}was_price{% endif %}">
-                  {% include 'product-customizer-helper' with 'item-price', item: line_item, items: order.line_items %}
+                  {{ line_item.original_price | money }}
                 </span>
                 {% for discount_allocation in line_item.line_level_discount_allocations %}
                   <span class="order-details__discount meta">
@@ -66,14 +66,13 @@
               {% endif %}
             </div>
           </td>
-          <td class="text-right">{% capture item_price %}{% include 'product-customizer-helper' with 'item-price', item: line_item, items: order.line_items, raw: true %}{% endcapture %}
-            {{ line_item.quantity | times: item_price | money }}</td>
+          <td class="text-right">{{ line_item.quantity }}</td>
           <td class="text-right">
             {% if line_item.line_level_discount_allocations != blank %}
               <span class="order-discount money">{{ line_item.final_line_price | money }}</span>
             {% endif %}
             <span class="money {% if line_item.line_level_discount_allocations != blank %}was_price{% endif %}">
-              {{% include 'product-customizer-helper' with 'item-price', item: line_item, items: order.line_items %}
+              {{ line_item.original_line_price | money }}
             </span>
           </td>
         </tr>

@@ -46,7 +46,7 @@
             {% assign total_saving = saving | plus: total_saving %}
           {% endif %}
 
-          <div class="section clearfix cart__item" data-cart-item data-line-id="{{ forloop.index }}" data-variant-id="{{ item.id }}" style="{% include 'product-customizer-helper' with 'hide-pricing-item-row' %}" {% include 'product-customizer-helper' with 'cart-row-data' %}>
+          <div class="section clearfix cart__item" data-cart-item data-line-id="{{ forloop.index }}" data-variant-id="{{ item.id }}">
             <div class="five columns small-down--one-fifth alpha cart__item--image">
               <a href="{{ item.url }}" title="{{ item.title | escape }}" class="cart_page_image">
                 {% include 'image-element', image: item.product.featured_media.preview_image, alt: item.title, object_fit: settings.align_height, max_height: settings.collection_height %}
@@ -55,7 +55,7 @@
 
             <div class="eleven columns small-down--four-fifths omega cart_content_info cart__item--content">
               <h3 class="cart__item--title">
-                <a href="{{ item.url }}">{{ item.product.title }} {% include 'product-customizer-helper' %}
+                <a href="{{ item.url }}">{{ item.product.title }}
               <!-- **BEGIN** Hextom USB Integration // Cart Include - DO NOT MODIFY -->
                   {% render 'hextom_usb_cart', item: item %}
                   <!-- **END** Hextom USB Integration // Cart Include - DO NOT MODIFY -->
@@ -93,9 +93,9 @@
 
               <p class="modal_price">
                 {% if item.price > 0 %}
-                  <span class="money {% if item.price < item.variant.compare_at_price or item.line_level_discount_allocations.size > 0 %}sale{% endif %}">
-                    {% include 'product-customizer-helper' with 'item-price', items: cart.items %}
-                  </span>
+                <span class="money {% if item.price < item.variant.compare_at_price or item.line_level_discount_allocations.size > 0 %}sale{% endif %}">
+                  {{ item.final_price | money }}
+                </span>
                 
                   {% if item.price < item.variant.compare_at_price or item.line_level_discount_allocations.size > 0 %}
                     <span class="money was_price">
@@ -125,16 +125,16 @@
               <p class="price_total">
                 <strong>{{ 'cart.general.total' | t }}:</strong>
                 {% if item.line_level_discount_allocations.size > 0 %}
-                  <span class="">
-                    {% include 'product-customizer-helper' with 'item-line-price', items: cart.items %}
+                  <span class="money">
+                    {{ item.final_line_price | money }}
                   </span>
                 {% endif %}
                 <span class="money {% if item.line_level_discount_allocations.size > 0 %}was_price{% endif %}">
-                  {% include 'product-customizer-helper' with 'item-line-price', items: cart.items %}
+                  {{ item.original_line_price | money }}
                 </span>
               </p>
 
-              <a href="{% include 'product-customizer-helper' with 'remove-from-cart-href' %}" class="cart__remove-btn" data-line-id="{{ forloop.index }}" data-remove-item="cart-template"><span class="remove-text">{{ 'cart.general.remove' | t }}</span> <span class="remove-icon"></span></a>
+              <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&amp;quantity=0" class="cart__remove-btn" data-line-id="{{ forloop.index }}" data-remove-item="cart-template"><span class="remove-text">{{ 'cart.general.remove' | t }}</span> <span class="remove-icon"></span></a>
 
             </div>
           </div>
@@ -333,4 +333,3 @@
 }
 
 {% endschema %}
-{% include 'product-customizer-helper' with 'product-customizer-script' %}
