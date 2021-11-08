@@ -189,6 +189,12 @@
           {% endunless %}
 
         
+         {% if section.settings.show_trust_badge %}
+          <hr>
+          <div class="meta">
+         	  {% include 'trust-badge' %}
+          </div>
+     	 {% endif %}
          {% if section.settings.display_estimated_delivery %}
          	  {% include 'shipping-count' %}
      	 {% endif %}
@@ -245,12 +251,6 @@
             </div>
           {% endif %}
 			
-         {% if section.settings.show_trust_badge %}
-          <hr>
-          <div class="meta">
-         	  {% include 'trust-badge' %}
-          </div>
-     	 {% endif %}
           <div class="meta">
             {% if section.settings.display_social_buttons %}
               {% include "social-buttons" with "product" %}
