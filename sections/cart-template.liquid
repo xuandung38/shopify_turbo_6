@@ -230,7 +230,9 @@
     </div>
   </form>
 
-<!-- start Recomatic code --><div class="container"><div class="related-products__title sixteen columns"> <h4 class="title center">{{ shop.metafields.recomatic.cart.headline }}</h4> <div class="feature_divider"><div id="recomatic-related-products" data-widget="cart" data-product-ids="[{{ cart.items | map: 'product' | map: 'id' | join: ', ' }}]"></div></div></div><div class="clear"></div></div><!-- end Recomatic code -->
+<!-- start Recomatic code -->
+<div class="container"><div class="related-products__title sixteen columns"> <h4 class="title center">{{ shop.metafields.recomatic.cart.headline }}</h4> <div class="feature_divider"><div id="recomatic-related-products" data-widget="cart" data-product-ids="[{{ cart.items | map: 'product' | map: 'id' | join: ', ' }}]"></div></div></div><div class="clear"></div></div>
+<!-- end Recomatic code -->
 
   {% include 'cart-shipping-calculator' %}
 {% endif %}
