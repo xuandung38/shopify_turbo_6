@@ -50,7 +50,7 @@
                   product-{{ product.id }}">
         <div class="product-wrap">
           <div class="relative product_image">
-            <a href="{{ product.url | within: collection }}">
+            <a href="{{ product.url }}">
               <div class="image__container">
                 {% include 'image-element', image: product.featured_media.preview_image, alt: alt_text, object_fit: settings.align_height, max_height: section.settings.collection_height %}
                 {% if settings.collection_secondary_image != blank and product.media[1] != blank %}
@@ -78,7 +78,7 @@
               {% include 'collection-swatch' %}
             {% endif %}
           </div>
-          <a class="product-info__caption {% if settings.thumbnail_hover_enabled %}hidden{% endif %}" href="{{ product.url | within: collection }}">
+          <a class="product-info__caption {% if settings.thumbnail_hover_enabled %}hidden{% endif %}" href="{{ product.url }}">
             {% include "product-info" %}
           </a>
         </div>
