@@ -195,12 +195,13 @@
          	  {% include 'trust-badge' %}
           </div>
      	 {% endif %}
-          <div class="saso-bundle"></div>
           
          {% if section.settings.display_estimated_delivery %}
          	  {% include 'shipping-count' %}
      	 {% endif %}
 			
+          <div class="saso-bundle"></div>
+          
           {% if section.settings.product_description_position == "bottom" %}
             {% if product.description != blank %}
               <div class="description bottom">
