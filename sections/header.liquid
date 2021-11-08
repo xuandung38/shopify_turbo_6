@@ -2,6 +2,7 @@
 ** Header - default view **
 - Static section
 {% endcomment %}
+{% capture cart_item_count %}{% include 'product-customizer-helper' with 'cart-item-count' %}{% endcapture %}{% assign cart_item_count = cart_item_count | plus: 0 %}
 
 {% comment %} Structured data {% endcomment %}
 

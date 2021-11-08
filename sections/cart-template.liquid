@@ -46,7 +46,7 @@
             {% assign total_saving = saving | plus: total_saving %}
           {% endif %}
 
-          <div class="section clearfix cart__item" data-cart-item data-line-id="{{ forloop.index }}" data-variant-id="{{ item.id }}">
+          <div class="section clearfix cart__item" data-cart-item data-line-id="{{ forloop.index }}" data-variant-id="{{ item.id }}"  style="{% include 'product-customizer-helper' with 'hide-pricing-item-row' %}" {% include 'product-customizer-helper' with 'cart-row-data' %} >
             <div class="five columns small-down--one-fifth alpha cart__item--image">
               <a href="{{ item.url }}" title="{{ item.title | escape }}" class="cart_page_image">
                 {% include 'image-element', image: item.product.featured_media.preview_image, alt: item.title, object_fit: settings.align_height, max_height: settings.collection_height %}
@@ -65,6 +65,7 @@
               </a>
               </h3>
 
+              {% include 'product-customizer-helper' %}   
               {% unless item.product.has_only_default_variant or item.variant.title contains "Title" %}
                 <p class="meta">
                   {% for option in item.product.options %}
@@ -94,7 +95,7 @@
               <p class="modal_price">
                 {% if item.price > 0 %}
                 <span class="money {% if item.price < item.variant.compare_at_price or item.line_level_discount_allocations.size > 0 %}sale{% endif %}">
-                  {{ item.final_price | money }}
+                  <span class="saso-cart-item-price" data-key="{{item.key}}">{% include 'product-customizer-helper' with 'item-price', items: cart.items %}</span>
                 </span>
                 
                   {% if item.price < item.variant.compare_at_price or item.line_level_discount_allocations.size > 0 %}
