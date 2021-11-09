@@ -101,20 +101,20 @@
                 </p>
               {% endif %}
 
-              <p class="modal_price">
-                {% if item.price > 0 %}
-                  <span class="">
+              <p class="price_total">
+                <strong>{{ 'cart.general.total' | t }}:</strong>
+                {% if item.line_level_discount_allocations.size > 0 %}
+                  <span class="money">
                     <span class="saso-cart-item-price" data-key="{{item.key}}">
                       {% include 'product-customizer-helper' with 'item-price', items: cart.items %}
                     </span>
-                   </span>
+                  </span>
                 {% else %}
                   {{ settings.free_price_text }}
                 {% endif %}
-
-                {% if item.price < item.variant.compare_at_price %}
-                  <span class="money was_price">{{ item.variant.compare_at_price | money }}</span>
-                {% endif %}
+                <span class="money {% if item.line_level_discount_allocations.size > 0 %}was_price{% endif %}">
+                  {{ item.original_line_price | money }}
+                </span>
               </p>
 
               <div class="product-quantity-box left">
