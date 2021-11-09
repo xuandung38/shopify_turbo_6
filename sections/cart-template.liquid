@@ -46,7 +46,7 @@
           {% endif %}
 
           <div class="section clearfix cart__item" data-cart-item data-line-id="{{ forloop.index }}" data-variant-id="{{ item.id }}">
-            <div class="five columns small-down--one-fifth alpha cart__item--image">
+            <div class="three columns small-down--one-fifth alpha cart__item--image">
               <a href="{{ item.url }}" title="{{ item.title | escape }}" class="cart_page_image">
                 {% include 'image-element', image: item.product.featured_media.preview_image, alt: item.title, object_fit: settings.align_height, max_height: settings.collection_height %}
               </a>
