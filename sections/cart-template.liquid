@@ -15,21 +15,29 @@
 {% if cart.item_count == 0 %}
   <div class="sixteen columns">
     <div class="section clearfix">
-      <div class="six columns offset-by-five">
+      <div class="six columns offset-by-five medium-down--one-whole">
         <p class="quote">{{ 'cart.general.continue_browsing_html' | t }}</p>
 
-        <a href="{% if cart.items.first.product.collections != blank %}{{ cart.items.first.product.collections.last.url }}{% else %}/collections/all{% endif %}" class="action_button continue-button add_to_cart">{{ 'cart.general.continue_shopping_link_html' | t }}</a>
+        <a href="{% if cart.items.first.product.collections != blank %}{{ cart.items.first.product.collections.last.url }}{% else %}{{ routes.all_products_collection_url }}{% endif %}" class="action_button continue-button add_to_cart">{{ 'cart.general.continue_shopping_link_html' | t }}</a>
       </div>
       <br class="clear" />
     </div>
   </div>
 {% else %}
 
-  <script src="https://cdn.customily.com/shopify/static/customily.shopify.script.unified.js"></script>
-
-  <form action="/cart" method="post" id="cart_form">
+  <div class="sixteen columns hidden js-empty-cart__message">
     <div class="section clearfix">
-      <div class="ten columns">
+      <div class="six columns offset-by-five medium-down--one-whole">
+        <p class="quote">{{ 'cart.general.continue_browsing_html' | t }}</p>
+        <a href="{% if cart.items.first.product.collections != blank %}{{ cart.items.first.product.collections.last.url }}{% else %}{{ routes.all_products_collection_url }}{% endif %}" class="action_button continue-button add_to_cart">{{ 'cart.general.continue_shopping_link_html' | t }}</a>
+      </div>
+      <br class="clear" />
+    </div>
+  </div>
+
+  <form action="{{ routes.cart_url }}" method="post" id="cart_form" data-cart-form="cart-template" data-total-discount="{{ cart.total_discount }}">
+    <div class="section clearfix cart__wrapper">
+      <div class="eleven columns medium-down--one-whole">
         {% assign total_saving = 0 %}
         {% for item in cart.items %}
           {% if item.variant.compare_at_price > item.variant.price %}
@@ -37,33 +45,22 @@
             {% assign total_saving = saving | plus: total_saving %}
           {% endif %}
 
-          <div style="{% include 'product-customizer-helper' with 'hide-pricing-item-row' %}" {% include 'product-customizer-helper' with 'cart-row-data' %} class="section clearfix">
-            <div class="three columns alpha">
+          <div class="section clearfix cart__item" data-cart-item data-line-id="{{ forloop.index }}" data-variant-id="{{ item.id }}">
+            <div class="five columns small-down--one-fifth alpha cart__item--image">
               <a href="{{ item.url }}" title="{{ item.title | escape }}" class="cart_page_image">
-                <img  src="{{ item | img_url: '100x' }}"
-                      alt="{{ item.title | escape }}"
-                      class="lazyload {{ settings.image_loading_style }}"
-                      style="max-width: {{- item.image.width -}}px"
-                      data-sizes="auto"
-                      data-src="{{ item | img_url: '900x' }}"
-                      data-srcset=" {{ item | img_url: '300x' }} 300w,
-                                    {{ item | img_url: '600x' }} 600w,
-                                    {{ item | img_url: '900x' }} 900w"
-                       />
+                {% include 'image-element', image: item.product.featured_media.preview_image, alt: item.title, object_fit: settings.align_height, max_height: settings.collection_height %}
               </a>
             </div>
 
-            <div class="eleven columns omega cart_content_info">
-              <h3>
-                <a href="{{ item.url }}">{{ item.product.title }}
-<!-- **BEGIN** Hextom USB Integration // Cart Include - DO NOT MODIFY -->
-    {% render 'hextom_usb_cart', item: item %}
-    <!-- **END** Hextom USB Integration // Cart Include - DO NOT MODIFY -->
-
-<span class="saso-cart-item-discount-notes" data-key="{{item.key}}"></span>
-<span class="saso-cart-item-upsell-notes" data-key="{{item.key}}"></span>
-                                </a>
+            <div class="eleven columns small-down--four-fifths omega cart_content_info cart__item--content">
+              <h3 class="cart__item--title">
+                 <a href="{{ item.url }}">{{ item.product.title }}
+                        {% render 'hextom_usb_cart', item: item %}
+                        <span class="saso-cart-item-discount-notes" data-key="{{item.key}}"></span>
+                        <span class="saso-cart-item-upsell-notes" data-key="{{item.key}}"></span>
+                 </a>
               </h3>
+              
               {% include 'product-customizer-helper' %}   
               {% unless item.product.has_only_default_variant or item.variant.title contains "Title" %}
                 <p class="meta">
@@ -73,9 +70,8 @@
                 </p>
               {% endunless %}
 
-              {% if item.properties and false %}
+              {% if item.properties %}
                 <p>
-                    {%comment%}
                   {% for p in item.properties %}
                     {% unless p.last == blank %}
                       {% if p.last contains '/uploads/' %}
@@ -89,66 +85,102 @@
                       {% endif %}
                     {% endunless %}
                   {% endfor %}
-                  {% endcomment %}
                 </p>
               {% endif %}
 
               <p class="modal_price">
                 {% if item.price > 0 %}
-                  <span class="">
-<span class="saso-cart-item-price" data-key="{{item.key}}">
-  {% include 'product-customizer-helper' with 'item-price', items: cart.items %}<
-  /span>
-</span>
+                  <span class="money {% if item.price < item.variant.compare_at_price or item.line_level_discount_allocations.size > 0 %}sale{% endif %}">
+                    {{ item.final_price | money }}
+                  </span>
+                  {% if item.price < item.variant.compare_at_price or item.line_level_discount_allocations.size > 0 %}
+                    <span class="money was_price">
+                      {{ item.variant.compare_at_price | money }}
+                    </span>
+                  {% endif %}
                 {% else %}
-                  {{ settings.free_price_text }}
-                {% endif %}
-
-                {% if item.price < item.variant.compare_at_price %}
-                  <span class="money was_price">{{ item.variant.compare_at_price | money }}</span>
+                    {{ settings.free_price_text }}
                 {% endif %}
               </p>
 
+              {% if item.line_level_discount_allocations.size > 0 %}
+                {% for discount_allocation in item.line_level_discount_allocations %}
+                  <p class="meta cart__item--discount">
+                    <span class="label">{{ 'cart.general.discount' | t }}:</span>
+                    {{ discount_allocation.discount_application.title }} (-<span class="money">{{ discount_allocation.amount | money }}</span>)
+                  </p>
+                {% endfor %}
+              {% endif %}
+
               <div class="product-quantity-box left">
                 <span class="ss-icon product-minus js-change-quantity" data-func="minus"><span class="icon-minus"></span></span>
-                <input type="number" min="0" size="2" class="quantity" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" data-line-id="{{ forloop.index }}" {% if settings.limit_quantity and item.variant.inventory_management != blank and item.variant.inventory_quantity > 0 and item.variant.inventory_policy == "deny" %}max="{{ item.variant.inventory_quantity }}"{% endif %} />
+                <input type="number" min="0" size="2" class="quantity" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" data-cart-quantity-input="cart-template" {% if settings.limit_quantity and item.variant.inventory_management != blank and item.variant.inventory_quantity > 0 and item.variant.inventory_policy == "deny" %}max="{{ item.variant.inventory_quantity }}"{% endif %} />
                 <span class="ss-icon product-plus js-change-quantity" data-func="plus"><span class="icon-plus"></span></span>
               </div>
+
+              <p class="price_total">
+                <strong>{{ 'cart.general.total' | t }}:</strong>
+                {% if item.line_level_discount_allocations.size > 0 %}
+                  <span class="money">
+                    <span class="saso-cart-item-price" data-key="{{item.key}}">
+                      {% include 'product-customizer-helper' with 'item-price', items: cart.items %}
+                    </span>
+                  </span>
+                {% endif %}
+                <span class="money {% if item.line_level_discount_allocations.size > 0 %}was_price{% endif %}">
+                  {{ item.original_line_price | money }}
+                </span>
+              </p>
+
+              <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&amp;quantity=0" class="cart__remove-btn" data-line-id="{{ forloop.index }}" data-remove-item="cart-template"><span class="remove-text">{{ 'cart.general.remove' | t }}</span> <span class="remove-icon"></span></a>
             </div>
           </div>
         {% endfor %}
       </div>
 
-      <div class="five columns offset-by-one">
+      <div class="five columns medium-down--one-whole">
         <div class="section clearfix">
           <div class="subtotal">
+
+            {% if cart.cart_level_discount_applications != blank %}
+              <p class="cart_discounts js-cart_discounts sale">
+              {% for discount_application in cart.cart_level_discount_applications %}
+                <span class="cart_discounts--title">{{ discount_application.title }}</span>
+                <span class="cart_discounts--price">
+                  -<span class="money">{{ discount_application.total_allocated_amount | money }}</span>
+                </span>
+              {% endfor %}
+
+              </p>
+
+            {% endif %}
+
             <p class="cart_subtotal js-cart_subtotal">
               <span class="right">
-                
-                <span class="saso-cart-original-total"><span class="">{{ cart.total_price | money }}</span></span>
-                <span class="saso-cart-total"></span>
-
+                <span class="money">
+                  <span class="saso-cart-original-total"><span class="">{{ cart.total_price | money }}</span></span>
+                  <span class="saso-cart-total"></span></span>
               </span>
               <span>{{ 'cart.general.subtotal' | t }}</span>
             </p>
 
-            {% if section.settings.display_savings %}
-              <p class="cart_savings sale">
-                {% if total_saving > 0 %}
-                  <span class="right">
-                    <span class="">{{ total_saving | money }}</span>
-                  </span>
-                  <span>{{ 'layout.general.savings' | t }}</span>
-                {% endif %}
+            {% if section.settings.display_savings and total_saving > 0 or section.settings.display_savings and cart.total_discount > 0 %}
+              <p class="cart_savings js-cart_savings sale">
+                <span class="right">
+                  <span class="money">{{ total_saving | plus: cart.total_discount | money }}</span>
+                </span>
+                <span>{{ 'layout.general.savings' | t }}</span>
               </p>
             {% endif %}
 
             {% if settings.show_multiple_currencies %}
-              <p>
-                <small>
-                  {{ 'cart.general.orders_processed_in_currency_html' | t: currency: shop.currency }}
-                </small>
-              </p>
+              {% unless shop.enabled_currencies.size > 1 %}
+                <p>
+                  <small>
+                    {{ 'cart.general.orders_processed_in_currency_html' | t: currency: shop.currency }}
+                  </small>
+                </p>
+              {% endunless %}
             {% endif %}
 
             {% if section.settings.display_special_instructions %}
@@ -156,7 +188,7 @@
               <textarea id="note" name="note" rows="2">{{ cart.note }}</textarea>
             {% endif %}
 
-            {% if section.settings.display_tos_checkbox %}
+            {% if settings.display_tos_checkbox %}
               <p>
                 <input type="checkbox" class="tos_agree" id="cart_agree" required />
                   <label class="tos_label" for="cart_agree">
@@ -174,20 +206,18 @@
               </div>
             {% endif %}
 
-            <p>
-              <input type="submit" class="action_button add_to_cart" id="checkout" name="checkout" value="{{ 'cart.general.checkout' | t }}" />
+            <p class="tos_warning checkout_button">
+              <button type="submit" class="action_button add_to_cart" id="checkout" name="checkout">{% if settings.show_lock_icon %}<span class="icon-lock"></span>{% endif %}{{ 'cart.general.checkout' | t }}</button>
             </p>
 
-            {% if content_for_additional_checkout_buttons and settings.cart_action != 'ajax' %}
-              <div class="additional-checkout-buttons">
+            {% if content_for_additional_checkout_buttons %}
+              <div class="additional-checkout-buttons additional-checkout-buttons--vertical">
                 {{ content_for_additional_checkout_buttons }}
               </div>
             {% endif %}
 
             {% if cart.item_count > 0 %}
-              <div class="featured-links">
-                <a href="{% if cart.items.first.product.collections != blank %}{{ cart.items.first.product.collections.last.url }}{% else %}/collections/all{% endif %}" class="secondary_button">{{ 'cart.general.continue_shopping_link_html' | t }}</a>
-              </div>
+              <a href="{% if cart.items.first.product.collections != blank %}{{ cart.items.first.product.collections.last.url }}{% else %}{{ routes.all_products_collection_url }}{% endif %}" class="continue-shopping">{{ 'cart.general.continue_shopping_link_html' | t }}</a>
             {% endif %}
           </div>
         </div>
@@ -197,7 +227,6 @@
 
   {% include 'cart-shipping-calculator' %}
 {% endif %}
-
 
 </div>
 
