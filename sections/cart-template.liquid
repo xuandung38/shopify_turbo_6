@@ -92,19 +92,18 @@
                 </p>
               {% endif %}
 
+              
               <p class="modal_price">
                 {% if item.price > 0 %}
-                <span class="money {% if item.price < item.variant.compare_at_price or item.line_level_discount_allocations.size > 0 %}sale{% endif %}">
-                    {% include 'product-customizer-helper' with 'item-price', items: cart.items %}
-                </span>
-                
-                  {% if item.price < item.variant.compare_at_price or item.line_level_discount_allocations.size > 0 %}
-                    <span class="money was_price">
-                      {{ item.variant.compare_at_price | money }}
-                    </span>
-                  {% endif %}
+                  <span class="">
+                  <span class="saso-cart-item-price" data-key="{{item.key}}">{% include 'product-customizer-helper' with 'item-price', items: cart.items %}</span>
+                  </span>
                 {% else %}
-                    {{ settings.free_price_text }}
+                  {{ settings.free_price_text }}
+                {% endif %}
+
+                {% if item.price < item.variant.compare_at_price %}
+                  <span class="money was_price">{{ item.variant.compare_at_price | money }}</span>
                 {% endif %}
               </p>
 
