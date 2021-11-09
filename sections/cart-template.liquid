@@ -126,9 +126,9 @@
                 <strong>{{ 'cart.general.total' | t }}:</strong>
                 {% if item.line_level_discount_allocations.size > 0 %}
                   <span class="money">
-                    <span class="saso-cart-item-price" data-key="{{item.key}}">
+<!--                     <span class="saso-cart-item-price" data-key="{{item.key}}"> -->
                       {% include 'product-customizer-helper' with 'item-price', items: cart.items %}
-                    </span>
+<!--                     </span> -->
                   </span>
                 {% endif %}
                 <span class="money {% if item.line_level_discount_allocations.size > 0 %}was_price{% endif %}">
