@@ -55,12 +55,14 @@
             <div class="eleven columns small-down--four-fifths omega cart_content_info cart__item--content">
               <h3 class="cart__item--title">
                  <a href="{{ item.url }}">{{ item.product.title }}
-                        {% render 'hextom_usb_cart', item: item %}
-                        <span class="saso-cart-item-discount-notes" data-key="{{item.key}}"></span>
-                        <span class="saso-cart-item-upsell-notes" data-key="{{item.key}}"></span>
-                 </a>
+                  <!-- **BEGIN** Hextom USB Integration // Cart Include - DO NOT MODIFY -->
+                      {% render 'hextom_usb_cart', item: item %}
+                      <!-- **END** Hextom USB Integration // Cart Include - DO NOT MODIFY -->
+
+                  <span class="saso-cart-item-discount-notes" data-key="{{item.key}}"></span>
+                  <span class="saso-cart-item-upsell-notes" data-key="{{item.key}}"></span>
+                                                  </a>
               </h3>
-              
               {% include 'product-customizer-helper' %}   
               {% unless item.product.has_only_default_variant or item.variant.title contains "Title" %}
                 <p class="meta">
@@ -70,8 +72,9 @@
                 </p>
               {% endunless %}
 
-              {% if item.properties %}
+              {% if item.properties and false %}
                 <p>
+                    {%comment%}
                   {% for p in item.properties %}
                     {% unless p.last == blank %}
                       {% if p.last contains '/uploads/' %}
@@ -85,6 +88,7 @@
                       {% endif %}
                     {% endunless %}
                   {% endfor %}
+                  {% endcomment %}
                 </p>
               {% endif %}
 
