@@ -95,7 +95,7 @@
               <p class="modal_price">
                 {% if item.price > 0 %}
                 <span class="money {% if item.price < item.variant.compare_at_price or item.line_level_discount_allocations.size > 0 %}sale{% endif %}">
-                  <span class="saso-cart-item-price" data-key="{{item.key}}">{% include 'product-customizer-helper' with 'item-price', items: cart.items %}</span>
+                   {{ item.final_line_price | money }}
                 </span>
                 
                   {% if item.price < item.variant.compare_at_price or item.line_level_discount_allocations.size > 0 %}
