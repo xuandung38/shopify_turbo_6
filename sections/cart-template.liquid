@@ -126,9 +126,9 @@
                 <strong>{{ 'cart.general.total' | t }}:</strong>
                 {% if item.line_level_discount_allocations.size > 0 %}
                   <span class="money">
-<!--                     <span class="saso-cart-item-price" data-key="{{item.key}}"> -->
+                    <span class="saso-cart-item-price" data-key="{{item.key}}">
                       {% include 'product-customizer-helper' with 'item-price', items: cart.items %}
-<!--                     </span> -->
+                    </span>
                   </span>
                 {% endif %}
                 <span class="money {% if item.line_level_discount_allocations.size > 0 %}was_price{% endif %}">
@@ -161,9 +161,10 @@
 
             <p class="cart_subtotal js-cart_subtotal">
               <span class="right">
+                <span class="money">
                 <span class="saso-cart-original-total"><span class="">{{ cart.total_price | money }}</span></span>
                 <span class="saso-cart-total"></span>
-
+                </span>span>
               </span>
               <span>{{ 'cart.general.subtotal' | t }}</span>
             </p>
