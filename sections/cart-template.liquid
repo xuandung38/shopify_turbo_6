@@ -37,7 +37,7 @@
 
   <form action="{{ routes.cart_url }}" method="post" id="cart_form" data-cart-form="cart-template" data-total-discount="{{ cart.total_discount }}">
     <div class="section clearfix cart__wrapper">
-      <div class="ten columns medium-down--one-whole">
+      <div class="eleven columns medium-down--one-whole">
         {% assign total_saving = 0 %}
         {% for item in cart.items %}
           {% if item.variant.compare_at_price > item.variant.price %}
@@ -52,7 +52,7 @@
               </a>
             </div>
 
-            <div class="seven columns small-down--four-fifths omega cart_content_info cart__item--content">
+            <div class="nine columns small-down--four-fifths omega cart_content_info cart__item--content">
               <h3 class="cart__item--title">
                  <a href="{{ item.url }}">{{ item.product.title }}
                         {% render 'hextom_usb_cart', item: item %}
