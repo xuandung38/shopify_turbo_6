@@ -29,7 +29,7 @@
 
   <form action="/cart" method="post" id="cart_form">
     <div class="section clearfix">
-      <div class="ten columns">
+      <div class="eleven columns">
         {% assign total_saving = 0 %}
         {% for item in cart.items %}
           {% if item.variant.compare_at_price > item.variant.price %}
