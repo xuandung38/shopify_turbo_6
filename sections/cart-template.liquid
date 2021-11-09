@@ -25,7 +25,6 @@
   </div>
 {% else %}
 
-
   <div class="sixteen columns hidden js-empty-cart__message">
     <div class="section clearfix">
       <div class="six columns offset-by-five medium-down--one-whole">
@@ -46,8 +45,8 @@
             {% assign total_saving = saving | plus: total_saving %}
           {% endif %}
 
-          <div class="section clearfix cart__item" data-cart-item data-line-id="{{ forloop.index }}" data-variant-id="{{ item.id }}"  style="{% include 'product-customizer-helper' with 'hide-pricing-item-row' %}" {% include 'product-customizer-helper' with 'cart-row-data' %} >
-            <div class="five columns small-down--one-fifth alpha cart__item--image">
+          <div class="section clearfix cart__item" data-cart-item data-line-id="{{ forloop.index }}" data-variant-id="{{ item.id }}" style="{% include 'product-customizer-helper' with 'hide-pricing-item-row' %}" {% include 'product-customizer-helper' with 'cart-row-data' %}>
+            <div class="three columns small-down--one-fifth alpha cart__item--image">
               <a href="{{ item.url }}" title="{{ item.title | escape }}" class="cart_page_image">
                 {% include 'image-element', image: item.product.featured_media.preview_image, alt: item.title, object_fit: settings.align_height, max_height: settings.collection_height %}
               </a>
@@ -55,16 +54,15 @@
 
             <div class="eleven columns small-down--four-fifths omega cart_content_info cart__item--content">
               <h3 class="cart__item--title">
-                <a href="{{ item.url }}">{{ item.product.title }}
-              <!-- **BEGIN** Hextom USB Integration // Cart Include - DO NOT MODIFY -->
-                  {% render 'hextom_usb_cart', item: item %}
-                  <!-- **END** Hextom USB Integration // Cart Include - DO NOT MODIFY -->
+                 <a href="{{ item.url }}">{{ item.product.title }}
+                  <!-- **BEGIN** Hextom USB Integration // Cart Include - DO NOT MODIFY -->
+                      {% render 'hextom_usb_cart', item: item %}
+                      <!-- **END** Hextom USB Integration // Cart Include - DO NOT MODIFY -->
 
-              <span class="saso-cart-item-discount-notes" data-key="{{item.key}}"></span>
-              <span class="saso-cart-item-upsell-notes" data-key="{{item.key}}"></span>
-              </a>
+                  <span class="saso-cart-item-discount-notes" data-key="{{item.key}}"></span>
+                  <span class="saso-cart-item-upsell-notes" data-key="{{item.key}}"></span>
+                                                  </a>
               </h3>
-
               {% include 'product-customizer-helper' %}   
               {% unless item.product.has_only_default_variant or item.variant.title contains "Title" %}
                 <p class="meta">
@@ -74,8 +72,9 @@
                 </p>
               {% endunless %}
 
-              {% if item.properties %}
+              {% if item.properties and false %}
                 <p>
+                    {%comment%}
                   {% for p in item.properties %}
                     {% unless p.last == blank %}
                       {% if p.last contains '/uploads/' %}
@@ -89,15 +88,15 @@
                       {% endif %}
                     {% endunless %}
                   {% endfor %}
+                  {% endcomment %}
                 </p>
               {% endif %}
 
               <p class="modal_price">
                 {% if item.price > 0 %}
-                <span class="money {% if item.price < item.variant.compare_at_price or item.line_level_discount_allocations.size > 0 %}sale{% endif %}">
-                    {% include 'product-customizer-helper' with 'item-price', items: cart.items %}
-                </span>
-                
+                  <span class="money {% if item.price < item.variant.compare_at_price or item.line_level_discount_allocations.size > 0 %}sale{% endif %}">
+                    {{ item.final_price | money }}
+                  </span>
                   {% if item.price < item.variant.compare_at_price or item.line_level_discount_allocations.size > 0 %}
                     <span class="money was_price">
                       {{ item.variant.compare_at_price | money }}
@@ -112,7 +111,7 @@
                 {% for discount_allocation in item.line_level_discount_allocations %}
                   <p class="meta cart__item--discount">
                     <span class="label">{{ 'cart.general.discount' | t }}:</span>
-                    {{ discount_allocation.discount_application.title }} (-<span class="">{{ discount_allocation.amount | money }}</span>)
+                    {{ discount_allocation.discount_application.title }} (-<span class="money">{{ discount_allocation.amount | money }}</span>)
                   </p>
                 {% endfor %}
               {% endif %}
@@ -127,7 +126,9 @@
                 <strong>{{ 'cart.general.total' | t }}:</strong>
                 {% if item.line_level_discount_allocations.size > 0 %}
                   <span class="money">
-                    {{ item.final_line_price | money }}
+                    <span class="saso-cart-item-price" data-key="{{item.key}}">
+                      {% include 'product-customizer-helper' with 'item-price', items: cart.items %}
+                    </span>
                   </span>
                 {% endif %}
                 <span class="money {% if item.line_level_discount_allocations.size > 0 %}was_price{% endif %}">
@@ -136,7 +137,6 @@
               </p>
 
               <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&amp;quantity=0" class="cart__remove-btn" data-line-id="{{ forloop.index }}" data-remove-item="cart-template"><span class="remove-text">{{ 'cart.general.remove' | t }}</span> <span class="remove-icon"></span></a>
-
             </div>
           </div>
         {% endfor %}
@@ -151,7 +151,7 @@
               {% for discount_application in cart.cart_level_discount_applications %}
                 <span class="cart_discounts--title">{{ discount_application.title }}</span>
                 <span class="cart_discounts--price">
-                  -<span class="">{{ discount_application.total_allocated_amount | money }}</span>
+                  -<span class="money">{{ discount_application.total_allocated_amount | money }}</span>
                 </span>
               {% endfor %}
 
@@ -161,9 +161,8 @@
 
             <p class="cart_subtotal js-cart_subtotal">
               <span class="right">
-                
-              <span class="saso-cart-original-total"><span class="">{{ cart.total_price | money }}</span></span>
-              <span class="saso-cart-total"></span>
+                <span class="saso-cart-original-total"><span class="">{{ cart.total_price | money }}</span></span>
+                <span class="saso-cart-total"></span>
 
               </span>
               <span>{{ 'cart.general.subtotal' | t }}</span>
@@ -172,7 +171,7 @@
             {% if section.settings.display_savings and total_saving > 0 or section.settings.display_savings and cart.total_discount > 0 %}
               <p class="cart_savings js-cart_savings sale">
                 <span class="right">
-                  <span class="">{{ total_saving | plus: cart.total_discount | money }}</span>
+                  <span class="money">{{ total_saving | plus: cart.total_discount | money }}</span>
                 </span>
                 <span>{{ 'layout.general.savings' | t }}</span>
               </p>
@@ -229,10 +228,6 @@
       </div>
     </div>
   </form>
-
-<!-- start Recomatic code -->
-<div class="container"><div class="related-products__title sixteen columns"> <h4 class="title center">{{ shop.metafields.recomatic.cart.headline }}</h4> <div class="feature_divider"><div id="recomatic-related-products" data-widget="cart" data-product-ids="[{{ cart.items | map: 'product' | map: 'id' | join: ', ' }}]"></div></div></div><div class="clear"></div></div>
-<!-- end Recomatic code -->
 
   {% include 'cart-shipping-calculator' %}
 {% endif %}
