@@ -889,6 +889,19 @@
       },
       "collection-template": {
         "type": "collection-template",
+        "blocks": {
+          "8d704112-d492-4e4b-b82a-40d5d6d02c58": {
+            "type": "filter",
+            "settings": {
+              "filter_name": "Gifts Recipient",
+              "filter_tags": "for her, for wife, for him, for mom, for dad, for baby",
+              "enable_filter_swatches": true
+            }
+          }
+        },
+        "block_order": [
+          "8d704112-d492-4e4b-b82a-40d5d6d02c58"
+        ],
         "settings": {
           "wide_display": false,
           "featured_collection_image": false,
