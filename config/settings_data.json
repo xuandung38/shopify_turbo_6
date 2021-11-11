@@ -892,9 +892,10 @@
         "blocks": {
           "8d704112-d492-4e4b-b82a-40d5d6d02c58": {
             "type": "filter",
+            "disabled": true,
             "settings": {
               "filter_name": "Gifts Recipient",
-              "filter_tags": "for her, for wife, for him, for mom, for dad, for baby",
+              "filter_tags": "",
               "enable_filter_swatches": true
             }
           }
