@@ -897,10 +897,19 @@
               "filter_tags": "For dad, For step dad, For father in law, For expecting dad, For new dad, For dog dad, For mom, For step mom, For mother in law, For new mom, For mom to be, For daughter, For son, For Kids, For baby, For grandma, For grandpa",
               "enable_filter_swatches": true
             }
+          },
+          "a19ce6d7-4d1d-4366-ba68-c320fdc2053f": {
+            "type": "filter",
+            "settings": {
+              "filter_name": "Product type",
+              "filter_tags": "Canvas,\nPoster,\nOrnament,\nBlanket,\nPillow,\nMug,\nTumbler,\nT-shirt,\nHoodie,\nSweatshirt,\nBaby Onesie,\nNecklace,\nTote bags,",
+              "enable_filter_swatches": false
+            }
           }
         },
         "block_order": [
-          "8d704112-d492-4e4b-b82a-40d5d6d02c58"
+          "8d704112-d492-4e4b-b82a-40d5d6d02c58",
+          "a19ce6d7-4d1d-4366-ba68-c320fdc2053f"
         ],
         "settings": {
           "wide_display": false,
