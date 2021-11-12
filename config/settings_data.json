@@ -903,7 +903,7 @@
             "settings": {
               "filter_name": "Product type",
               "filter_tags": "Canvas,\nPoster,\nOrnament,\nBlanket,\nPillow,\nMug,\nTumbler,\nT-shirt,\nHoodie,\nSweatshirt,\nBaby Onesie,\nNecklace,\nTote bags,",
-              "enable_filter_swatches": false
+              "enable_filter_swatches": true
             }
           },
           "5d3726d4-220d-4266-ba72-c26b9f5f9be7": {
@@ -911,7 +911,7 @@
             "settings": {
               "filter_name": "Occasion",
               "filter_tags": "Anniversary,\nWedding,\nValentine's ,\nMother's Day,\nFather's Day,\nChristmas,\nMemorial",
-              "enable_filter_swatches": false
+              "enable_filter_swatches": true
             }
           }
         },
