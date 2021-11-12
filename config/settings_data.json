@@ -894,7 +894,7 @@
             "type": "filter",
             "settings": {
               "filter_name": "Gift Recipients",
-              "filter_tags": "For dad, \nFor step dad, \nFor father in law, \nFor expecting dad, For new dad, For dog dad, For mom, For step mom, For mother in law, For new mom, For mom to be, For daughter, For son, For Kids, For baby, For grandma, For grandpa, Memorial",
+              "filter_tags": "For dad, \nFor step dad, \nFor father in law, \nFor expecting dad, For new dad, For dog dad, For mom, For step mom, For mother in law, For new mom, For mom to be, For daughter, For son, For Kids, For baby, For grandma, For grandpa",
               "enable_filter_swatches": true
             }
           },
