@@ -1616,6 +1616,7 @@
             "type": "column",
             "settings": {
               "richtext_top": "",
+              "image_top": "shopify:\/\/shop_images\/demo.png",
               "image_caption_top": "",
               "image_link_top": "",
               "menu_1": "",
