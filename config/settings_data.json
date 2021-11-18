@@ -1614,6 +1614,7 @@
           },
           "1075e209-e472-4cb1-a67b-fdd036ca6670": {
             "type": "column",
+            "disabled": true,
             "settings": {
               "richtext_top": "",
               "image_top": "shopify:\/\/shop_images\/demo.png",
