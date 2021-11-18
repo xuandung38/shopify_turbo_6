@@ -1611,11 +1611,31 @@
               "image_link_bottom": "",
               "richtext_bottom": ""
             }
+          },
+          "1075e209-e472-4cb1-a67b-fdd036ca6670": {
+            "type": "column",
+            "settings": {
+              "richtext_top": "",
+              "image_caption_top": "",
+              "image_link_top": "",
+              "menu_1": "",
+              "menu_1_link": "",
+              "menu_2": "",
+              "menu_2_link": "",
+              "menu_3": "",
+              "menu_3_link": "",
+              "menu_4": "",
+              "menu_4_link": "",
+              "image_caption_bottom": "",
+              "image_link_bottom": "",
+              "richtext_bottom": ""
+            }
           }
         },
         "block_order": [
           "1497370093035",
-          "1497292597591"
+          "1497292597591",
+          "1075e209-e472-4cb1-a67b-fdd036ca6670"
         ],
         "settings": {
           "parent": "🎄 Christmas"
