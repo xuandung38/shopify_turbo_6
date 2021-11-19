@@ -875,6 +875,7 @@
           },
           "f7d31b89-e617-4c9b-b0b6-2520da60decf": {
             "type": "image",
+            "disabled": true,
             "settings": {
               "image": "shopify:\/\/shop_images\/bfcm.final.jpg",
               "pretext": "",
