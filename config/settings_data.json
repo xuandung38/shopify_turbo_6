@@ -834,7 +834,7 @@
           "d55dac6b-81ce-4767-83c5-24ff44832406": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/XMAS_PANDA_71585d9c-fd90-4471-89d1-805ea1a7ad45.jpg",
+              "image": "shopify:\/\/shop_images\/XMAS_PANDA.jpg",
               "pretext": "",
               "title": "",
               "subtitle": "",
@@ -1700,13 +1700,33 @@
               "image_link_bottom": "",
               "richtext_bottom": ""
             }
+          },
+          "d45f5ffa-9438-4ba4-bb61-52eb975a84d5": {
+            "type": "column",
+            "settings": {
+              "richtext_top": "",
+              "image_caption_top": "",
+              "image_link_top": "",
+              "menu_1": "gifts-for-animal-lover",
+              "menu_1_link": "",
+              "menu_2": "",
+              "menu_2_link": "",
+              "menu_3": "",
+              "menu_3_link": "",
+              "menu_4": "",
+              "menu_4_link": "",
+              "image_caption_bottom": "",
+              "image_link_bottom": "",
+              "richtext_bottom": ""
+            }
           }
         },
         "block_order": [
           "1497369953263",
           "1497331215349",
           "1497369901739",
-          "1497369814235"
+          "1497369814235",
+          "d45f5ffa-9438-4ba4-bb61-52eb975a84d5"
         ],
         "settings": {
           "parent": "Gifts for"
