@@ -2265,6 +2265,27 @@
               "feature_collection": "christmas-ornaments",
               "image": "shopify:\/\/shop_images\/Christmas_Ornaments.final_2d46227c-9dd8-4cf5-bd0a-dbcaa5e48721.jpg"
             }
+          },
+          "cd91ac39-8ed5-4590-bc3b-8cd26267f519": {
+            "type": "collection",
+            "settings": {
+              "feature_collection": "home-decor-canvas",
+              "image": "shopify:\/\/shop_images\/Canvas_-_Poster.final.jpg"
+            }
+          },
+          "2b5a67d0-ae3f-446f-803f-80f78a295c8e": {
+            "type": "collection",
+            "settings": {
+              "feature_collection": "coffee-mug",
+              "image": "shopify:\/\/shop_images\/Coffee_Mugs_-_Tumbler.final.jpg"
+            }
+          },
+          "2d6dbb6e-691e-40c1-9ab2-66e943fe7db0": {
+            "type": "collection",
+            "settings": {
+              "feature_collection": "sympathy-memorial-gifts",
+              "image": "shopify:\/\/shop_images\/Sympathy_Gifts.final.jpg"
+            }
           }
         },
         "block_order": [
@@ -2272,7 +2293,10 @@
           "1589303119803-0",
           "1589303119803-1",
           "1589303119803-2",
-          "1ef7a0ea-e626-4bcd-a93f-a6b5dabc533c"
+          "1ef7a0ea-e626-4bcd-a93f-a6b5dabc533c",
+          "cd91ac39-8ed5-4590-bc3b-8cd26267f519",
+          "2b5a67d0-ae3f-446f-803f-80f78a295c8e",
+          "2d6dbb6e-691e-40c1-9ab2-66e943fe7db0"
         ],
         "settings": {
           "title": "SHOP FOR GIFTS",
