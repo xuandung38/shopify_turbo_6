@@ -879,7 +879,7 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/bfcm.final.jpg",
               "pretext": "",
-              "title": "Your headline",
+              "title": "",
               "subtitle": "",
               "caption_background": false,
               "caption_background_transparency": false,
