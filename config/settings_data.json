@@ -1625,6 +1625,25 @@
       "mega-menu-2": {
         "type": "mega-menu-2",
         "blocks": {
+          "1497369814235": {
+            "type": "column",
+            "settings": {
+              "richtext_top": "",
+              "image_caption_top": "",
+              "image_link_top": "",
+              "menu_1": "gifts-for-family",
+              "menu_1_link": "",
+              "menu_2": "",
+              "menu_2_link": "",
+              "menu_3": "",
+              "menu_3_link": "",
+              "menu_4": "",
+              "menu_4_link": "",
+              "image_caption_bottom": "",
+              "image_link_bottom": "",
+              "richtext_bottom": ""
+            }
+          },
           "1497369953263": {
             "type": "column",
             "settings": {
@@ -1682,25 +1701,6 @@
               "richtext_bottom": ""
             }
           },
-          "1497369814235": {
-            "type": "column",
-            "settings": {
-              "richtext_top": "",
-              "image_caption_top": "",
-              "image_link_top": "",
-              "menu_1": "gifts-for-family",
-              "menu_1_link": "",
-              "menu_2": "",
-              "menu_2_link": "",
-              "menu_3": "",
-              "menu_3_link": "",
-              "menu_4": "",
-              "menu_4_link": "",
-              "image_caption_bottom": "",
-              "image_link_bottom": "",
-              "richtext_bottom": ""
-            }
-          },
           "d45f5ffa-9438-4ba4-bb61-52eb975a84d5": {
             "type": "column",
             "settings": {
@@ -1722,10 +1722,10 @@
           }
         },
         "block_order": [
+          "1497369814235",
           "1497369953263",
           "1497331215349",
           "1497369901739",
-          "1497369814235",
           "d45f5ffa-9438-4ba4-bb61-52eb975a84d5"
         ],
         "settings": {
