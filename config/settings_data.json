@@ -2157,6 +2157,7 @@
         "blocks": {
           "1589302562773-0": {
             "type": "collection",
+            "disabled": true,
             "settings": {
               "feature_collection": "gifts-for-wife",
               "image": "shopify:\/\/shop_images\/Panda-wife.jpg"
@@ -2164,6 +2165,7 @@
           },
           "1589302562773-1": {
             "type": "collection",
+            "disabled": true,
             "settings": {
               "feature_collection": "gifts-for-husband",
               "image": "shopify:\/\/shop_images\/Panda-husband.jpg"
@@ -2171,6 +2173,7 @@
           },
           "1589302562773-2": {
             "type": "collection",
+            "disabled": true,
             "settings": {
               "feature_collection": "expecting-parents-gift",
               "image": "shopify:\/\/shop_images\/Panda_-_expecting.jpg"
@@ -2178,6 +2181,7 @@
           },
           "1589302573131": {
             "type": "collection",
+            "disabled": true,
             "settings": {
               "feature_collection": "new-parents-gift",
               "image": "shopify:\/\/shop_images\/Panda_-_new_parents.jpg"
@@ -2234,12 +2238,14 @@
         "blocks": {
           "1589303132398": {
             "type": "collection",
+            "disabled": true,
             "settings": {
               "feature_collection": "christmas-ornaments"
             }
           },
           "1589303119803-0": {
             "type": "collection",
+            "disabled": true,
             "settings": {
               "feature_collection": "home-decor-canvas",
               "image": "shopify:\/\/shop_images\/home_decor_496311a6-cec7-4ed6-b3c3-ed5eb3bb92ac.jpg"
@@ -2247,6 +2253,7 @@
           },
           "1589303119803-1": {
             "type": "collection",
+            "disabled": true,
             "settings": {
               "feature_collection": "coffee-mug",
               "image": "shopify:\/\/shop_images\/drinkware_0fa63976-7f2d-4f41-b062-9bcd5bcd3c40.jpg"
@@ -2254,6 +2261,7 @@
           },
           "1589303119803-2": {
             "type": "collection",
+            "disabled": true,
             "settings": {
               "feature_collection": "necklace",
               "image": "shopify:\/\/shop_images\/necklace_8d35f4be-2624-45f1-a234-efe7e7cf278d.jpg"
