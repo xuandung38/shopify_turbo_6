@@ -175,7 +175,7 @@
     "cart_message": "",
     "show_shipping_calculator": false,
     "shipping_calculator_default_country": "United States",
-    "show_multiple_currencies": true,
+    "show_multiple_currencies": false,
     "currency_format": "money_format",
     "supported_currencies": "USD CAD AUD GBP EUR JPY",
     "default_currency": "USD",
