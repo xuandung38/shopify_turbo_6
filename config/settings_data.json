@@ -814,7 +814,7 @@
           "1489599925759": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Panda_-_anniversary_96cd4227-5bf0-45a3-899b-98b7ecbf9d17.jpg",
+              "image": "shopify:\/\/shop_images\/bannerbfcm.final.jpg",
               "pretext": "",
               "title": "",
               "subtitle": "",
@@ -833,6 +833,7 @@
           },
           "1489594068647": {
             "type": "image",
+            "disabled": true,
             "settings": {
               "image": "shopify:\/\/shop_images\/Panda_-_wedding_bee5a781-54c2-4fcc-9456-ca55d7453ec3.jpg",
               "pretext": "",
@@ -853,6 +854,7 @@
           },
           "a9eb43e4-0535-44d1-9419-5121ecc7b60f": {
             "type": "image",
+            "disabled": true,
             "settings": {
               "image": "shopify:\/\/shop_images\/Family_Panda_Banner_1800x1000_de559b9c-3b70-4b3d-b7df-c57cd0e7511c.jpg",
               "pretext": "",
@@ -870,12 +872,32 @@
               "text_align": "center",
               "mobile_image_crop": "none"
             }
+          },
+          "f7d31b89-e617-4c9b-b0b6-2520da60decf": {
+            "type": "image",
+            "settings": {
+              "pretext": "",
+              "title": "Your headline",
+              "subtitle": "",
+              "caption_background": false,
+              "caption_background_transparency": false,
+              "button1": "",
+              "button1_link": "",
+              "button1_highlight": false,
+              "button2": "",
+              "button2_link": "",
+              "button2_highlight": false,
+              "text_position": "center",
+              "text_align": "center",
+              "mobile_image_crop": "none"
+            }
           }
         },
         "block_order": [
           "1489599925759",
           "1489594068647",
-          "a9eb43e4-0535-44d1-9419-5121ecc7b60f"
+          "a9eb43e4-0535-44d1-9419-5121ecc7b60f",
+          "f7d31b89-e617-4c9b-b0b6-2520da60decf"
         ],
         "settings": {
           "wide_display": false,
@@ -2160,13 +2182,21 @@
               "feature_collection": "new-parents-gift",
               "image": "shopify:\/\/shop_images\/Panda_-_new_parents.jpg"
             }
+          },
+          "78603787-00a7-4261-8001-005a6bed205f": {
+            "type": "collection",
+            "settings": {
+              "feature_collection": "baby-first-christmas-ornaments-gifts",
+              "image": "shopify:\/\/shop_images\/Baby_s_First_Christmas.final.jpg"
+            }
           }
         },
         "block_order": [
           "1589302562773-0",
           "1589302562773-1",
           "1589302562773-2",
-          "1589302573131"
+          "1589302573131",
+          "78603787-00a7-4261-8001-005a6bed205f"
         ],
         "settings": {
           "title": "TRENDING NOW",
