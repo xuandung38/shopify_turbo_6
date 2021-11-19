@@ -1707,7 +1707,7 @@
               "richtext_top": "",
               "image_caption_top": "",
               "image_link_top": "",
-              "menu_1": "",
+              "menu_1": "gifts-for-animal-lover",
               "menu_1_link": "",
               "menu_2": "",
               "menu_2_link": "",
@@ -1729,7 +1729,7 @@
           "d45f5ffa-9438-4ba4-bb61-52eb975a84d5"
         ],
         "settings": {
-          "parent": "Gifts for Animal Lover"
+          "parent": "Gift for"
         }
       },
       "page-details-template": {
