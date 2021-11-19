@@ -2189,6 +2189,20 @@
               "feature_collection": "baby-first-christmas-ornaments-gifts",
               "image": "shopify:\/\/shop_images\/Baby_s_First_Christmas.final.jpg"
             }
+          },
+          "fdd312ea-b5d6-4e48-9e26-b3d741b72be9": {
+            "type": "collection",
+            "settings": {
+              "feature_collection": "for-parents",
+              "image": "shopify:\/\/shop_images\/For_parents.final.jpg"
+            }
+          },
+          "0e5a0c03-fa6f-44cc-ac32-1e800bea77e7": {
+            "type": "collection",
+            "settings": {
+              "feature_collection": "gifts-for-couples",
+              "image": "shopify:\/\/shop_images\/For_Couple.final.jpg"
+            }
           }
         },
         "block_order": [
@@ -2196,7 +2210,9 @@
           "1589302562773-1",
           "1589302562773-2",
           "1589302573131",
-          "78603787-00a7-4261-8001-005a6bed205f"
+          "78603787-00a7-4261-8001-005a6bed205f",
+          "fdd312ea-b5d6-4e48-9e26-b3d741b72be9",
+          "0e5a0c03-fa6f-44cc-ac32-1e800bea77e7"
         ],
         "settings": {
           "title": "TRENDING NOW",
