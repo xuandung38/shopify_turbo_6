@@ -736,7 +736,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "promo_text": "<p>Christmas Gift Bundles For Family: Buy 3 Get 30% OFF<\/p>",
+          "promo_text": "<p><a href=\"https:\/\/familypanda.co\/collections\/christmas\" target=\"_blank\">Christmas Gift Bundles For Family: Buy 3 Get 30% OFF<\/a><\/p>",
           "social_icons_header": false,
           "phone_number": "",
           "top_bar_menu": "",
