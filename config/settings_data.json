@@ -2258,13 +2258,21 @@
               "feature_collection": "necklace",
               "image": "shopify:\/\/shop_images\/necklace_8d35f4be-2624-45f1-a234-efe7e7cf278d.jpg"
             }
+          },
+          "1ef7a0ea-e626-4bcd-a93f-a6b5dabc533c": {
+            "type": "collection",
+            "settings": {
+              "feature_collection": "christmas-ornaments",
+              "image": "shopify:\/\/shop_images\/Christmas_Ornaments.final_2d46227c-9dd8-4cf5-bd0a-dbcaa5e48721.jpg"
+            }
           }
         },
         "block_order": [
           "1589303132398",
           "1589303119803-0",
           "1589303119803-1",
-          "1589303119803-2"
+          "1589303119803-2",
+          "1ef7a0ea-e626-4bcd-a93f-a6b5dabc533c"
         ],
         "settings": {
           "title": "SHOP FOR GIFTS",
