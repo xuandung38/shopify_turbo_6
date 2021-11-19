@@ -736,7 +736,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "promo_text": "<p>Free Shipping For Order From $150<\/p>",
+          "promo_text": "<p><a href=\"https:\/\/familypanda.co\/collections\/christmas\" target=\"_blank\">Christmas Gift Bundles For Family: Buy 3 Get 30% OFF<\/a><\/p>",
           "social_icons_header": false,
           "phone_number": "",
           "top_bar_menu": "",
@@ -830,10 +830,31 @@
               "text_align": "center",
               "mobile_image_crop": "none"
             }
+          },
+          "4424b8a6-c3ef-41cb-8ef3-54fc9211ab36": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Xmas_150kb.jpg",
+              "pretext": "",
+              "title": "",
+              "subtitle": "",
+              "caption_background": false,
+              "caption_background_transparency": false,
+              "button1": "",
+              "button1_link": "https:\/\/familypanda.co\/collections\/christmas",
+              "button1_highlight": false,
+              "button2": "",
+              "button2_link": "",
+              "button2_highlight": false,
+              "text_position": "center",
+              "text_align": "center",
+              "mobile_image_crop": "none"
+            }
           }
         },
         "block_order": [
-          "3517cb51-13f1-45f5-b6cf-04de24620e3f"
+          "3517cb51-13f1-45f5-b6cf-04de24620e3f",
+          "4424b8a6-c3ef-41cb-8ef3-54fc9211ab36"
         ],
         "settings": {
           "wide_display": false,
