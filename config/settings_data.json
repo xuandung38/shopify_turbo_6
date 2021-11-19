@@ -892,13 +892,34 @@
               "text_align": "center",
               "mobile_image_crop": "none"
             }
+          },
+          "ada86e7e-4223-4022-819a-2aca2bfe8a2f": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/xmas8.jpg",
+              "pretext": "",
+              "title": "Your headline",
+              "subtitle": "",
+              "caption_background": false,
+              "caption_background_transparency": false,
+              "button1": "",
+              "button1_link": "",
+              "button1_highlight": false,
+              "button2": "",
+              "button2_link": "",
+              "button2_highlight": false,
+              "text_position": "center",
+              "text_align": "center",
+              "mobile_image_crop": "none"
+            }
           }
         },
         "block_order": [
           "1489599925759",
           "1489594068647",
           "a9eb43e4-0535-44d1-9419-5121ecc7b60f",
-          "f7d31b89-e617-4c9b-b0b6-2520da60decf"
+          "f7d31b89-e617-4c9b-b0b6-2520da60decf",
+          "ada86e7e-4223-4022-819a-2aca2bfe8a2f"
         ],
         "settings": {
           "wide_display": false,
