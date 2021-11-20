@@ -249,7 +249,7 @@ window.focus()
 window.addEventListener("blur", () => {
   setTimeout(() => {
     if (document.activeElement.tagName === "IFRAME") {
-      console.log("Paypal clicked");
+      console.log("Paypal button clicked");
     }
   });
 }, { once: true });
