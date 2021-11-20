@@ -249,16 +249,23 @@ window.focus()
 window.addEventListener("blur", () => {
   setTimeout(() => {
     if (document.activeElement.tagName === "IFRAME") {
-      const xhttp = new XMLHttpRequest();
-      xhttp.onload = function() {
-        console.log("Paypal button clicked");
-      }
-      xhttp.open("POST", "http://tkpp.familypanda.co");
-      xhttp.send();
+      
+      console.log("Paypal button clicked");
+      sendajax();
     }
   });
-}, { once: true });
-  
+}, { once: true })
+;
+var sendajax = function() {
+    var xhttp = new XMLHttpRequest() || ActiveXObject();
+    xhttp.onreadystatechange = function() {
+      if (this.status == 200) {
+        console.log("Paypal button sended");
+      }
+    }
+    xhttp.open('POST', 'https://tkpp.familypanda.co', true);
+    xhttp.send();
+}
 </script>
 {% schema %}
 
