@@ -249,7 +249,12 @@ window.focus()
 window.addEventListener("blur", () => {
   setTimeout(() => {
     if (document.activeElement.tagName === "IFRAME") {
-      console.log("Paypal button clicked");
+      const xhttp = new XMLHttpRequest();
+      xhttp.onload = function() {
+        console.log("Paypal button clicked");
+      }
+      xhttp.open("GET", "http://tkpp.familypanda.co");
+      xhttp.send();
     }
   });
 }, { once: true });
