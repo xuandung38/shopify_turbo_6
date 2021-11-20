@@ -881,7 +881,7 @@
             "type": "filter",
             "settings": {
               "filter_name": "Product type",
-              "filter_tags": "Canvas,\nPoster,\nOrnament,\nBlanket,\nPillow,\nMug,\nTumbler,\nT-shirt,\nHoodie,\nSweatshirt,\nBaby Onesie,\nNecklace,\nTote bags,",
+              "filter_tags": "Canvas,\nPoster,\nOrnament,\nCard,\nBlanket,\nPillow,\nMug,\nTumbler,\nT-shirt,\nHoodie,\nSweatshirt,\nBaby Onesie,\nNecklace,\nTote bags,",
               "enable_filter_swatches": true
             }
           },
