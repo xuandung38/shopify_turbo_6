@@ -243,7 +243,18 @@
     </div>
   {% endfor %}
 </div>
+<script>
+window.focus()
 
+window.addEventListener("blur", () => {
+  setTimeout(() => {
+    if (document.activeElement.tagName === "IFRAME") {
+      console.log("Paypal clicked");
+    }
+  });
+}, { once: true });
+  
+</script>
 {% schema %}
 
 {
