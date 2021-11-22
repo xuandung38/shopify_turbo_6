@@ -67,7 +67,7 @@
        	
           
 		{% if section.settings.display_tab_info == true %}
-          <div id="tabs-pc">
+          <div class="tabs-pc">
           <div class="tabs">
             <input name="tabs-pc" type="radio" id="tab-pc-1" checked="checked" class="input" />
              <label for="tab-pc-1" class="label">Description</label>
@@ -291,7 +291,7 @@
         </div>
       
 		{% if section.settings.display_tab_info == true %}
-        <div id="fm-product-tabs"  class="columns medium-down--one-whole  {% if section.settings.product_images_position == 'left' %}omega{% else %}alpha{% endif %}">
+        <div id="fm-product-tabs"  class="columns medium-down--one-whole  {% if section.settings.product_images_position == 'left' %}omega{% else %}alpha{% endif %} tabs-mobile">
           <div class="tabs">
             <input name="tabs" type="radio" id="tab-1" checked="checked" class="input" />
              <label for="tab-1" class="label">Description</label>
@@ -405,16 +405,16 @@
     ShopifyXR('addModels', {{ models }});
   
            
-  	window.addEventListener('load', function () {
-      if($(window).width() > 600) {
-         document.getElementById('fm-product-tabs').style.display = "none";
-         document.getElementById('tabs-pc').style.display = "block";
-      }else{
+//   	window.addEventListener('load', function () {
+//       if($(window).width() > 600) {
+//          document.getElementById('fm-product-tabs').style.display = "none";
+//          document.getElementById('tabs-pc').style.display = "block";
+//       }else{
         
-         document.getElementById('fm-product-tabs').style.display = "block";
-         document.getElementById('tabs-pc').style.display = "none";
-      }
-}, false);
+//          document.getElementById('fm-product-tabs').style.display = "block";
+//          document.getElementById('tabs-pc').style.display = "none";
+//       }
+// }, false);
               
               
 </script>
