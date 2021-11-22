@@ -69,7 +69,7 @@
 		{% if section.settings.display_tab_info == true %}
           <div id="tabs-pc">
           <div class="tabs">
-            <input name="tabs" type="radio" id="tab-pc-1" checked="checked" class="input" />
+            <input name="tabs-pc" type="radio" id="tab-pc-1" checked="checked" class="input" />
              <label for="tab-pc-1" class="label">Description</label>
              <div class="panel">
                 {% if product.description != blank %}
@@ -77,13 +77,13 @@
                {% endif %}
             </div>
 
-             <input name="tabs" type="radio" id="tab-pc-2" class="input" />
+             <input name="tabs-pc" type="radio" id="tab-pc-2" class="input" />
              <label for="tab-pc-2" class="label">Shipping & Refund</label>
              <div class="panel">
                   {{ section.settings.ti_shipping_and_refund }}
              </div>
 
-             <input name="tabs" type="radio" id="tab-pc-3" class="input" />
+             <input name="tabs-pc" type="radio" id="tab-pc-3" class="input" />
              <label for="tab-pc-3" class="label">Why Choose Us</label>
              <div class="panel">
                   {{ section.settings.ti_why_choose_us }}
