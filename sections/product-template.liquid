@@ -264,7 +264,7 @@
           <!-- Group Product -->
         </div>
       
-		    {% if section.settings.display_tab_info == true %}
+		{% if section.settings.display_tab_info == true %}
         <div id="fm-product-tabs"  class="columns medium-down--one-whole  {% if section.settings.product_images_position == 'left' %}omega{% else %}alpha{% endif %}">
           <div class="tabs">
             <input name="tabs" type="radio" id="tab-1" checked="checked" class="input" />
@@ -327,7 +327,7 @@
 
     {% else %}
 
-{% include "recomatic-app" %}
+	{% include "recomatic-app" %}
 
           </div>
         </div>
