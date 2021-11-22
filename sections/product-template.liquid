@@ -66,6 +66,32 @@
           {% include 'product-images', video_looping: section.settings.video_looping, set_product_height: section.settings.set_product_height %}
        	
           
+		{% if section.settings.display_tab_info == true %}
+          <div id="tabs-pc">
+          <div class="tabs">
+            <input name="tabs" type="radio" id="tab-1" checked="checked" class="input" />
+             <label for="tab-1" class="label">Description</label>
+             <div class="panel">
+                {% if product.description != blank %}
+                  {{ product.description | split: '<!-- split -->' | first }}
+               {% endif %}
+            </div>
+
+             <input name="tabs" type="radio" id="tab-2" class="input" />
+             <label for="tab-2" class="label">Shipping & Refund</label>
+             <div class="panel">
+                  {{ section.settings.ti_shipping_and_refund }}
+             </div>
+
+             <input name="tabs" type="radio" id="tab-3" class="input" />
+             <label for="tab-3" class="label">Why Choose Us</label>
+             <div class="panel">
+                  {{ section.settings.ti_why_choose_us }}
+             </div>
+        	</div>
+            </div>
+          
+        {% endif %}
 <!-- Original at https://kyusuf.com/post/completely-css-tabs/ -->
         </div>
 
@@ -381,9 +407,12 @@
            
   	window.addEventListener('load', function () {
       if($(window).width() > 600) {
-        var marginTopNTab = ((750 - document.getElementById('fm-product-form').offsetHeight));
-        console.log('marginTopNTab:', marginTopNTab);
-        document.getElementById('fm-product-tabs').style.cssText = "margin-top: "+ marginTopNTab+ "px;";
+         document.getElementById('fm-product-tabs').style.display = "none";
+         document.getElementById('tabs-pc').style.display = "block";
+      }else{
+        
+         document.getElementById('fm-product-tabs').style.display = "block";
+         document.getElementById('tabs-pc').style.display = "none";
       }
 }, false);
               
