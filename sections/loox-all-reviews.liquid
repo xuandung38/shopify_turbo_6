@@ -1,14 +1,17 @@
-<h4 class="title center"> Reviews </h4> 
-<hr>
-<div 
-	id="looxReviews" 
-	data-loox-aggregate 
-	data-limit="{{section.settings.data-limit}}" 
-	{% if section.settings.only_photos %}data-mode="img"{% endif %} 
-	{% if section.settings.product_handle %}data-product-id="{{ all_products[section.settings.product_handle].id }}"{% endif %}
-	{% if section.settings.hide_thumbnails %}data-product-thumbnails="false"{% endif %}
-	style="margin:0 auto;max-width:{{section.settings.maxwidth}}px;"
-></div>
+<div class="container">
+  <div class="sixteen columns center">
+    <h2 class="title">Reviews</h2>
+    <div 
+        id="looxReviews" 
+        data-loox-aggregate 
+        data-limit="{{section.settings.data-limit}}" 
+        {% if section.settings.only_photos %}data-mode="img"{% endif %} 
+        {% if section.settings.product_handle %}data-product-id="{{ all_products[section.settings.product_handle].id }}"{% endif %}
+        {% if section.settings.hide_thumbnails %}data-product-thumbnails="false"{% endif %}
+        style="margin:0 auto;max-width:{{section.settings.maxwidth}}px;"
+    ></div>
+  </div>
+</div>
 {% schema %}
 {
 	"name": "All reviews - Grid",
