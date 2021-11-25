@@ -1360,7 +1360,7 @@ h3, .h3 {
 h4, .h4 {
   @include headline-style(floor($font-size-header*0.7));
   margin: 0 0 0.5em 0;
-  padding: 7px 0;
+  padding: 1px 0;
   a {
     font-weight: inherit;
   }
@@ -1374,7 +1374,7 @@ h4, .h4 {
 h5, .h5 {
   @include headline-style(floor($font-size-header*0.65));
   margin: 0 0 0.5em 0;
-  padding: 7px 0;
+  padding: 1px 0;
   a {
     font-weight: inherit;
   }
@@ -1391,7 +1391,7 @@ h6, .h6 {
   @include headline-style(floor($font-size-header*0.6));
   letter-spacing: {{ settings.headline_letter_spacing | divided_by: 2 }}px;
   margin: 0 0 0.5em 0;
-  padding: 7px 0;
+  padding: 1px 0;
   a {
     font-weight: inherit;
   }
@@ -1410,7 +1410,7 @@ h6, .h6 {
   @include headline-style;
   margin: 0 auto 15px;
   clear: both;
-  padding-top: 4px;
+  padding-top: 2px;
   a {
     font-weight: inherit;
     color: {{ settings.headline_color }};
