@@ -706,6 +706,8 @@ $(function() {
         },
         success: function(itemData) {
           $addToCartBtn.find('.checkmark').addClass('checkmark-active');
+          var $mini_cart = document.getElementsByClassName("tos_warning cart_content animated fadeIn");
+  		  $mini_cart[0].style.display = "block";;
 
           window.setTimeout(function(){
             $addToCartBtn.removeAttr('disabled').removeClass('disabled');
