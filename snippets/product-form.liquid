@@ -73,6 +73,13 @@
         {% endif %}
       </div>
     {% endif %}
+    <div class="purchase clearfix {% if settings.display_product_quantity %}inline_purchase{% endif %}">
+      {% if settings.cart_action == 'reload_page' %}
+        <input type="hidden" name="return_to" value="back" />
+      {% elsif settings.cart_action == 'redirect_checkout' %}
+        <input type="hidden" name="return_to" value="/checkout" />
+      {% endif %}
+
 
     {% if settings.display_product_quantity %}
       <div class="left product-quantity-box">
@@ -82,13 +89,6 @@
         <span class="ss-icon product-plus js-change-quantity" data-func="plus"><span class="icon-plus"></span></span>
       </div>
     {% endif %}
-    <div class="purchase clearfix {% if settings.display_product_quantity %}inline_purchase{% endif %}">
-      {% if settings.cart_action == 'reload_page' %}
-        <input type="hidden" name="return_to" value="back" />
-      {% elsif settings.cart_action == 'redirect_checkout' %}
-        <input type="hidden" name="return_to" value="/checkout" />
-      {% endif %}
-
       {% capture add_to_cart_label %}{% if collection_handles contains 'pre-order' %}{{ 'collections.general.pre_order' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endif %}{% endcapture %}
       <button type="submit" name="add" class="action_button add_to_cart" data-label={{ add_to_cart_label | json }}>
         <span class="text">{{ add_to_cart_label }}</span>
