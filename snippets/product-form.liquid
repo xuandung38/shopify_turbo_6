@@ -73,13 +73,6 @@
         {% endif %}
       </div>
     {% endif %}
-    <div class="purchase clearfix {% if settings.display_product_quantity %}inline_purchase{% endif %}">
-      {% if settings.cart_action == 'reload_page' %}
-        <input type="hidden" name="return_to" value="back" />
-      {% elsif settings.cart_action == 'redirect_checkout' %}
-        <input type="hidden" name="return_to" value="/checkout" />
-      {% endif %}
-
 
     {% if settings.display_product_quantity %}
       <div class="left product-quantity-box">
@@ -89,14 +82,20 @@
         <span class="ss-icon product-plus js-change-quantity" data-func="plus"><span class="icon-plus"></span></span>
       </div>
     {% endif %}
+    <div class="purchase clearfix {% if settings.display_product_quantity %}inline_purchase{% endif %}">
+      {% if settings.cart_action == 'reload_page' %}
+        <input type="hidden" name="return_to" value="back" />
+      {% elsif settings.cart_action == 'redirect_checkout' %}
+        <input type="hidden" name="return_to" value="/checkout" />
+      {% endif %}
+
+      {% capture add_to_cart_label %}{% if collection_handles contains 'pre-order' %}{{ 'collections.general.pre_order' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endif %}{% endcapture %}
       <button type="submit" name="add" class="action_button add_to_cart" data-label={{ add_to_cart_label | json }}>
         <span class="text">{{ add_to_cart_label }}</span>
         <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" class="checkmark">
           <path fill="none" stroke="{{ settings.btn_text_color }}" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"/>
         </svg>
-      </button> 
-      {% capture add_to_cart_label %}{% if collection_handles contains 'pre-order' %}{{ 'collections.general.pre_order' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endif %}{% endcapture %}
-     
+      </button>
     </div>
   </form>
   <div id="cbb-frequently-bought-box"></div>
