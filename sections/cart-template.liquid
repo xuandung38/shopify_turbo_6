@@ -102,7 +102,7 @@
                 {% endif %}
 
                 {% if item.price < item.variant.compare_at_price %}
-                  <span class="money was_price" style="text-decoration-line: line-through !important; color: red;">{{ item.variant.compare_at_price | money }}</span>
+                  <span class="money was_price" style="text-decoration-line: line-through !important; color: #e75656;">{{ item.variant.compare_at_price | money }}</span>
                 {% endif %}
               </p>
 
