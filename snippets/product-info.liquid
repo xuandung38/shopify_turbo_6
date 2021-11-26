@@ -11,11 +11,13 @@
   {% if settings.display_vendor %}
     <span class="brand">{{ product.vendor }}</span>
   {% endif %}
+  {% comment %}
   {% if settings.enable_shopify_collection_badges %}
     <div class="shopify-reviews reviewsVisibility--{{settings.enable_shopify_review_comments}}">
       <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
     </div>
   {% endif %}
+  {% endcomment %}
   {% if collection_handles contains 'coming-soon' %}
     <span class="coming-soon">{{ 'collections.general.coming_soon' | t }}</span>
   {% else %}
