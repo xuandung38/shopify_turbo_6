@@ -957,7 +957,7 @@
           "related_products_style": "slider",
           "related_products_limit": 4,
           "products_per": 4,
-          "display_recently_viewed": true,
+          "display_recently_viewed": false,
           "rv_title": "Recently Viewed Items",
           "rv_products_style": "slider",
           "rv_max_display": 8,
