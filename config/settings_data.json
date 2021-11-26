@@ -169,7 +169,7 @@
     "show_lock_icon": true,
     "display_tos_checkbox": false,
     "tos_page": "",
-    "go_to_checkout": false,
+    "go_to_checkout": true,
     "display_special_instructions": false,
     "display_savings": false,
     "cart_message": "",
