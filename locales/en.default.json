@@ -151,7 +151,7 @@
     "general": {
       "previous_product_html": "Previous",
       "next_product_html": "Next",
-      "from": "from"
+      "from": ""
     },
     "product": {
       "sold_out": "Sold Out",
