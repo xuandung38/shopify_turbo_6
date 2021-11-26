@@ -3,7 +3,7 @@
     <img src="{{ section.settings.ed_icon | img_url: '50x50' }}" alt="{{ section.settings.ed_icon | img_alt }}">
   </div>
   <div class="text">
-    <strong> Arrives by <span class="estimate-shipping-time">N/A</span></strong> if you order today. Hooray!</div>
+    <strong> Arrives by <span class="estimate-shipping-time">N/A</span></strong> if you order today. Check it out to avoid delays!</div>
 </div>
 <style>
   .estimated-delivery {
@@ -72,7 +72,6 @@ function estimatedDeliveryRange(from = new Date(), minWorkDays = {{ section.sett
 
 function formatDate(date = new Date()) {
     return new Intl.DateTimeFormat("en-US", {
-        weekday: 'short',
         day: 'numeric',
         month: 'short',
     }).format(date);
