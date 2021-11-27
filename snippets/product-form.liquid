@@ -97,14 +97,15 @@
         </svg>
       </button>
       </div>
+
+    {% if section.settings.display_estimated_delivery %}
+    	{% include 'shipping-count' %}
+    {% endif %}
+    
      {% if section.settings.show_trust_badge %}
       <div class="meta">
         {% include 'trust-badge' %}
       </div>
-    {% endif %}
-
-    {% if section.settings.display_estimated_delivery %}
-    {% include 'shipping-count' %}
     {% endif %}
 </form>
   <div id="cbb-frequently-bought-box"></div>
