@@ -970,9 +970,9 @@
           "display_tab_info": true,
           "ti_shipping_and_refund": "<h6><strong>Low shipping fee for timely delivery.<\/strong><\/h6>\n<ul>\n<li>Orders are delivered within 2-7 working days for domestic orders in the United States. Express shipping available.<\/li>\n<li>Orders are delivered within 5-10 working days for international orders out of the United States<\/li>\n<\/ul>\n<h6><strong>Satisfaction guaranteed<\/strong><\/h6>\n<ul>\n<li>2-hour modification\/cancellation<br>\n<\/li>\n<li>30 day money back for manufacturing errors<\/li>\n<li>24\/7 customer support<\/li>\n<\/ul>",
           "ti_why_choose_us": "<h6><strong>Quality Assurance<\/strong><\/h6>\n<ul>\n    <li>Printed in the USA<\/li>\n    <li>Fine materials<\/li>\n    <li>Trusted and loved by <strong>55,555<\/strong>+ customers and counting. \"<em>Breathtaking!!! Beautiful!! Beautiful!! Beautiful!! Received our canvas in perfect condition and exceeded all expectations.<\/em>\" Vonnely M.<\/li>\n<\/ul>\n<h6><strong>Transaction are secure<\/strong><\/h6>\n<ul>\n    <li>Safe And Secure Checkout.<\/li>\n    <li>Simple and easy checkout in less than 3 minutes with diverse payment methods supported.<\/li>\n<\/ul>\n<h6><strong>Satisfaction Guaranteed<\/strong><\/h6>\n<ul>\n    <li>2-hour modification\/cancellation.<\/li>\n    <li>30 day money back for manufacturing errors.<\/li>\n    <li>24\/7 customer support.<\/li>\n<\/ul>",
-          "show_trust_badge": false,
-          "trust_badge_img": "shopify:\/\/shop_images\/payment_method.jpg",
-          "trust_badge_text": "<p>Text area can be used for special announcements or general information.<\/p>"
+          "show_trust_badge": true,
+          "trust_badge_img": "shopify:\/\/shop_images\/trustbadge-product-2.png",
+          "trust_badge_text": ""
         }
       },
       "cart-template": {
