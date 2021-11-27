@@ -210,16 +210,16 @@
          
           {% unless collection_handles contains 'coming-soon' %}
             {% include 'product-form' with 'product' %}
+               {% if section.settings.show_trust_badge %}
+
+                <div class="meta">
+                    {% include 'trust-badge' %}
+                </div>
+               {% endif %}
             {% include 'product-notify-me' %}
           {% endunless %}
 
         
-         {% if section.settings.show_trust_badge %}
-       
-          <div class="meta">
-         	  {% include 'trust-badge' %}
-          </div>
-     	 {% endif %}
           
           <div class="saso-volumes"></div>
           
