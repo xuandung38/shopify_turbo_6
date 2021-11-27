@@ -96,9 +96,14 @@
           <path fill="none" stroke="{{ settings.btn_text_color }}" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"/>
         </svg>
       </button>
-
       </div>
-  </form>
+     {% if section.settings.show_trust_badge %}
+
+    <div class="meta">
+      {% include 'trust-badge' %}
+    </div>
+    {% endif %}
+</form>
   <div id="cbb-frequently-bought-box"></div>
 
 {% endif %}
