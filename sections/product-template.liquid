@@ -400,20 +400,7 @@
   window.ShopifyXR=window.ShopifyXR||function(){(ShopifyXR.q=ShopifyXR.q||[]).push(arguments)}
     {% assign models = product.media | where: 'media_type', 'model' | json %}
     ShopifyXR('addModels', {{ models }});
-  
-           
-//   	window.addEventListener('load', function () {
-//       if($(window).width() > 600) {
-//          document.getElementById('fm-product-tabs').style.display = "none";
-//          document.getElementById('tabs-pc').style.display = "block";
-//       }else{
         
-//          document.getElementById('fm-product-tabs').style.display = "block";
-//          document.getElementById('tabs-pc').style.display = "none";
-//       }
-// }, false);
-              
-              
 </script>
 {% schema %}
 
