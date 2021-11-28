@@ -29,21 +29,21 @@ window.addEventListener('load', function () {
     })
     
     
-    const estDelEls = document.querySelectorAll(".express-ship");
-    if (!estDelEls || !estDelEls.length) {
-        return;
-    }
-    const [expressMinDate, expressMaxDate] = estimatedDeliveryRange({{ section.settings.express_ship_min }},{{ section.settings.express_ship_max }});
-    const [expressMinFormat, expressMaxFormat] = [formatDate(expressMinDate), formatDate(expressMaxDate)];
-    let expressEstimatedDelivery
-    if (expressMinFormat === expressMaxFormat) {
-        expressEstimatedDelivery = expressMinFormat;
-    } else {
-        expressEstimatedDelivery = `${expressMinFormat} &mdash; ${expressMaxFormat}`;
-    }
-    document.querySelectorAll(".express-ship").forEach((el2) => {
-        el2.innerHTML = expressEstimatedDelivery;
-    })
+//     const estDelEls = document.querySelectorAll(".express-ship");
+//     if (!estDelEls || !estDelEls.length) {
+//         return;
+//     }
+//     const [expressMinDate, expressMaxDate] = estimatedDeliveryRange({{ section.settings.express_ship_min }},{{ section.settings.express_ship_max }});
+//     const [expressMinFormat, expressMaxFormat] = [formatDate(expressMinDate), formatDate(expressMaxDate)];
+//     let expressEstimatedDelivery
+//     if (expressMinFormat === expressMaxFormat) {
+//         expressEstimatedDelivery = expressMinFormat;
+//     } else {
+//         expressEstimatedDelivery = `${expressMinFormat} &mdash; ${expressMaxFormat}`;
+//     }
+//     document.querySelectorAll(".express-ship").forEach((el2) => {
+//         el2.innerHTML = expressEstimatedDelivery;
+//     })
 }, false);
 
 const SATURDAY = 6
