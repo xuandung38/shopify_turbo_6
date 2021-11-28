@@ -26,7 +26,7 @@ window.addEventListener('load', function () {
     })
     
 
-    const [expressMinDate, expressMaxDate] = estimatedDeliveryRange({{ section.settings.express_ship_min }}-1,{{ section.settings.express_ship_max }}-1);
+    const [expressMinDate, expressMaxDate] = estimatedDeliveryRange({{ section.settings.express_ship_min }},{{ section.settings.express_ship_max }});
     const [expressMinFormat, expressMaxFormat] = [formatDate(expressMinDate), formatDate(expressMaxDate)];
     let expressEstimatedDelivery
     if (expressMinFormat === expressMaxFormat) {
