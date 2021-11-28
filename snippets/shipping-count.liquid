@@ -6,7 +6,7 @@
   </div>
   <div class="shipping-block">
       <p class="shipping-title">Express Shipping</p>
-      <p>Get it by <span class="estimate-shipping-time standa">N/A</span><p>
+      <p>Get it by <span class="estimate-shipping-time express">N/A</span><p>
   </div>
 </div>
 
@@ -16,13 +16,13 @@ window.addEventListener('load', function () {
     if (!estDelEls || !estDelEls.length) {
         return;
     }
-    const [minDate, maxDate] = estimatedDeliveryRange( {{ section.settings.standa_ship_min }},{{ section.settings.standa_ship_max }});
-    const [minFormat, maxFormat] = [formatDate(minDate), formatDate(maxDate)];
+    const [standaMinDate, standaMaxDate] = estimatedDeliveryRange( {{ section.settings.standa_ship_min }},{{ section.settings.standa_ship_max }});
+    const [standaMinFormat, standaMaxFormat] = [formatDate(standaMinDate), formatDate(standaMaxDate)];
     let estimatedDelivery
     if (minFormat === maxFormat) {
-        estimatedDelivery = minFormat;
+        estimatedDelivery = standaMinFormat;
     } else {
-        estimatedDelivery = `${minFormat} &mdash; ${maxFormat}`;
+        estimatedDelivery = `${standaMinFormat} &mdash; ${standaMaxFormat}`;
     }
     document.querySelectorAll(".standa").forEach((el) => {
         el.innerHTML = estimatedDelivery;
