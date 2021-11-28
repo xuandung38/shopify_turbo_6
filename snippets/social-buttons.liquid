@@ -2,7 +2,7 @@
 
 {% capture buttons %}
 <div class="social_buttons">
-  <span>Share : </span>
+  <span style="padding-left: 20px">Share : </span>
   {% capture title %}{% if social-buttons == 'article' %}{{ article.title | truncate: 30 | url_escape }}{% else %}{{ product.title | truncate: 30 | url_escape }}{% endif %}{% endcapture %}
   {% capture shop_name %}{{ shop.name | url_param_escape }}{% endcapture %}
   {% capture twitter_name %}{{ settings.twitter_link | split: 'twitter.com/' | last }}{% endcapture %}
