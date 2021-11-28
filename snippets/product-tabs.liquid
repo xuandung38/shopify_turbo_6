@@ -1,0 +1,34 @@
+<div class="tabs-content"> 
+  <div class="tabs-nav"> 
+    <nav class="tabs"> 
+      <ul> 
+        <li><a href="#tab-description" class="active">Description</a></li>
+        <li><a href="#tab-shipping" class="">Shipping & Refund</a></li>
+        <li><a href="#tab-why-choose" class="">Why Choose Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<div>
+  <div id="tab-description" class="tab-panel description bottom active" itemprop="description">  
+    <h4>Description<span class="icon-right-arrow"></span></h4> 
+    <div class="tab-content">
+     {% if product.description != blank %}
+      {{ product.description | split: '<!-- split -->' | first }}
+      {% endif %}
+    </div>
+  </div>
+  <div id="tab-shipping" class="tab-panel shipping-info">
+    <h4>Shipping & Refund<span class="icon-right-arrow"></span></h4> 
+    <div class="tab-content" style="display: none;">
+      {{ section.settings.ti_shipping_and_refund }}
+    </div>
+  </div>
+
+  <div id="tab-why-choose" class="tab-panel why-choose"><h4>Why Choose Us<span class="icon-right-arrow"></span></h4> 
+    <div class="tab-content" style="display: none;">
+       {{ section.settings.ti_why_choose_us }}
+    </div>
+  </div>
+</div>
