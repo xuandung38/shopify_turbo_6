@@ -13,16 +13,16 @@
 <script>
 window.addEventListener('load', function () {
 
-    const [standaMinDate, standaMaxDate] = estimatedDeliveryRange({{ section.settings.standa_ship_min }},{{ section.settings.standa_ship_max }});
-    const [standaMinFormat, standaMaxFormat] = [formatDate(standaMinDate), formatDate(standaMaxDate)];
-    let standaEstimatedDelivery
-    if (standaMinFormat === standaMaxFormat) {
-        standaEstimatedDelivery = standaMinFormat;
+    const [standardMinDate, standardMaxDate] = estimatedDeliveryRange({{ section.settings.standard_ship_min }},{{ section.settings.standard_ship_max }});
+    const [standardMinFormat, standardMaxFormat] = [formatDate(standardMinDate), formatDate(standardMaxDate)];
+    let standardEstimatedDelivery
+    if (standardMinFormat === standaMaxFormat) {
+        standardEstimatedDelivery = standardMinFormat;
     } else {
-        standaEstimatedDelivery = `${standaMinFormat} &mdash; ${standaMaxFormat}`;
+        standardEstimatedDelivery = `${standardMinFormat} &mdash; ${standardMaxFormat}`;
     }
     document.querySelectorAll(".standard-ship").forEach((el) => {
-        el.innerHTML = standaEstimatedDelivery;
+        el.innerHTML = standardEstimatedDelivery;
     })
     
 
