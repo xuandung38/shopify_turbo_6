@@ -50,7 +50,7 @@ function estimatedDeliveryRange(minWorkDays, maxWorkDays, isExpress == false) {
     let maxDate
     while (minWorkDays > 0 || maxWorkDays > 0) {
         time.setHours(time.getHours() + 24)
-        if ((!isExpress && time.getDay() !== SATURDAY) && time.getDay() !== SUNDAY) {
+        if (time.getDay() !== SATURDAY &&  time.getDay() !== SUNDAY) {
             minWorkDays--
             maxWorkDays--
             if (minWorkDays <= 0 && !minDate) {
