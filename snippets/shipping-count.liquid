@@ -1,18 +1,18 @@
 <br>
 <div>
-<div class="shipping-block">
-	<p class="shipping-title">Estimate Shipping</p>
-    <p>Arrives by <span class="estimate-shipping-time">N/A</span> if you order today. Buy now to be guaranteed Christmas delivery!<p>
-</div>
+  <div class="shipping-block">
+      <p class="shipping-title">Express Shipping</p>
+      <p>Get it by <span class="estimate-shipping-time standa">N/A</span><p>
+  </div>
 </div>
 
 <script>
 window.addEventListener('load', function () {
- const estDelEls = document.querySelectorAll(".estimate-shipping-time");
+ const estDelEls = document.querySelectorAll(".standa");
     if (!estDelEls || !estDelEls.length) {
         return;
     }
-    const [minDate, maxDate] = estimatedDeliveryRange();
+    const [minDate, maxDate] = estimatedDeliveryRange( {{ section.settings.standa_ship_min }},{{ section.settings.standa_ship_max }});
     const [minFormat, maxFormat] = [formatDate(minDate), formatDate(maxDate)];
     let estimatedDelivery
     if (minFormat === maxFormat) {
@@ -20,7 +20,7 @@ window.addEventListener('load', function () {
     } else {
         estimatedDelivery = `${minFormat} &mdash; ${maxFormat}`;
     }
-    document.querySelectorAll(".estimate-shipping-time").forEach((el) => {
+    document.querySelectorAll(".standa").forEach((el) => {
         el.innerHTML = estimatedDelivery;
     })
 }, false);
@@ -28,8 +28,10 @@ window.addEventListener('load', function () {
 const SATURDAY = 6
 const SUNDAY = 0
 
-function estimatedDeliveryRange(from = new Date(), minWorkDays = {{ section.settings.ed_min_workday }}, maxWorkDays = {{ section.settings.ed_max_workday }}) {
-    const time = new Date(from.getTime())
+function estimatedDeliveryRange(minWorkDays, maxWorkDays) {
+   
+  var from = new Date();
+  const time = new Date(from.getTime())
     time.setHours(12, 0, 0, 0)
     let minDate
     let maxDate
