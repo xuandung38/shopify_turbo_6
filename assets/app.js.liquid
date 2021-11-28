@@ -1167,3 +1167,19 @@ $(document)
       $('a.mega-menu-parent[data-dropdown-rel="' + megaMenuParent + '"]').parents('header').removeClass('editor-hover--true');
     }
 });
+
+
+  $('.tabs a').on('click',function(e){
+  	e.preventDefault();
+    let $self = $(this);
+    $('.tabs a').removeClass('active');
+    $self.addClass('active');
+    let $target = $($self.attr('href'));
+    $('.tab-panel').removeClass('active');
+    $target.addClass('active');
+  });
+  $('.tab-panel h4').on('click',function(){
+  	let $self = $(this);
+    $self.toggleClass('active');
+    $self.next('.tab-content').slideToggle();
+  });
