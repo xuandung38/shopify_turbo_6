@@ -12,20 +12,37 @@
 
 <script>
 window.addEventListener('load', function () {
- const estDelEls = document.querySelectorAll(".standa");
+    const estDelEls = document.querySelectorAll(".standa");
     if (!estDelEls || !estDelEls.length) {
         return;
     }
     const [standaMinDate, standaMaxDate] = estimatedDeliveryRange( {{ section.settings.standa_ship_min }},{{ section.settings.standa_ship_max }});
     const [standaMinFormat, standaMaxFormat] = [formatDate(standaMinDate), formatDate(standaMaxDate)];
-    let estimatedDelivery
+    let standaEstimatedDelivery
     if (standaMinFormat === standaMaxFormat) {
-        estimatedDelivery = standaMinFormat;
+        standaEstimatedDelivery = standaMinFormat;
     } else {
-        estimatedDelivery = `${standaMinFormat} &mdash; ${standaMaxFormat}`;
+        standaEstimatedDelivery = `${standaMinFormat} &mdash; ${standaMaxFormat}`;
     }
     document.querySelectorAll(".standa").forEach((el) => {
-        el.innerHTML = estimatedDelivery;
+        el.innerHTML = standaEstimatedDelivery;
+    })
+    
+    
+    const estDelEls = document.querySelectorAll(".express");
+    if (!estDelEls || !estDelEls.length) {
+        return;
+    }
+    const [expressMinDate, expressMaxDate] = estimatedDeliveryRange( {{ section.settings.express_ship_min }},{{ section.settings.express_ship_max }});
+    const [expressMinFormat, expressMaxFormat] = [formatDate(expressMinDate), formatDate(expressMaxDate)];
+    let expressEstimatedDelivery
+    if (expressMinFormat === expressMaxFormat) {
+        expressEstimatedDelivery = expressMinFormat;
+    } else {
+        expressEstimatedDelivery = `${expressMinFormat} &mdash; ${expressMaxFormat}`;
+    }
+    document.querySelectorAll(".express").forEach((el) => {
+        el.innerHTML = expressEstimatedDelivery;
     })
 }, false);
 
