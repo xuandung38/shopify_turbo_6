@@ -1,34 +1,11 @@
 <br>
 <div>
-  <div class="shipping-block">
-      <p class="shipping-title">Express Shipping</p>
-      <p>Get it by <span class="shipping-date">N/A</span> if you order today. Check it out to avoid delays!<p>
-  </div>
+<div class="shipping-block">
+	<p class="shipping-title">Express Shipping</p>
+    <p>Get it by <span class="estimate-shipping-time">N/A</span>if you order today. Check it out to avoid delays!<p>
 </div>
-div>
+</div>
 
-<style>
-  .estimated-delivery {
-    display: flex;
-    align-items: center;
-  }
-  .estimated-delivery .hurry-icon {
-    flex: 0 0 50px;
-  }
-  .estimated-delivery .text {
-    padding-left: 10px;
-    font-size: 12px;
-  }
-  .estimated-delivery .js-shipping-time {
-    text-decoration: underline;
-    text-decoration-style: dashed;
-    text-underline-position: under;
-    text-decoration-color: inherit;
-  }
-  .eta-note {
-    font-style: italic;
-  }
-</style>
 <script>
 window.addEventListener('load', function () {
  const estDelEls = document.querySelectorAll(".estimate-shipping-time");
