@@ -2,21 +2,21 @@
 <div>
   <div class="shipping-block">
       <p class="shipping-title">Standa Shipping</p>
-      <p>Get it by <span class="estimate-shipping-time standa">N/A</span><p>
+      <p>Get it by <span class="estimate-shipping-time standa-ship">N/A</span><p>
   </div>
   <div class="shipping-block">
       <p class="shipping-title">Express Shipping</p>
-      <p>Get it by <span class="estimate-shipping-time express">N/A</span><p>
+      <p>Get it by <span class="estimate-shipping-time express-ship">N/A</span><p>
   </div>
 </div>
 
 <script>
 window.addEventListener('load', function () {
-    const estDelEls = document.querySelectorAll(".standa");
+    const estDelEls = document.querySelectorAll(".standa-ship");
     if (!estDelEls || !estDelEls.length) {
         return;
     }
-    const [standaMinDate, standaMaxDate] = estimatedDeliveryRange( {{ section.settings.standa_ship_min }},{{ section.settings.standa_ship_max }});
+    const [standaMinDate, standaMaxDate] = estimatedDeliveryRange({{ section.settings.standa_ship_min }},{{ section.settings.standa_ship_max }});
     const [standaMinFormat, standaMaxFormat] = [formatDate(standaMinDate), formatDate(standaMaxDate)];
     let standaEstimatedDelivery
     if (standaMinFormat === standaMaxFormat) {
@@ -24,16 +24,16 @@ window.addEventListener('load', function () {
     } else {
         standaEstimatedDelivery = `${standaMinFormat} &mdash; ${standaMaxFormat}`;
     }
-    document.querySelectorAll(".standa").forEach((el) => {
+    document.querySelectorAll(".standa-ship").forEach((el) => {
         el.innerHTML = standaEstimatedDelivery;
     })
     
     
-    const estDelEls = document.querySelectorAll(".express");
+    const estDelEls = document.querySelectorAll(".express-ship");
     if (!estDelEls || !estDelEls.length) {
         return;
     }
-    const [expressMinDate, expressMaxDate] = estimatedDeliveryRange( {{ section.settings.express_ship_min }},{{ section.settings.express_ship_max }});
+    const [expressMinDate, expressMaxDate] = estimatedDeliveryRange({{ section.settings.express_ship_min }},{{ section.settings.express_ship_max }});
     const [expressMinFormat, expressMaxFormat] = [formatDate(expressMinDate), formatDate(expressMaxDate)];
     let expressEstimatedDelivery
     if (expressMinFormat === expressMaxFormat) {
@@ -41,7 +41,7 @@ window.addEventListener('load', function () {
     } else {
         expressEstimatedDelivery = `${expressMinFormat} &mdash; ${expressMaxFormat}`;
     }
-    document.querySelectorAll(".express").forEach((el) => {
+    document.querySelectorAll(".express-ship").forEach((el) => {
         el.innerHTML = expressEstimatedDelivery;
     })
 }, false);
