@@ -247,15 +247,15 @@
           {% endif %}
 			
           <div class="meta">
-            {% if section.settings.display_social_buttons %}
-              {% include "social-buttons" with "product" %}
-            {% endif %}
-            
 			{% if section.settings.display_tab_info == true %}
             <div class="tabs-mobile">
               {% include 'product-tabs' %}
             </div>
             {% endif %}
+            {% if section.settings.display_social_buttons %}
+              {% include "social-buttons" with "product" %}
+            {% endif %}
+            
         	  </div>
 
           <!-- Group Product -->
