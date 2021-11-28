@@ -19,7 +19,7 @@ window.addEventListener('load', function () {
     const [standaMinDate, standaMaxDate] = estimatedDeliveryRange( {{ section.settings.standa_ship_min }},{{ section.settings.standa_ship_max }});
     const [standaMinFormat, standaMaxFormat] = [formatDate(standaMinDate), formatDate(standaMaxDate)];
     let estimatedDelivery
-    if (minFormat === maxFormat) {
+    if (standaMinFormat === standaMaxFormat) {
         estimatedDelivery = standaMinFormat;
     } else {
         estimatedDelivery = `${standaMinFormat} &mdash; ${standaMaxFormat}`;
