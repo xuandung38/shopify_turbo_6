@@ -927,14 +927,14 @@
       "product-template": {
         "type": "product-template",
         "settings": {
-          "product_thumbs": false,
-          "gallery_arrows": true,
+          "product_thumbs": true,
+          "gallery_arrows": false,
           "enable_product_lightbox": true,
           "activate_zoom": true,
           "slideshow_speed": 3,
           "slideshow_animation": "slide",
           "thumbnail_position": "left-thumbnails",
-          "enable_thumbnail_slider": false,
+          "enable_thumbnail_slider": true,
           "display_vendor": false,
           "product_breadcrumb": false,
           "display_sku": false,
