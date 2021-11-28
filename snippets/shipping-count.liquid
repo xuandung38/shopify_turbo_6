@@ -12,7 +12,6 @@
 
 <script>
 window.addEventListener('load', function () {
-
     const [standaMinDate, standaMaxDate] = estimatedDeliveryRange({{ section.settings.standa_ship_min }},{{ section.settings.standa_ship_max }});
     const [standaMinFormat, standaMaxFormat] = [formatDate(standaMinDate), formatDate(standaMaxDate)];
     let standaEstimatedDelivery
@@ -42,7 +41,7 @@ window.addEventListener('load', function () {
 const SATURDAY = 6
 const SUNDAY = 0
 
-function estimatedDeliveryRange(minWorkDays, maxWorkDays) {
+function estimatedDeliveryRange(minWorkDays, maxWorkDays, isExpress == false) {
    
   var from = new Date();
   const time = new Date(from.getTime())
@@ -51,7 +50,7 @@ function estimatedDeliveryRange(minWorkDays, maxWorkDays) {
     let maxDate
     while (minWorkDays > 0 || maxWorkDays > 0) {
         time.setHours(time.getHours() + 24)
-        if (time.getDay() !== SATURDAY && time.getDay() !== SUNDAY) {
+        if ((!isExpress && time.getDay() !== SATURDAY) && time.getDay() !== SUNDAY) {
             minWorkDays--
             maxWorkDays--
             if (minWorkDays <= 0 && !minDate) {
@@ -61,6 +60,7 @@ function estimatedDeliveryRange(minWorkDays, maxWorkDays) {
                 maxDate = new Date(time.getTime())
             }
         }
+      	
     }
     return [minDate, maxDate]
 }
