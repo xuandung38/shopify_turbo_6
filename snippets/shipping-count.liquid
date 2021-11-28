@@ -16,7 +16,7 @@ window.addEventListener('load', function () {
     const [standardMinDate, standardMaxDate] = estimatedDeliveryRange({{ section.settings.standard_ship_min }},{{ section.settings.standard_ship_max }});
     const [standardMinFormat, standardMaxFormat] = [formatDate(standardMinDate), formatDate(standardMaxDate)];
     let standardEstimatedDelivery
-    if (standardMinFormat === standaMaxFormat) {
+    if (standardMinFormat === standardMaxFormat) {
         standardEstimatedDelivery = standardMinFormat;
     } else {
         standardEstimatedDelivery = `${standardMinFormat} &mdash; ${standardMaxFormat}`;
