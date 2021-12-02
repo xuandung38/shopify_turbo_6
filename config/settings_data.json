@@ -906,7 +906,7 @@
       "product-template": {
         "type": "product-template",
         "settings": {
-          "product_thumbs": false,
+          "product_thumbs": true,
           "gallery_arrows": true,
           "enable_product_lightbox": true,
           "activate_zoom": true,
