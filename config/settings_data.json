@@ -811,26 +811,6 @@
       "1488497250346": {
         "type": "slideshow",
         "blocks": {
-          "3517cb51-13f1-45f5-b6cf-04de24620e3f": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/BFCM.fin.jpg",
-              "pretext": "",
-              "title": "",
-              "subtitle": "",
-              "caption_background": false,
-              "caption_background_transparency": false,
-              "button1": "",
-              "button1_link": "https:\/\/familypanda.co\/collections\/christmas",
-              "button1_highlight": false,
-              "button2": "",
-              "button2_link": "",
-              "button2_highlight": false,
-              "text_position": "center",
-              "text_align": "center",
-              "mobile_image_crop": "none"
-            }
-          },
           "d55dac6b-81ce-4767-83c5-24ff44832406": {
             "type": "image",
             "settings": {
@@ -853,7 +833,6 @@
           }
         },
         "block_order": [
-          "3517cb51-13f1-45f5-b6cf-04de24620e3f",
           "d55dac6b-81ce-4767-83c5-24ff44832406"
         ],
         "settings": {
