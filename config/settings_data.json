@@ -906,14 +906,14 @@
       "product-template": {
         "type": "product-template",
         "settings": {
-          "product_thumbs": true,
-          "gallery_arrows": false,
+          "product_thumbs": false,
+          "gallery_arrows": true,
           "enable_product_lightbox": true,
           "activate_zoom": true,
           "slideshow_speed": 3,
           "slideshow_animation": "slide",
           "thumbnail_position": "bottom",
-          "enable_thumbnail_slider": true,
+          "enable_thumbnail_slider": false,
           "display_vendor": false,
           "product_breadcrumb": false,
           "display_sku": false,
