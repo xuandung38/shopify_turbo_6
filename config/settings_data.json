@@ -913,7 +913,7 @@
           "slideshow_speed": 3,
           "slideshow_animation": "slide",
           "thumbnail_position": "bottom",
-          "enable_thumbnail_slider": false,
+          "enable_thumbnail_slider": true,
           "display_vendor": false,
           "product_breadcrumb": false,
           "display_sku": false,
