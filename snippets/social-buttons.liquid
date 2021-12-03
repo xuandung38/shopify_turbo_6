@@ -2,29 +2,90 @@
 
 {% capture buttons %}
 <div class="social_buttons">
-  <span style="padding-left: 20px">Share : </span>
+  <div class="share-btn text">
+    Share:
+  </div>
   {% capture title %}{% if social-buttons == 'article' %}{{ article.title | truncate: 30 | url_escape }}{% else %}{{ product.title | truncate: 30 | url_escape }}{% endif %}{% endcapture %}
   {% capture shop_name %}{{ shop.name | url_param_escape }}{% endcapture %}
   {% capture twitter_name %}{{ settings.twitter_link | split: 'twitter.com/' | last }}{% endcapture %}
 
   <div class="share-btn twitter"><!--Twitter-->
-    <a target="_blank" class="icon-twitter-share" title="{{ 'layout.social_sharing.twitter_title' | t }}" href="https://twitter.com/intent/tweet?text={{ title | replace: '&','%26' }}&url={{ current_url }}{%- if twitter_name != blank -%}&via={{ twitter_name }}{%- endif -%}"></a>
+    <a target="_blank"  title="{{ 'layout.social_sharing.twitter_title' | t }}" href="https://twitter.com/intent/tweet?text={{ title | replace: '&','%26' }}&url={{ current_url }}{%- if twitter_name != blank -%}&via={{ twitter_name }}{%- endif -%}">
+    	<svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M7.54752 19.5013C16.6042 19.5013 21.5578 11.9979 21.5578 5.49101C21.5578 5.27789 21.5578 5.06573 21.5434 4.85453C22.507 4.15748 23.3389 3.29441 24 2.30573C23.1014 2.70413 22.148 2.96528 21.1718 3.08045C22.1998 2.46514 22.9692 1.49723 23.3366 0.356928C22.3701 0.930537 21.3126 1.33475 20.2099 1.55213C19.4675 0.762706 18.4856 0.23997 17.4162 0.0648128C16.3468 -0.110344 15.2494 0.071843 14.294 0.583182C13.3385 1.09452 12.5782 1.9065 12.1307 2.89348C11.6833 3.88045 11.5735 4.98739 11.8186 6.04301C9.8609 5.94481 7.94576 5.43604 6.19745 4.54973C4.44915 3.66343 2.90676 2.41939 1.6704 0.898368C1.04073 1.98236 0.847872 3.2656 1.1311 4.48679C1.41433 5.70799 2.15234 6.77532 3.19488 7.47149C2.41123 7.44853 1.64465 7.23712 0.96 6.85517V6.91757C0.960311 8.05442 1.35385 9.15617 2.07387 10.0359C2.79389 10.9157 3.79606 11.5193 4.9104 11.7444C4.18548 11.9422 3.42487 11.9711 2.68704 11.8289C3.00181 12.8073 3.61443 13.6628 4.43924 14.2759C5.26405 14.889 6.25983 15.229 7.28736 15.2485C6.26644 16.0509 5.09731 16.6442 3.84687 16.9944C2.59643 17.3447 1.28921 17.4449 0 17.2894C2.25183 18.7344 4.87192 19.5009 7.54752 19.4974"
+          fill="#1DA1F2"></path>
+      </svg>
+    </a>
   </div>
 
   <div class="share-btn facebook"><!--Facebook-->
-    <a target="_blank" class="icon-facebook-share" title="{{ 'layout.social_sharing.facebook_title' | t }}" href="https://www.facebook.com/sharer/sharer.php?u={{ current_url }}"></a>
+    <a target="_blank" title="{{ 'layout.social_sharing.facebook_title' | t }}" href="https://www.facebook.com/sharer/sharer.php?u={{ current_url }}">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 17.9895 4.3882 22.954 10.125 23.8542V15.4688H7.07812V12H10.125V9.35625C10.125 6.34875 11.9166 4.6875 14.6576 4.6875C15.9701 4.6875 17.3438 4.92188 17.3438 4.92188V7.875H15.8306C14.34 7.875 13.875 8.80008 13.875 9.75V12H17.2031L16.6711 15.4688H13.875V23.8542C19.6118 22.954 24 17.9895 24 12Z"
+          fill="#1877F2"></path>
+      </svg>
+    </a>
   </div>
 
    <div class="share-btn pinterest"><!--Pinterest-->
     {% if social-buttons == 'article' %}
-    <a target="_blank" data-pin-do="skipLink" class="icon-pinterest-share" title="{{ 'layout.social_sharing.pinterest_title' | t }}" href="https://pinterest.com/pin/create/button/?url={{ current_url }}&description={{ article.content | strip_html | truncate: 240 }}&media={% if article.image %}{{ article.image | img_url: 'grande' }}{% else %}{% assign my_image_url=article.content | escape %}{% if my_image_url contains '&lt;img' %}{% assign my_image_url = my_image_url | split: 'src=&quot;' %}{% assign my_image_url = my_image_url[1] | split: '&quot;' %}{% assign my_image_url = my_image_url[0] | remove: '//cdn' %}{% assign my_image_url = my_image_url | remove: 'http:http://' %}{% assign my_image_url = my_image_url | remove: 'https:' %}{{ my_image_url | prepend: 'https://cdn'}}{% endif %}{% endif %}"></a>
+    <a target="_blank" data-pin-do="skipLink" title="{{ 'layout.social_sharing.pinterest_title' | t }}" href="https://pinterest.com/pin/create/button/?url={{ current_url }}&description={{ article.content | strip_html | truncate: 240 }}&media={% if article.image %}{{ article.image | img_url: 'grande' }}{% else %}{% assign my_image_url=article.content | escape %}{% if my_image_url contains '&lt;img' %}{% assign my_image_url = my_image_url | split: 'src=&quot;' %}{% assign my_image_url = my_image_url[1] | split: '&quot;' %}{% assign my_image_url = my_image_url[0] | remove: '//cdn' %}{% assign my_image_url = my_image_url | remove: 'http:http://' %}{% assign my_image_url = my_image_url | remove: 'https:' %}{{ my_image_url | prepend: 'https://cdn'}}{% endif %}{% endif %}">
+     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_515:3651)">
+          <path
+            d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
+            fill="white"></path>
+          <path
+            d="M12 0C5.37284 0 0 5.37284 0 12C0 17.0864 3.16049 21.4321 7.62469 23.1802C7.51605 22.2321 7.42716 20.7704 7.6642 19.7333C7.88148 18.7951 9.06667 13.7679 9.06667 13.7679C9.06667 13.7679 8.71111 13.0469 8.71111 11.9901C8.71111 10.321 9.67901 9.07654 10.8839 9.07654C11.9111 9.07654 12.4049 9.84691 12.4049 10.7654C12.4049 11.7926 11.7531 13.3333 11.4074 14.7654C11.121 15.9605 12.0099 16.9383 13.1852 16.9383C15.3185 16.9383 16.958 14.6864 16.958 11.4469C16.958 8.57284 14.8938 6.5679 11.9407 6.5679C8.52346 6.5679 6.51852 9.12593 6.51852 11.7728C6.51852 12.8 6.91358 13.9062 7.40741 14.5086C7.50617 14.6272 7.51605 14.7358 7.48642 14.8543C7.39753 15.2296 7.19012 16.0494 7.15062 16.2173C7.10123 16.4346 6.97284 16.484 6.74568 16.3753C5.24444 15.6741 4.30617 13.4914 4.30617 11.7235C4.30617 7.94074 7.05185 4.4642 12.237 4.4642C16.3951 4.4642 19.6346 7.42716 19.6346 11.3975C19.6346 15.5358 17.0272 18.8642 13.4123 18.8642C12.1975 18.8642 11.0519 18.2321 10.6667 17.4815C10.6667 17.4815 10.0642 19.7728 9.91605 20.3358C9.64938 21.3827 8.91852 22.6864 8.42469 23.4864C9.55062 23.8321 10.7358 24.0198 11.9802 24.0198C18.6074 24.0198 23.9802 18.6469 23.9802 12.0198C24 5.37284 18.6272 0 12 0Z"
+            fill="#E60019"></path>
+        </g>
+        <defs>
+          <clipPath id="clip0_515:3651">
+            <rect width="24" height="24" fill="white"></rect>
+          </clipPath>
+        </defs>
+      </svg>
+     </a>
   {% else %}
-    <a target="_blank" data-pin-do="skipLink" class="icon-pinterest-share" title="{{ 'layout.social_sharing.pinterest_title' | t }}" href="https://pinterest.com/pin/create/button/?url={{ current_url }}&description={{ title | truncate: 240 }}&media=https:{{ product.featured_image.src | product_img_url: '600x' }}"></a>
+    <a target="_blank" data-pin-do="skipLink"  title="{{ 'layout.social_sharing.pinterest_title' | t }}" href="https://pinterest.com/pin/create/button/?url={{ current_url }}&description={{ title | truncate: 240 }}&media=https:{{ product.featured_image.src | product_img_url: '600x' }}">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_515:3651)">
+          <path
+            d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
+            fill="white"></path>
+          <path
+            d="M12 0C5.37284 0 0 5.37284 0 12C0 17.0864 3.16049 21.4321 7.62469 23.1802C7.51605 22.2321 7.42716 20.7704 7.6642 19.7333C7.88148 18.7951 9.06667 13.7679 9.06667 13.7679C9.06667 13.7679 8.71111 13.0469 8.71111 11.9901C8.71111 10.321 9.67901 9.07654 10.8839 9.07654C11.9111 9.07654 12.4049 9.84691 12.4049 10.7654C12.4049 11.7926 11.7531 13.3333 11.4074 14.7654C11.121 15.9605 12.0099 16.9383 13.1852 16.9383C15.3185 16.9383 16.958 14.6864 16.958 11.4469C16.958 8.57284 14.8938 6.5679 11.9407 6.5679C8.52346 6.5679 6.51852 9.12593 6.51852 11.7728C6.51852 12.8 6.91358 13.9062 7.40741 14.5086C7.50617 14.6272 7.51605 14.7358 7.48642 14.8543C7.39753 15.2296 7.19012 16.0494 7.15062 16.2173C7.10123 16.4346 6.97284 16.484 6.74568 16.3753C5.24444 15.6741 4.30617 13.4914 4.30617 11.7235C4.30617 7.94074 7.05185 4.4642 12.237 4.4642C16.3951 4.4642 19.6346 7.42716 19.6346 11.3975C19.6346 15.5358 17.0272 18.8642 13.4123 18.8642C12.1975 18.8642 11.0519 18.2321 10.6667 17.4815C10.6667 17.4815 10.0642 19.7728 9.91605 20.3358C9.64938 21.3827 8.91852 22.6864 8.42469 23.4864C9.55062 23.8321 10.7358 24.0198 11.9802 24.0198C18.6074 24.0198 23.9802 18.6469 23.9802 12.0198C24 5.37284 18.6272 0 12 0Z"
+            fill="#E60019"></path>
+        </g>
+        <defs>
+          <clipPath id="clip0_515:3651">
+            <rect width="24" height="24" fill="white"></rect>
+          </clipPath>
+        </defs>
+      </svg></a>
   {% endif %}
    </div>
 
    <div class="share-btn mail"><!--Email-->
-     <a href="mailto:?subject={{ 'layout.social_sharing.email_subject' | t: title: title }}&amp;body={{ 'layout.social_sharing.email_message' | t: title: title, name: shop_name }}%0D%0A%0D%0A{{ current_url }}" class="icon-mail-share" title="{{ 'layout.social_sharing.email_title' | t }}"></a>
+     <a href="mailto:?subject={{ 'layout.social_sharing.email_subject' | t: title: title }}&amp;body={{ 'layout.social_sharing.email_message' | t: title: title, name: shop_name }}%0D%0A%0D%0A{{ current_url }}"  title="{{ 'layout.social_sharing.email_title' | t }}">
+     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M23.526 12.2767C23.526 11.461 23.4599 10.6409 23.3188 9.83838H12V14.4594H18.4817C18.2128 15.9497 17.3485 17.2681 16.0831 18.1059V21.1042H19.95C22.2209 19.0142 23.526 15.9277 23.526 12.2767Z"
+          fill="#4285F4"></path>
+        <path
+          d="M11.9999 24.0008C15.2363 24.0008 17.9657 22.9382 19.9543 21.1039L16.0873 18.1055C15.0114 18.8375 13.6225 19.252 12.0043 19.252C8.87365 19.252 6.21923 17.1399 5.26681 14.3003H1.27637V17.3912C3.31348 21.4434 7.46266 24.0008 11.9999 24.0008Z"
+          fill="#34A853"></path>
+        <path
+          d="M5.26254 14.3002C4.75987 12.8099 4.75987 11.196 5.26254 9.70569V6.61475H1.2765C-0.425501 10.0055 -0.425501 14.0004 1.2765 17.3912L5.26254 14.3002Z"
+          fill="#FBBC04"></path>
+        <path
+          d="M11.9999 4.74966C13.7107 4.7232 15.3642 5.36697 16.6032 6.54867L20.0293 3.12262C17.8599 1.0855 14.9806 -0.034466 11.9999 0.000808666C7.46266 0.000808666 3.31348 2.55822 1.27637 6.61481L5.2624 9.70575C6.21041 6.86173 8.86924 4.74966 11.9999 4.74966Z"
+          fill="#EA4335"></path>
+      </svg>
+     </a>
    </div>
 </div>
 
