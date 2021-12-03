@@ -13,7 +13,7 @@
   <div class="container">
     <div class="sixteen columns">
 {% endif %}
-    <div class="klaviyo"  style="{% if is_disable %} display: none;{% endif %} {% if disable_in_cart and template.name == "cart" %} display: none;{% endif %} background-color: {{ section.settings.background_color }} " >
+    <div class="klaviyo"  style="{% if is_disable %} display: none;{% endif %} {% if disable_in_cart and template.name == "cart" or  disable_in_product and template.name == "product" %}   display: none;{% endif %} background-color: {{ section.settings.background_color }} " >
       <div class="klaviyo-form-{{ section.settings.klaviyo_api_key }}"></div>
     </div>
 
