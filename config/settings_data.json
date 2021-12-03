@@ -2222,7 +2222,7 @@
         "type": "kaviyomkt",
         "settings": {
           "is_disable": false,
-          "list_page_disable": "cart,product",
+          "list_page_disable": "cart,product,collection",
           "klaviyo_api_key": "S9QAS3",
           "background_color": "#74ca9c"
         }
