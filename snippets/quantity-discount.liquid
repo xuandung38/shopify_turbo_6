@@ -27,9 +27,8 @@
 
 
 <script type="text/javascript">
-  $(document).ready(function(){
-    
-    console.log('upsell-quantity-button');
+  document.addEventListener("DOMContentLoaded", function(event) { 
+  console.log('upsell-quantity-button');
     $('.upsell-quantity-button').click(function(){
       
       	var cartItemCount = $(".cart_count").first().text();
@@ -63,7 +62,8 @@
         $(this).html(`<div class="ld ld-cycle ld-ring"></div>`); 
       }
     })
-  })
+});
+
   
   function check_valid() {
     firstLoad = !1;
