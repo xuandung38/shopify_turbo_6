@@ -28,12 +28,10 @@
 
 <script type="text/javascript">
   document.addEventListener("DOMContentLoaded", function(event) { 
-  console.log('upsell-quantity-button');
-    $('.upsell-quantity-button').click(function(){
-      
+   $('.upsell-quantity-button').click(function(){
       	var cartItemCount = $(".cart_count").first().text();
       	cartItemCount = parseInt(cartItemCount);
-    	var quantity = $(this).data('quantity');
+    	var quantity = $(this).data('quanity');
 		var leftItemCount = quantity - cartItemCount;
       	var isCustomily = $("#customily-cart-btn").length > 0;
       	let checkReady = false;
