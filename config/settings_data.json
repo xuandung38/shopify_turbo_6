@@ -912,7 +912,7 @@
           "activate_zoom": true,
           "slideshow_speed": 3,
           "slideshow_animation": "slide",
-          "thumbnail_position": "bottom",
+          "thumbnail_position": "left",
           "enable_thumbnail_slider": true,
           "display_vendor": false,
           "product_breadcrumb": false,
