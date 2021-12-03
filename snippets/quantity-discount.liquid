@@ -29,6 +29,8 @@
 <script type="text/javascript">
   $(document).ready(function(){
     $('.upsell-quantity-button').click(function(){
+      
+        console.log('upsell-quantity-button');
       	var cartItemCount = $(".cart_count").first().text();
       	cartItemCount = parseInt(cartItemCount);
     	var quantity = $(this).data('quanity');
