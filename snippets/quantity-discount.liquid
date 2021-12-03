@@ -1,0 +1,64 @@
+<div class="quantity-discount">
+  <h4 class="upsell-quantity__title">Buy More Save More!</h4>
+  <div class="quantity-discount-container">
+    <div class="upsell-quantity-discounts">
+      <div class="upsell-quantity-text">
+        <div class="discount-title">2 items get 10% OFF</div>
+        <div class="discount-subtitle">on each product</div>
+      </div>
+      <button class="upsell-quantity-button" data-quanity="2"> Add</button>
+    </div>
+    <div class="upsell-quantity-discounts">
+      <div class="upsell-quantity-text">
+        <div class="discount-title">3 items get 15% OFF</div>
+        <div class="discount-subtitle">on each product</div>
+      </div>
+      <button class="upsell-quantity-button" data-quanity="3">Add</button>
+    </div>
+    <div class="upsell-quantity-discounts">
+      <div class="upsell-quantity-text">
+        <div class="discount-title">5 items get 20% OFF</div>
+        <div class="discount-subtitle">on each product</div>
+      </div>
+      <button class="upsell-quantity-button" data-quanity="5">Add</button>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.upsell-quantity-button').click(function(){
+      	var cartItemCount = $(".cart_count").first().text();
+      	cartItemCount = parseInt(cartItemCount);
+    	var quantity = $(this).data('quanity');
+		var leftItemCount = quantity - cartItemCount;
+      	var isCustomily = $("#customily-cart-btn").length > 0;
+      	let checkReady = false;
+        if(isCustomily){
+          check_valid();
+          if($(".customily_option").hasClass("customily-required-error") == false){
+            checkReady = true;            
+          }else{
+            checkReady = false;
+          	$("#customily-cart-btn").click();            
+			$(window).scrollTop($('#customily-options').offset().top - 40);
+          }
+        } else {
+			checkReady = true;   
+        }
+      
+      if(checkReady){
+        const currentPrice = $('.current_price').text().replace('$','');
+        const clickValue = parseFloat(currentPrice) * parseFloat(quantity);
+        console.log('clickValue',clickValue);
+        ga('send', 'event', 'Quantity Discount', `Clicked Quantity Discount`, `Buy ${quantity}`);
+        $('.upsell-quantity-button').hide();
+        $(this).show(); 
+        $("#quantity").val(leftItemCount);
+        $("#customily-cart-btn").click();   
+        $(this).html(`<div class="ld ld-cycle ld-ring"></div>`); 
+      }
+    })
+  })
+</script>
