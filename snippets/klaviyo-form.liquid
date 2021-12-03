@@ -9,6 +9,9 @@
   {% assign is_disable = section.settings.is_disable %}
 {% endif %}
 
+{% if section.settings.list_page_disable contains template.name %}
+	{% assign is_disable = true %}
+{% endif %}
 
 
 {% if wide_display == false %}
