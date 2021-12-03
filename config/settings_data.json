@@ -2222,8 +2222,6 @@
         "type": "kaviyomkt",
         "settings": {
           "is_disable": false,
-          "disable_in_cart": true,
-          "disable_in_product": true,
           "klaviyo_api_key": "S9QAS3",
           "background_color": "#74ca9c"
         }
