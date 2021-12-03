@@ -784,23 +784,12 @@
               "content": "<p>Officially launched in 2018, we provide world class customer service to all our customers. Customer satisfaction is our utmost priority<\/p><p><strong>US Address:<\/strong> 454 Las Gallinas Ave, San Rafael, CA 94903<br\/><br\/><strong>UK Address:<\/strong> 24-26 Arcadia Avenue, London, United Kingdom, N3 2JU<br\/><br\/><strong>Email:<\/strong> support@familypanda.co<\/p><p><strong>Phone<\/strong>: +1 (619) 768 5780<\/p>",
               "social_icons_footer": false
             }
-          },
-          "1589304697126": {
-            "type": "newsletter",
-            "settings": {
-              "title": "SUBSCRIBE",
-              "newsletter_text": "<p>Subscribe to get 10% off your order and get updated about our latest arrivals and special offers<\/p>",
-              "show_firstname": false,
-              "show_lastname": false,
-              "show_social": false
-            }
           }
         },
         "block_order": [
           "footer-2",
           "1589304636437",
-          "1589304662087",
-          "1589304697126"
+          "1589304662087"
         ],
         "settings": {
           "copyright_text": "",
