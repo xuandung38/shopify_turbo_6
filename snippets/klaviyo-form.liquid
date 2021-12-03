@@ -9,12 +9,17 @@
   {% assign is_disable = section.settings.is_disable %}
 {% endif %}
 
+{% if disable_in_cart and template.name == "cart"%}
+	{% assign is_disable = true %}
+{% else if disable_in_product and template.name == "product" %}
+	{% assign is_disable = true %}
+{% endif %}
+
 {% if wide_display == false %}
   <div class="container">
     <div class="sixteen columns">
 {% endif %}
-      {{ template.name }}
-    <div class="klaviyo"  style="{% if is_disable %} display: none;{% endif %} {% if disable_in_cart and template.name == "cart"%} {% if disable_in_product and template.name == "product" %}  display: none;{% endif %}{% endif %} background-color: {{ section.settings.background_color }} " >
+    <div class="klaviyo"  style="{% if is_disable %} display: none;{% endif %} background-color: {{ section.settings.background_color }} " >
       <div class="klaviyo-form-{{ section.settings.klaviyo_api_key }}"></div>
     </div>
 
