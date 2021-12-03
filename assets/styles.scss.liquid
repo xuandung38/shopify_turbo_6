@@ -4707,13 +4707,17 @@ input[type="button"].get-rates.action_button {
   }
 }
 
+
 .social_buttons {
-  border-top: 1px solid {{ settings.border_color }};
-  padding-top: 5px;
+  border-top: 1px solid #cccccc;
+  padding-top: 20px;
   font-size: 1em;
-  margin-bottom: 2px;
+  margin-bottom: 25px;
   @include respond-to('medium-down'){
     text-align: center;
+  }
+  @include respond-to('small-down'){
+    text-align: left;
   }
 }
 
