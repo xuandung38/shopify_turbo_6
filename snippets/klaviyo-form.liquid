@@ -9,9 +9,7 @@
   {% assign is_disable = section.settings.is_disable %}
 {% endif %}
 
-{% if disable_in_cart and template.name == "cart"%}
-	{% assign is_disable = true %}
-{% else if disable_in_product and template.name == "product" %}
+{% if list_page_disable contains  template.name %}
 	{% assign is_disable = true %}
 {% endif %}
 
