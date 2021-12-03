@@ -31,7 +31,7 @@
    $('.upsell-quantity-button').click(function(){
       	var cartItemCount = $(".cart_count").first().text();
       	cartItemCount = parseInt(cartItemCount);
-    	var quantity = $(this).data('quanity');
+    	var quantity = $(this).data('quantity');
 		var leftItemCount = quantity - cartItemCount;
       	var isCustomily = $("#customily-cart-btn").length > 0;
       	let checkReady = false;
