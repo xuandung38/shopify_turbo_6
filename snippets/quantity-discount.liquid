@@ -36,19 +36,19 @@
     	var quantity = $(this).data('quanity');
 		var leftItemCount = quantity - cartItemCount;
       	var isCustomily = $("#customily-cart-btn").length > 0;
-      	let checkReady = false;
-        if(isCustomily){
-          check_valid();
-          if($(".customily_option").hasClass("customily-required-error") == false){
-            checkReady = true;            
-          }else{
-            checkReady = false;
-          	$("#customily-cart-btn").click();            
-			$(window).scrollTop($('#customily-options').offset().top - 40);
-          }
-        } else {
-			checkReady = true;   
-        }
+      	let checkReady = true;
+//         if(isCustomily){
+//           check_valid();
+//           if($(".customily_option").hasClass("customily-required-error") == false){
+//             checkReady = true;            
+//           }else{
+//             checkReady = false;
+//           	$("#customily-cart-btn").click();            
+// 			$(window).scrollTop($('#customily-options').offset().top - 40);
+//           }
+//         } else {
+// 			checkReady = true;   
+//         }
       
       if(checkReady){
         const currentPrice = $('.current_price').text().replace('$','');
