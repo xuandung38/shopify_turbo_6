@@ -33,6 +33,7 @@
       	cartItemCount = parseInt(cartItemCount);
     	var quantity = $(this).data('quantity');
 		var leftItemCount = quantity - cartItemCount;
+     	console.log('leftItemCount', leftItemCount);
       	var isCustomily = $("#customily-cart-btn").length > 0;
       	let checkReady = false;
         if(isCustomily){
