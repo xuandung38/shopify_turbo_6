@@ -31,7 +31,8 @@
 <script type="text/javascript">
 
   window.addEventListener('DOMContentLoaded', (event) => {
-   haveCustomily();
+    setTimeout(function(){ haveCustomily(); }, 3000);
+   
    $('.upsell-quantity-button').click(function(){
     
    		var isCustomily = $("#customily-cart-btn").length > 0;
