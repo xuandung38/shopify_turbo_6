@@ -8,6 +8,18 @@ function hxdValidateForm(form){
   }
 };
 
+function isCustomily()
+{
+   var isCustomily = $("#customily-cart-btn").length > 0;
+    if(isCustomily){
+      var $upSellBtn = document.getElementsByClassName('upsell-quantity-button');
+      for(var i=0; i < $upSellBtn.length; i++){
+        if($upSellBtn[i].hasAttribute('hidden')){
+          $upSellBtn[i].removeAttribute("hidden");
+        }
+      }
+    }
+}
 
 function checkValidCustomily() {
     firstLoad = !1;
