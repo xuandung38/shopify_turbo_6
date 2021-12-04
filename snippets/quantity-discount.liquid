@@ -29,7 +29,11 @@
 
 
 <script type="text/javascript">
-
+window.addEventListener('load', (event) => {
+  console.log('page is fully loaded');
+  haveCustomily();
+});
+  
   window.addEventListener('DOMContentLoaded', (event) => {
    
    $('.upsell-quantity-button').click(function(){
