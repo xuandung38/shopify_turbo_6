@@ -10,8 +10,7 @@
     <div style="color:rgb(58, 58, 58);">Estimate delivery time</div>
     <div style="color:rgb(167,171,185);">Express by {{ "now" | date: "%s" | plus: 1036800 | date: "%b %d" }}</div>
   {% endif %}
- <script src="https://cdn.customily.com/customily.js"></script> 
- <script src="https://cdn.customily.com/shopify/static/customily.shopify.script.unified.js"></script>
+
   <form action="/cart/add"
         method="post"
         class="clearfix product_form init {% if product.variants.size > 1 or product.options.size > 1 %}product_form_options{% endif %}"
@@ -107,7 +106,9 @@
      {% if section.settings.show_trust_badge %}
         {% include 'trust-badge' %}
     {% endif %}
+ {% comment %}
  {% include 'quantity-discount' %}
+ {% endcomment %}
   <div id="cbb-frequently-bought-box"></div>
 
 {% endif %}
