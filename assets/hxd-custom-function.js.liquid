@@ -10,7 +10,6 @@ function hxdValidateForm(form){
 
 function haveCustomily()
 {
-  
   console.log('page is fully loaded');
    let isCustomily = $("#customily-cart-btn").length > 0;
     if(isCustomily){
@@ -19,9 +18,9 @@ function haveCustomily()
       let $upSellBtn = document.getElementsByClassName('upsell-quantity-button');
       for(var i=0; i < $upSellBtn.length; i++){
         
-        let $upSellBtnAv[i]= parseInt($upSellBtn[i].attr("data-quanity")) > cartItemCount;
+        let $upSellBtnAv = parseInt($upSellBtn[i].attr("data-quanity")) > cartItemCount;
         
-        if($upSellBtnAv[i] && $upSellBtn[i].hasAttribute('hidden')){
+        if($upSellBtnAv && $upSellBtn[i].hasAttribute('hidden')){
           $upSellBtn[i].removeAttribute("hidden");
         }
       }
