@@ -7,3 +7,58 @@ function hxdValidateForm(form){
     }
   }
 };
+
+function checkValidCustomily() {
+    firstLoad = !1;
+    var e = [];
+    var t = [];
+    var o = [];
+    $("#customily-options input[type='radio']").each(function() {
+            e.push($(this).attr("name"));
+        }),
+      
+    	$("#customily-options input[type='file']").each(function() {
+            e.push($(this).attr("name"));
+        }),
+        $("#customily-options select").each(function() {
+            t.push($(this).attr("name"));
+        }),
+        $("#customily-options input[type='text']").each(function() {
+            o.push($(this).attr("name"));
+        });
+    var r = $.unique(e);
+    var t = $.unique(t);
+    for (var c = 0; c < r.length; c++) {
+        var i;
+        null == (i = $("input[name='" + $.escapeSelector(r[c]) + "']:checked").attr("name")) ?
+            $("input[name='" + $.escapeSelector(r[c]) + "']")
+            .closest(".customily_option")
+            .addClass("customily-required-error") :
+            $("input[name='" + $.escapeSelector(r[c]) + "']:checked")
+            .closest(".customily_option")
+            .removeClass("customily-required-error");
+    }
+    for (var c = 0; c < t.length; c++) {
+        var i;
+        null == (i = $("select[name='" + $.escapeSelector(t[c]) + "']").val()) ?
+            $("select[name='" + $.escapeSelector(t[c]) + "']")
+            .closest(".customily_option")
+            .addClass("customily-required-error") :
+            $("select[name='" + $.escapeSelector(t[c]) + "']")
+            .closest(".customily_option")
+            .removeClass("customily-required-error");
+    }
+    for (var c = 0; c < o.length; c++) {
+        var i;
+        "" == (i = $("input[name='" + $.escapeSelector(o[c]) + "']").val()) ?
+        $("input[name='" + $.escapeSelector(o[c]) + "']")
+            .closest(".customily_option")
+            .addClass("customily-required-error"): $("input[name='" + $.escapeSelector(o[c]) + "']")
+            .closest(".customily_option")
+            .removeClass("customily-required-error");
+    }
+}
+
+function getRandomInt(e, t) {
+    return (e = Math.ceil(e)), (t = Math.floor(t)), Math.floor(Math.random() * (t - e + 1)) + e;
+}
