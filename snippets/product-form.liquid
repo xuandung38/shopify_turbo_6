@@ -90,7 +90,7 @@
       {% endif %}
 
       {% capture add_to_cart_label %}{% if collection_handles contains 'pre-order' %}{{ 'collections.general.pre_order' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endif %}{% endcapture %}
-       <button type="submit" name="add" class="action_button add_to_cart" data-label={{ add_to_cart_label | json }}>
+       <button type="submit" name="add" class="action_button add_to_cart" data-label={{ add_to_cart_label | json }} onclick="hxdValidateForm()">
         <span class="text">{{ add_to_cart_label }}</span>
         <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" class="checkmark">
           <path fill="none" stroke="{{ settings.btn_text_color }}" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"/>
