@@ -57,11 +57,10 @@
         $('.upsell-quantity-button').hide();
         $(this).show(); 
         
-        $("#quantity").val(leftItemCount);
         
-        $("#quantity").val(leftItemCount);
+        $("#quantity").val(parseInt(leftItemCount));
         
-        setTimeout(function(){  $("#customily-cart-btn").click();   }, 1000);
+        setTimeout(function(){  $("#customily-cart-btn").click(); }, 3000);
         
         $(this).html(`<div class="ld ld-cycle ld-ring"></div>`); 
       }
