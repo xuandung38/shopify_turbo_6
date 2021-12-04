@@ -1,6 +1,6 @@
 <br>
 
-<div class="quantity-discount">
+<div class="quantity-discount" onload="isCustomily()">
   <h4 class="upsell-quantity__title">Buy More Save More!</h4>
   <div class="quantity-discount-container">
     <div class="upsell-quantity-discounts">
@@ -30,10 +30,10 @@
 
 <script type="text/javascript">
   document.addEventListener("DOMContentLoaded", function(event) { 
-    
-   var isCustomily = $("#customily-cart-btn").length > 0;
-
    $('.upsell-quantity-button').click(function(){
+    
+   		var isCustomily = $("#customily-cart-btn").length > 0;
+
       	var cartItemCount = $(".cart_count").first().text();
       	cartItemCount = parseInt(cartItemCount);
     	var quantity = $(this).data('quanity');
