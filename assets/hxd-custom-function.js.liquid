@@ -1,3 +1,55 @@
+document.addEventListener("DOMContentLoaded", function(event) { 
+    
+   var isCustomily = $("#customily-cart-btn").length > 0;
+    if(isCustomily){
+      var $upSellBtn = document.getElementsByClassName('upsell-quantity-button');
+      for(var i=0; i < $upSellBtn.length; i++){
+        if($upSellBtn[i].hasAttribute('hidden')){
+          $upSellBtn[i].removeAttribute("hidden");
+        }
+      }
+    }
+    
+   $('.upsell-quantity-button').click(function(){
+      	var cartItemCount = $(".cart_count").first().text();
+      	cartItemCount = parseInt(cartItemCount);
+    	var quantity = $(this).data('quanity');
+		var leftItemCount = quantity - cartItemCount;
+     	console.log('leftItemCount', leftItemCount);
+     
+        $("#quantity").val(parseInt(leftItemCount));
+        
+      	let checkReady = false;
+        if(isCustomily){
+          checkValidCustomily();
+          if($(".customily_option").hasClass("customily-required-error") == false){
+            checkReady = true;            
+          }else{
+            checkReady = false;
+          	$("#customily-cart-btn").click();            
+			$(window).scrollTop($('#customily-options').offset().top - 40);
+          }
+        } else {
+			checkReady = false;   
+        }
+      
+      if(checkReady){
+        const currentPrice = $('.current_price').text().replace('$','');
+        const clickValue = parseFloat(currentPrice) * parseFloat(quantity);
+        console.log('clickValue',clickValue);
+		ga('send', 'event', 'Quantity Discount', `Clicked Quantity Discount`, `Buy ${quantity}`);
+        $('.upsell-quantity-button').hide();
+        $(this).show();
+        
+        $("#customily-cart-btn").click();
+        
+        $(this).html(`<div class="ld ld-cycle ld-ring"></div>`); 
+      }
+    })
+});
+
+
+
 function hxdValidateForm(form){
   for(var i=0; i < form.elements.length; i++){
     if(form.elements[i].value === '' && form.elements[i].hasAttribute('required')){
