@@ -123,28 +123,4 @@
 function getRandomInt(e, t) {
     return (e = Math.ceil(e)), (t = Math.floor(t)), Math.floor(Math.random() * (t - e + 1)) + e;
 }
-$(document).on("click", ".preview_btn", function(e) {
-        if ((e.preventDefault(), check_valid(), 0 == $(".customily_option").hasClass("customily-required-error"))) {
-            var t;
-            var o = document.getElementById("preview-canvas").toDataURL("image/png");
-            $(".main_priview_img img").attr("src", o), $.fancybox.open([{
-                src: "#preview_image",
-                type: "inline",
-                touch: !1,
-                animationDuration: 0
-            }]);
-        } else alert("Please check your design once again. Some required options have been left empty, unselected, or wrongly filled."), $("#customily-cart-btn").click();
-    }),
-    $(document).ready(function() {
-        $(".scoll_to_review,.m_scoll_to_review").click(function(e) {
-            $("#judgeme_product_reviews").get(0).scrollIntoView();
-        });
-    }),
-    $(document).ready(function() {
-        const e = undefined;
-        const t = undefined;
-        const o = getRandomInt(3, 8);
-        $("#people-available").text(o);
-    });
-
 </script>
