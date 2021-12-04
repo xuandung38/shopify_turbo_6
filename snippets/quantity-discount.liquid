@@ -34,6 +34,9 @@
     	var quantity = $(this).data('quantity');
 		var leftItemCount = quantity - cartItemCount;
      	console.log('leftItemCount', leftItemCount);
+     
+        $("#quantity").val(parseInt(leftItemCount));
+        
       	var isCustomily = $("#customily-cart-btn").length > 0;
       	let checkReady = false;
         if(isCustomily){
@@ -57,8 +60,6 @@
         $('.upsell-quantity-button').hide();
         $(this).show(); 
         
-        
-        $("#quantity").val(parseInt(leftItemCount));
         
         setTimeout(function(){  $("#customily-cart-btn").click(); }, 3000);
         
