@@ -27,16 +27,13 @@
 
 
 <script type="text/javascript">
-  document.addEventListener("DOMContentLoaded", function(event) { 
-   $('.upsell-quantity-button').click(function(){
+  
+  $(document).ready(function(){
+    $('.upsell-quantity-button').click(function(){
       	var cartItemCount = $(".cart_count").first().text();
       	cartItemCount = parseInt(cartItemCount);
     	var quantity = $(this).data('quantity');
 		var leftItemCount = quantity - cartItemCount;
-     	console.log('leftItemCount', leftItemCount);
-     
-        $("#quantity").val(parseInt(leftItemCount));
-        
       	var isCustomily = $("#customily-cart-btn").length > 0;
       	let checkReady = false;
         if(isCustomily){
@@ -56,16 +53,15 @@
         const currentPrice = $('.current_price').text().replace('$','');
         const clickValue = parseFloat(currentPrice) * parseFloat(quantity);
         console.log('clickValue',clickValue);
-		ga('send', 'event', 'Quantity Discount', `Clicked Quantity Discount`, `Buy ${quantity}`);
+        ga('send', 'event', 'Quantity Discount', `Clicked Quantity Discount`, `Buy ${quantity}`);
         $('.upsell-quantity-button').hide();
-        $(this).show();
-        
-        $("#customily-cart-btn").click();
-        
+        $(this).show(); 
+        $("#quantity").val(leftItemCount);
+        $("#customily-cart-btn").click();   
         $(this).html(`<div class="ld ld-cycle ld-ring"></div>`); 
       }
     })
-});
+  })
 
   function check_valid() {
     firstLoad = !1;
