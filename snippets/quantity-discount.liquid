@@ -32,14 +32,7 @@
   document.addEventListener("DOMContentLoaded", function(event) { 
     
    var isCustomily = $("#customily-cart-btn").length > 0;
-    if(isCustomily){
- 		var $upSellBtn = document.getElementsByClassName('upsell-quantity-button');
-      	for(var i=0; i < $upSellBtn.length; i++){
-          if($upSellBtn[i].hasAttribute('hidden')){
-            $upSellBtn[i].removeAttribute("hidden");
-          }
-        }
-    }
+
    $('.upsell-quantity-button').click(function(){
       	var cartItemCount = $(".cart_count").first().text();
       	cartItemCount = parseInt(cartItemCount);
