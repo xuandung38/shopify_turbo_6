@@ -56,12 +56,11 @@
         const currentPrice = $('.current_price').text().replace('$','');
         const clickValue = parseFloat(currentPrice) * parseFloat(quantity);
         console.log('clickValue',clickValue);
-//         ga('send', 'event', 'Quantity Discount', `Clicked Quantity Discount`, `Buy ${quantity}`);
+		ga('send', 'event', 'Quantity Discount', `Clicked Quantity Discount`, `Buy ${quantity}`);
         $('.upsell-quantity-button').hide();
-        $(this).show(); 
+        $(this).show();
         
-        
-        setTimeout(function(){  $("#customily-cart-btn").click(); }, 3000);
+        $("#customily-cart-btn").click();
         
         $(this).html(`<div class="ld ld-cycle ld-ring"></div>`); 
       }
