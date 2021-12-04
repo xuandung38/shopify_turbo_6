@@ -18,7 +18,7 @@ function haveCustomily()
       let $upSellBtn = document.getElementsByClassName('upsell-quantity-button');
       for(var i=0; i < $upSellBtn.length; i++){
         
-        let $upSellBtnAv = parseInt($upSellBtn[i].attr("data-quanity")) > cartItemCount;
+        let $upSellBtnAv = parseInt($upSellBtn[i].getAttribute("data-quanity")) > cartItemCount;
         
         if($upSellBtnAv && $upSellBtn[i].hasAttribute('hidden')){
           $upSellBtn[i].removeAttribute("hidden");
