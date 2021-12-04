@@ -36,7 +36,7 @@
  		var $upSellBtn = document.getElementsByClassName('upsell-quantity-button');
       	for(var i=0; i < $upSellBtn.length; i++){
           if($upSellBtn[i].hasAttribute('hidden')){
-            $upSellBtn[i].show();
+            $upSellBtn[i].removeAttribute("hidden");
           }
         }
     }
