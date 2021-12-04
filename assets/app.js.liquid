@@ -683,6 +683,19 @@ $(function() {
     }
   });
 
+  window.onload = function () {
+  var $addToCartForm = document.getElementsByClassName('product_form')[0];
+  var $addToCartBtn = document.getElementsByClassName('add_to_cart')[0];
+    $addToCartBtn.onclick = function (){
+      for(var i=0; i < $addToCartForm.elements.length; i++){
+        if($addToCartForm.elements[i].value === '' && $addToCartForm.elements[i].hasAttribute('required')){
+          $addToCartForm.elements[i].style.border = '1px solid red';
+          return false;
+        }
+      }
+    }; 
+  };
+
   if (Shopify.theme_settings.cart_action == 'ajax'){
     $(document).on('click', '.ajax-submit', function(e) {
       e.preventDefault();
