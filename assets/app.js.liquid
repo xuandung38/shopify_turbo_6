@@ -693,12 +693,7 @@ $(function() {
 //       var $mini_cart = document.getElementsByClassName("tos_warning cart_content animated fadeIn")[0].style.display = "block";
       //Refresh page on quick shop add to cart if on cart page
       if($('body').hasClass('cart')) {
-        for(var i=0; i < $addToCartForm.elements.length; i++){
-          if($addToCartForm.elements[i].value === '' && $addToCartForm.elements[i].hasAttribute('required')){
-            $addToCartForm.elements[i].style.border = '1px solid red';
-            return false;
-          }
-        }
+        
         $addToCartForm.submit();
       }
 
