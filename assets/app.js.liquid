@@ -690,6 +690,7 @@ $(function() {
       for(var i=0; i < $addToCartForm.elements.length; i++){
         if($addToCartForm.elements[i].value === '' && $addToCartForm.elements[i].hasAttribute('required')){
           $addToCartForm.elements[i].style.border = '1px solid red';
+          console.log('ok');
           return false;
         }
       }
