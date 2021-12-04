@@ -347,6 +347,8 @@
 {% endif %}
 
 {% include 'group-product-js' with 'product' %}
+
+{{ "hxd-custom-function.js" | asset_url | script_tag }}
 {% comment %} Shopify-XR {% endcomment %}
 <script>
   window.ShopifyXR=window.ShopifyXR||function(){(ShopifyXR.q=ShopifyXR.q||[]).push(arguments)}
