@@ -12,11 +12,14 @@ function haveCustomily()
 {
   
   console.log('page is fully loaded');
-   var isCustomily = $("#customily-cart-btn").length > 0;
+   let isCustomily = $("#customily-cart-btn").length > 0;
     if(isCustomily){
-      var $upSellBtn = document.getElementsByClassName('upsell-quantity-button');
+      let cartItemCount = $(".cart_count").first().text();
+      cartItemCount = parseInt(cartItemCount);
+      let $upSellBtn = document.getElementsByClassName('upsell-quantity-button');
       for(var i=0; i < $upSellBtn.length; i++){
-        if($upSellBtn[i].hasAttribute('hidden')){
+        let $upSellBtnAv = $upSellBtn[i].data('quanity') < cartItemCount
+        if($upSellBtnAv && $upSellBtn[i].hasAttribute('hidden')){
           $upSellBtn[i].removeAttribute("hidden");
         }
       }
