@@ -29,8 +29,9 @@
 
 
 <script type="text/javascript">
-  
-  document.addEventListener("DOMContentLoaded", function(event) { 
+
+  window.addEventListener('DOMContentLoaded', (event) => {
+   haveCustomily();
    $('.upsell-quantity-button').click(function(){
     
    		var isCustomily = $("#customily-cart-btn").length > 0;
