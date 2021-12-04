@@ -8,21 +8,21 @@
         <div class="discount-title">2 items get 10% OFF</div>
         <div class="discount-subtitle">on each product</div>
       </div>
-      <button class="upsell-quantity-button" data-quanity="2"> Add</button>
+      <button class="upsell-quantity-button" data-quanity="2" hidden> Add</button>
     </div>
     <div class="upsell-quantity-discounts">
       <div class="upsell-quantity-text">
         <div class="discount-title">3 items get 15% OFF</div>
         <div class="discount-subtitle">on each product</div>
       </div>
-      <button class="upsell-quantity-button" data-quanity="3">Add</button>
+      <button class="upsell-quantity-button" data-quanity="3" hidden>Add</button>
     </div>
     <div class="upsell-quantity-discounts">
       <div class="upsell-quantity-text">
         <div class="discount-title">5 items get 20% OFF</div>
         <div class="discount-subtitle">on each product</div>
       </div>
-      <button class="upsell-quantity-button" data-quanity="5">Add</button>
+      <button class="upsell-quantity-button" data-quanity="5" hidden>Add</button>
     </div>
   </div>
 </div>
@@ -30,6 +30,16 @@
 
 <script type="text/javascript">
   document.addEventListener("DOMContentLoaded", function(event) { 
+    
+   var isCustomily = $("#customily-cart-btn").length > 0;
+    if(isCustomily){
+ 		var $upSellBtn = document.getElementsByClassName('upsell-quantity-button');
+      	for(var i=0; i < $upSellBtn.length; i++){
+          if($upSellBtn[i].hasAttribute('hidden')){
+            $upSellBtn[i].show();
+          }
+        }
+    }
    $('.upsell-quantity-button').click(function(){
       	var cartItemCount = $(".cart_count").first().text();
       	cartItemCount = parseInt(cartItemCount);
@@ -39,7 +49,6 @@
      
         $("#quantity").val(parseInt(leftItemCount));
         
-      	var isCustomily = $("#customily-cart-btn").length > 0;
       	let checkReady = false;
         if(isCustomily){
           checkValidCustomily();
