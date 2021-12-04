@@ -30,7 +30,7 @@
   
   $(document).ready(function(){
     $('.upsell-quantity-button').click(function(){
-      	var cartItemCount = $(".cart_count").first().text();
+      	var cartItemCount = {{ cart.item_count }}
       	cartItemCount = parseInt(cartItemCount);
     	var quantity = $(this).data('quantity');
 		var leftItemCount = quantity - cartItemCount;
