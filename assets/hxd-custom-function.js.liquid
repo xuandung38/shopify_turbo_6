@@ -2,7 +2,7 @@ function hxdValidateForm(form){
   for(var i=0; i < form.elements.length; i++){
     if(form.elements[i].value === '' && form.elements[i].hasAttribute('required')){
       form.elements[i].style.border = '1px solid red';
-      console.log('ok');
+      console.log('false field');
       return false;
     }
   }
