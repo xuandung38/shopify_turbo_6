@@ -16,8 +16,25 @@
 </div>
 <script>
 window.addEventListener('load', function () {
+  const store = "familypanda.co";
+  let product_type = {{ product.product_type }};
+  
+  fetch('https://ghub.web/api/est-delivery?store='+store+'&type='+product_type)
+  .then(response => response.json())
+  .then(data => parseEstimateData(data));
 
-    const [standardMinDate, standardMaxDate] = estimatedDeliveryRange({{ section.settings.standard_ship_min }},{{ section.settings.standard_ship_max }});
+}, false);
+
+const SATURDAY = 6
+const SUNDAY = 0
+
+function parseEstimateData(data){
+var standard_ship_min = parseInt(data.standard_ship_min);
+  	var standard_ship_max = parseInt(data.standard_ship_max);
+  	var express_ship_min = parseInt(data.express_ship_min);
+  	var express_ship_max = parseInt(data.express_ship_max);
+  
+    const [standardMinDate, standardMaxDate] = estimatedDeliveryRange(standard_ship_min,standard_ship_max);
     const [standardMinFormat, standardMaxFormat] = [formatDate(standardMinDate), formatDate(standardMaxDate)];
     let standardEstimatedDelivery
     if (standardMinFormat === standardMaxFormat) {
@@ -30,7 +47,7 @@ window.addEventListener('load', function () {
     })
     
 
-    const [expressMinDate, expressMaxDate] = estimatedDeliveryRange({{ section.settings.express_ship_min }},{{ section.settings.express_ship_max }});
+    const [expressMinDate, expressMaxDate] = estimatedDeliveryRange(express_ship_min,express_ship_max);
     const [expressMinFormat, expressMaxFormat] = [formatDate(expressMinDate), formatDate(expressMaxDate)];
     let expressEstimatedDelivery
     if (expressMinFormat === expressMaxFormat) {
@@ -41,10 +58,7 @@ window.addEventListener('load', function () {
     document.querySelectorAll(".express-ship").forEach((el2) => {
         el2.innerHTML = expressEstimatedDelivery;
     })
-}, false);
-
-const SATURDAY = 6
-const SUNDAY = 0
+}
 
 function estimatedDeliveryRange(minWorkDays, maxWorkDays) {
    
