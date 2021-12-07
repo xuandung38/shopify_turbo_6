@@ -17,7 +17,7 @@
 <script>
 window.addEventListener('load', function () {
   const store = "familypanda.co";
-  let product_type = {{ product.type }};
+  let product_type = '{{ product.type }}';
   
   fetch('https://hub.greatestofalltime.co/api/est-delivery?store='+store+'&type='+product_type)
   .then(response => response.json())
