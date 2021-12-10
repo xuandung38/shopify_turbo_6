@@ -354,7 +354,9 @@
   window.ShopifyXR=window.ShopifyXR||function(){(ShopifyXR.q=ShopifyXR.q||[]).push(arguments)}
     {% assign models = product.media | where: 'media_type', 'model' | json %}
     ShopifyXR('addModels', {{ models }});
-        
+   $('.product-customizer-option-description').each(function() {
+      $(this).insertAfter($(this).parent().find('input'));
+  });
 </script>
 {% schema %}
 
