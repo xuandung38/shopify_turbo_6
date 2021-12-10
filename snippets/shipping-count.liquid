@@ -18,7 +18,7 @@
 window.addEventListener('load', function () {
   const store = "familypanda.co";
   let product_type = '{{ product.type }}';
-  {% if product.tags contains '#AMZC' %}
+  {% if product.tags contains 'AMZC' %}
   	let product_tags = '{{ product.tags | json }}';
   {% endif %}
   
