@@ -18,11 +18,9 @@
 window.addEventListener('load', function () {
   const store = "familypanda.co";
   let product_type = '{{ product.type }}';
-  {% for t in product.tags %}
-  {% if product.tags contains 'subtype' %}
+  
+  
   let product_tags = '{{ product.tags | json }}';
-  {% endif %}
-  {% endfor %}
   
   fetch('https://hub.greatestofalltime.co/api/est-delivery?store='+store+'&type='+product_type)
   .then(response => response.json())
