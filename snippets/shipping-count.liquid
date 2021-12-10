@@ -18,9 +18,10 @@
 window.addEventListener('load', function () {
   const store = "familypanda.co";
   let product_type = '{{ product.type }}';
+  {% if product.tags contains '#AMZC' %}
+  	let product_tags = '{{ product.tags | json }}';
+  {% endif %}
   
-  
-  let product_tags = '{{ product.tags | json }}';
   
   fetch('https://hub.greatestofalltime.co/api/est-delivery?store='+store+'&type='+product_type)
   .then(response => response.json())
