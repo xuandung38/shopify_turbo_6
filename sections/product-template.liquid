@@ -354,13 +354,11 @@
   window.ShopifyXR=window.ShopifyXR||function(){(ShopifyXR.q=ShopifyXR.q||[]).push(arguments)}
     {% assign models = product.media | where: 'media_type', 'model' | json %}
     ShopifyXR('addModels', {{ models }});
-     window.onload = function()
-{
-  
-    $('.product-customizer-option-description').each(function() {
-      $(this).insertAfter($(this).parent().find('input'));
-  });
-});
+    window.addEventListener('load', function () {
+        $('.product-customizer-option-description').each(function() {
+          $(this).insertAfter($(this).parent().find('input'));
+      });
+    }, false);
   
 </script>
 {% schema %}
