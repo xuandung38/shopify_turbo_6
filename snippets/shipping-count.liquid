@@ -1,7 +1,7 @@
 <br>
 <div class="estimate-shipping">
   
-<p>🚚 Deliver to <strong>United States</strong><br></p>
+<p>🚚 Deliver to <strong>United States</strong><br><small id="est-description"></small></p>
  
 <div class="shipping-inline">
   <div class="shipping-block">
@@ -30,7 +30,9 @@ const SATURDAY = 6
 const SUNDAY = 0
 
 function parseEstimateData(data){
-var standard_ship_min = parseInt(data.standard_ship_min);
+  	$('#est-description').html =   data.description;
+  
+	var standard_ship_min = parseInt(data.standard_ship_min);
   	var standard_ship_max = parseInt(data.standard_ship_max);
   	var express_ship_min = parseInt(data.express_ship_min);
   	var express_ship_max = parseInt(data.express_ship_max);
