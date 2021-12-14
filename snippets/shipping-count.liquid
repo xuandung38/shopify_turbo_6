@@ -20,7 +20,7 @@ window.addEventListener('load', function () {
   let product_type = '{{ product.type }}';
   let product_tags = '{{ product.tags |where: "est-" | first }}';
 
-  fetch('https://ghub.web/api/est-delivery?store='+store+'&type='+product_type+'&tag='+product_tags)
+  fetch('https://hub.greatestofalltime.co/api/est-delivery?store='+store+'&type='+product_type+'&tag='+product_tags)
   .then(response => response.json())
   .then(data => parseEstimateData(data));
 
