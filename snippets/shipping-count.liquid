@@ -30,7 +30,8 @@ const SATURDAY = 6
 const SUNDAY = 0
 
 function parseEstimateData(data){
-  	$('#est-description').html =   data.description;
+  
+    document.getElementById('est-description').innerHTML = data.description;
   
 	var standard_ship_min = parseInt(data.standard_ship_min);
   	var standard_ship_max = parseInt(data.standard_ship_max);
