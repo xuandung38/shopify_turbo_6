@@ -785,9 +785,11 @@
               "social_icons_footer": false
             }
           },
-          "9d9b06af-fa06-4f27-8862-6b029eaa1464": {
-            "type": "empty",
+          "8237304a-3766-4072-b7cb-ee2c5c111bf6": {
+            "type": "text",
             "settings": {
+              "title": "OUR COMMUNITY",
+              "content": "",
               "social_icons_footer": true
             }
           }
@@ -796,7 +798,7 @@
           "footer-2",
           "1589304636437",
           "1589304662087",
-          "9d9b06af-fa06-4f27-8862-6b029eaa1464"
+          "8237304a-3766-4072-b7cb-ee2c5c111bf6"
         ],
         "settings": {
           "copyright_text": "",
