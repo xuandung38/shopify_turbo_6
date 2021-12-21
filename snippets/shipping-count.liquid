@@ -38,30 +38,34 @@ function parseEstimateData(data){
   	var express_ship_min = parseInt(data.express_ship_min);
   	var express_ship_max = parseInt(data.express_ship_max);
   
-    const [standardMinDate, standardMaxDate] = estimatedDeliveryRange(standard_ship_min,standard_ship_max);
-    const [standardMinFormat, standardMaxFormat] = [formatDate(standardMinDate), formatDate(standardMaxDate)];
-    let standardEstimatedDelivery
-    if (standardMinFormat === standardMaxFormat) {
-        standardEstimatedDelivery = standardMinFormat;
-    } else {
-        standardEstimatedDelivery = `${standardMinFormat} &mdash; ${standardMaxFormat}`;
-    }
-    document.querySelectorAll(".standard-ship").forEach((el) => {
-        el.innerHTML = standardEstimatedDelivery;
-    })
-    
+    if(standard_ship_min != 0 || standard_ship_max != 0){
 
-    const [expressMinDate, expressMaxDate] = estimatedDeliveryRange(express_ship_min,express_ship_max);
-    const [expressMinFormat, expressMaxFormat] = [formatDate(expressMinDate), formatDate(expressMaxDate)];
-    let expressEstimatedDelivery
-    if (expressMinFormat === expressMaxFormat) {
-        expressEstimatedDelivery = expressMinFormat;
-    } else {
-        expressEstimatedDelivery = `${expressMinFormat} &mdash; ${expressMaxFormat}`;
+      const [standardMinDate, standardMaxDate] = estimatedDeliveryRange(standard_ship_min,standard_ship_max);
+      const [standardMinFormat, standardMaxFormat] = [formatDate(standardMinDate), formatDate(standardMaxDate)];
+      let standardEstimatedDelivery
+      if (standardMinFormat === standardMaxFormat) {
+          standardEstimatedDelivery = standardMinFormat;
+      } else {
+          standardEstimatedDelivery = `${standardMinFormat} &mdash; ${standardMaxFormat}`;
+      }
+      document.querySelectorAll(".standard-ship").forEach((el) => {
+          el.innerHTML = standardEstimatedDelivery;
+      })
     }
-    document.querySelectorAll(".express-ship").forEach((el2) => {
-        el2.innerHTML = expressEstimatedDelivery;
-    })
+    if(express_ship_min != 0 || express_ship_max != 0){
+      
+      const [expressMinDate, expressMaxDate] = estimatedDeliveryRange(express_ship_min,express_ship_max);
+      const [expressMinFormat, expressMaxFormat] = [formatDate(expressMinDate), formatDate(expressMaxDate)];
+      let expressEstimatedDelivery
+      if (expressMinFormat === expressMaxFormat) {
+          expressEstimatedDelivery = expressMinFormat;
+      } else {
+          expressEstimatedDelivery = `${expressMinFormat} &mdash; ${expressMaxFormat}`;
+      }
+      document.querySelectorAll(".express-ship").forEach((el2) => {
+          el2.innerHTML = expressEstimatedDelivery;
+      })
+    }
 }
 
 function estimatedDeliveryRange(minWorkDays, maxWorkDays) {
