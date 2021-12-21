@@ -203,12 +203,12 @@
     "newsletter_popup_seconds": 8,
     "newsletter_popup_days": "2",
     "twitter_link": "",
-    "facebook_link": "",
+    "facebook_link": "https:\/\/www.facebook.com\/FamilyPanda.stuff",
     "youtube_link": "",
     "vimeo_link": "",
     "pinterest_link": "",
     "tumblr_link": "",
-    "instagram_link": "",
+    "instagram_link": "https:\/\/www.instagram.com\/family_panda_official\/",
     "snapchat_link": "",
     "houzz_link": "",
     "linkedin_link": "",
@@ -784,20 +784,12 @@
               "content": "<p>Officially launched in 2018, we provide world class customer service to all our customers. Customer satisfaction is our utmost priority<\/p><p><strong>US Address:<\/strong> 454 Las Gallinas Ave, San Rafael, CA 94903<br\/><br\/><strong>UK Address:<\/strong> 24-26 Arcadia Avenue, London, United Kingdom, N3 2JU<br\/><br\/><strong>Email:<\/strong> support@familypanda.co<\/p><p><strong>Phone<\/strong>: +1 (619) 768 5780<\/p>",
               "social_icons_footer": false
             }
-          },
-          "b6fa5296-365e-41a8-aa58-bcdec629a1b9": {
-            "type": "link_list",
-            "settings": {
-              "menu": "our-community",
-              "social_icons_footer": true
-            }
           }
         },
         "block_order": [
           "footer-2",
           "1589304636437",
-          "1589304662087",
-          "b6fa5296-365e-41a8-aa58-bcdec629a1b9"
+          "1589304662087"
         ],
         "settings": {
           "copyright_text": "",
