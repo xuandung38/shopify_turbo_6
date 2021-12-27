@@ -2166,15 +2166,15 @@
           "2b5a67d0-ae3f-446f-803f-80f78a295c8e": {
             "type": "collection",
             "settings": {
-              "feature_collection": "coffee-mug",
-              "image": "shopify:\/\/shop_images\/Coffee_Mugs_-_Tumbler.final.jpg"
+              "feature_collection": "t-shirt-for-family",
+              "image": "shopify:\/\/shop_images\/couple2.jpg"
             }
           },
           "2d6dbb6e-691e-40c1-9ab2-66e943fe7db0": {
             "type": "collection",
             "settings": {
-              "feature_collection": "sympathy-memorial-gifts",
-              "image": "shopify:\/\/shop_images\/Sympathy_Gifts.final.jpg"
+              "feature_collection": "coffee-mug",
+              "image": "shopify:\/\/shop_images\/mug5_7c5e5fc9-4369-476b-854c-06fc88e656bd.jpg"
             }
           }
         },
