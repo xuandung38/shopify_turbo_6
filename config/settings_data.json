@@ -2121,15 +2121,15 @@
           "0e5a0c03-fa6f-44cc-ac32-1e800bea77e7": {
             "type": "collection",
             "settings": {
-              "feature_collection": "gifts-for-couples",
-              "image": "shopify:\/\/shop_images\/For_Couple.final.jpg"
+              "feature_collection": "anniversary",
+              "image": "shopify:\/\/shop_images\/BFCM_-_2383.jpg"
             }
           },
           "ad32c07a-be29-497b-8d8f-57c8b7ff1a74": {
             "type": "collection",
             "settings": {
-              "feature_collection": "top-christmas-ornament-for-family-collection",
-              "image": "shopify:\/\/shop_images\/For_Family.final.jpg"
+              "feature_collection": "gifts-for-him",
+              "image": "shopify:\/\/shop_images\/forhim.png"
             }
           }
         },
@@ -2152,15 +2152,15 @@
           "1ef7a0ea-e626-4bcd-a93f-a6b5dabc533c": {
             "type": "collection",
             "settings": {
-              "feature_collection": "christmas-ornaments",
-              "image": "shopify:\/\/shop_images\/Christmas_Ornaments.final_2d46227c-9dd8-4cf5-bd0a-dbcaa5e48721.jpg"
+              "feature_collection": "ornament",
+              "image": "shopify:\/\/shop_images\/ornament.jpg"
             }
           },
           "cd91ac39-8ed5-4590-bc3b-8cd26267f519": {
             "type": "collection",
             "settings": {
               "feature_collection": "home-decor-canvas",
-              "image": "shopify:\/\/shop_images\/Canvas_-_Poster.final.jpg"
+              "image": "shopify:\/\/shop_images\/forcouple.jpg"
             }
           },
           "2b5a67d0-ae3f-446f-803f-80f78a295c8e": {
