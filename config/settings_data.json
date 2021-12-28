@@ -117,7 +117,7 @@
     "footer_logo_font_size": 20,
     "footer_heading_font_size": 18,
     "footer_font_size": 14,
-    "mega_menu_1": true,
+    "mega_menu_1": false,
     "mega_menu_2": true,
     "mega_menu_3": true,
     "mega_menu_4": false,
@@ -1526,70 +1526,6 @@
       },
       "mega-menu-1": {
         "type": "mega-menu-1",
-        "blocks": {
-          "1497370093035": {
-            "type": "column",
-            "settings": {
-              "richtext_top": "",
-              "image_caption_top": "",
-              "image_link_top": "",
-              "menu_1": "christmas-gift-for",
-              "menu_1_link": "",
-              "menu_2": "",
-              "menu_2_link": "",
-              "menu_3": "",
-              "menu_3_link": "",
-              "menu_4": "",
-              "menu_4_link": "",
-              "image_caption_bottom": "",
-              "image_link_bottom": "",
-              "richtext_bottom": ""
-            }
-          },
-          "1497292597591": {
-            "type": "column",
-            "settings": {
-              "richtext_top": "",
-              "image_caption_top": "",
-              "image_link_top": "",
-              "menu_1": "product-type",
-              "menu_1_link": "shopify:\/\/collections",
-              "menu_2": "",
-              "menu_2_link": "",
-              "menu_3": "",
-              "menu_3_link": "",
-              "menu_4": "",
-              "menu_4_link": "",
-              "image_caption_bottom": "",
-              "image_link_bottom": "",
-              "richtext_bottom": ""
-            }
-          },
-          "c5d62172-7a08-47c4-bd24-936e18d5d886": {
-            "type": "column",
-            "settings": {
-              "richtext_top": "",
-              "image_caption_top": "",
-              "image_link_top": "",
-              "menu_1": "",
-              "menu_1_link": "",
-              "menu_2": "",
-              "menu_2_link": "",
-              "menu_3": "",
-              "menu_3_link": "",
-              "menu_4": "",
-              "menu_4_link": "",
-              "image_caption_bottom": "",
-              "image_link_bottom": "",
-              "richtext_bottom": ""
-            }
-          }
-        },
-        "block_order": [
-          "1497370093035",
-          "1497292597591",
-          "c5d62172-7a08-47c4-bd24-936e18d5d886"
-        ],
         "settings": {
           "parent": "💝 Valentine Gifts"
         }
