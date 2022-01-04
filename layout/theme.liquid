@@ -13,13 +13,10 @@
     <meta charset="utf-8">
     <meta http-equiv="cleartype" content="on">
     <meta name="robots" content="index,follow">
-
-    <!-- Mobile Specific Metas -->
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="{{ settings.shop_bg_color }}">
-
     {% if current_tags %}{% assign meta_tags = current_tags | join: ', ' %}{% endif %}
     <title>
       {% if template contains "index" %}{{ page_title }}{% else %}{{ page_title }}{% if current_tags %} {{ 'general.meta.tagged_html' | t: tags: meta_tags }}{% endif %}{% if current_page != 1 %} {{ 'general.meta.page' | t: page_number: current_page }}{% endif %}{% unless page_title contains shop.name %} - {{ shop.name }}{% endunless %}{% endif %}
@@ -37,27 +34,12 @@
     {% endif %}
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.6/jquery.fancybox.css">
-    <!-- Stylesheets for Turbo "6.0.1" -->
     {{ 'styles.scss.css' | asset_url | stylesheet_tag }}
-
-
-    <!-- Google Re-Maketing -->
-    {% include 'ga-remaketing' %}
-
-    <!-- Tracking HotJar -->
+	{% include 'ga-remaketing' %}
     {% include 'tracking-hotjar' %}
-
-    <!-- Some Addtional scripts -->
     {% include 'addtional-scripts' %}
-
-    <!-- Pinterest Tag -->
       {% include 'pinterest-tag' %}
-    <!-- end Pinterest Tag -->
-
-    <!-- uploadkit -->
     {% include 'uploadkit' %}
-    <!-- end uploadkit -->
-
     <script>
       window.lazySizesConfig = window.lazySizesConfig || {};
 
@@ -77,7 +59,6 @@
     <script>
       {% include 'js-variables' %}
     </script>
-
     {% if page_description %}
       <meta name="description" content="{% if template contains 'search' %} {{ page_title }} - {{ shop.name }} {% else %}{{ page_description | escape }}{% if current_tags %} {{ 'general.meta.tagged_html' | t: tags: meta_tags | escape }}.{% endif %}{% if current_page != 1 %} {{ 'general.meta.page' | t: page_number: current_page }}.{% endif %}{% endif %}" />
     {% endif %}
@@ -96,13 +77,11 @@
       <link rel="shortcut icon" type="image/x-icon" href="{{ 'favicon.png' | asset_url }}">
     {% endif %}
     <link rel="canonical" href="{{ canonical_url }}" />
-
     {% if template contains 'customer' %}
       {{ "shopify_common.js" | shopify_asset_url | script_tag }}
       {{ "customer_area.js" | shopify_asset_url | script_tag }}
     {% endif %}
     {{ content_for_header }}
-
     {% include 'social-meta-info' %}
     {% if collection.previous_product %}<link rel="prev" href="{{ collection.previous_product }}">{% endif %}
     {% if collection.next_product %}<link rel="next" href="{{ collection.next_product }}">{% endif %}
@@ -116,14 +95,11 @@
 {% render 'gsf-conversion-pixels' %}
   {% if content_for_header contains shop.metafields.recomatic.script.filename %}{{ shop.metafields.recomatic.script.contents }}{% endif %}
     <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=HLrvFC"></script>
-
   {% include "trackify_x" %}
-
     <script type="text/javascript">
     adroll_adv_id = "L4THXCMPIBFTBOKAZYPMCQ";
     adroll_pix_id = "AJGWE2GYDFDTBKGUWALSRL";
     adroll_version = "2.0";
-
     (function(w, d, e, o, a) {
         w.__adroll_loaded = true;
         w.adroll = w.adroll || [];
@@ -145,10 +121,8 @@
         o.parentNode.insertBefore(e, o);
     })(window, document);
     adroll.track("pageView");
-</script>
-    
-	{% render 'vitals-loader' %}
-
+</script>  
+{% render 'vitals-loader' %}
 </head>
 {% if template contains "index" %}
     {% assign feature_image = true %}
@@ -195,7 +169,6 @@
       }
     </style>
   </noscript>
-
   <body class="{% if template == '404' %}error-404{% else %}{{ template | replace: '.', '-' | handle }}{% endif %}"
         data-money-format="
         {%- if settings.show_multiple_currencies == true and settings.currency_format == 'money_with_currency_format' -%}
@@ -207,7 +180,6 @@
         data-shop-url="{{ shop.url }}">
   {% include 'teeinblue-product-loader' %}
     {% section 'header' %}
-
     <div class="mega-menu-container">
       {% if settings.mega_menu_1 %}
         {% section 'mega-menu-1' %}
@@ -279,7 +251,6 @@
       <script src="{{ 'instantclick.min.js' | asset_url }}" data-no-instant></script>
 
       <script data-no-instant>
-
       function inIframe() {
         try {
           return window.self !== window.top;
@@ -287,7 +258,6 @@
           return true;
         }
       }
-
       if (!inIframe()){
         InstantClick.on('change', function(isInitialLoad) {
 
@@ -308,23 +278,17 @@
       }
       </script>
     {% endunless %}
-
     <script>
       {{ settings.custom_scripts }}
     </script>
     {% render 'hextom_usb_main', product: product, customer: customer %}
  {% render 'product-customizer-asw' %}
-  
-	{{ shop.metafields.loox["global_html_body"] }}
-
+ {{ shop.metafields.loox["global_html_body"] }}
 {% render 'special-offers' %}
 
 {% comment %}
-<!--     Đoạn này gây lỗi cho customily -->
 {% render 'oneclickupsellapp-theme', oneclickupsellapp: oneclickupsellapp %}
-    
 {% endcomment %}
-    
 {% assign oneclickupsellapp = true %}
 {% include 'adroll' %}
 {% include 'simplifyapps-skipcart-snippet' %}</body>
