@@ -206,8 +206,6 @@
         data-shop-currency="{{ shop.currency }}"
         data-shop-url="{{ shop.url }}">
   {% include 'teeinblue-product-loader' %}
-
-
     {% section 'header' %}
 
     <div class="mega-menu-container">
@@ -314,11 +312,7 @@
     <script>
       {{ settings.custom_scripts }}
     </script>
-    
-    <!-- **BEGIN** Hextom USB Integration // Main Include - DO NOT MODIFY -->
     {% render 'hextom_usb_main', product: product, customer: customer %}
-    <!-- **END** Hextom USB Integration // Main Include - DO NOT MODIFY -->
- 
  {% render 'product-customizer-asw' %}
   
 	{{ shop.metafields.loox["global_html_body"] }}
