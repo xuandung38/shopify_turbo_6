@@ -2030,11 +2030,11 @@
       "product-recommendations": {
         "type": "product-recommendations",
         "settings": {
-          "show_product_recommendations": false,
-          "product_recommendations_style": "grid",
+          "show_product_recommendations": true,
+          "product_recommendations_style": "slider",
           "product_recommendations_heading": "",
           "products_per_row": 2,
-          "recommended_products_limit": 2
+          "recommended_products_limit": 10
         }
       },
       "1589302562773": {
