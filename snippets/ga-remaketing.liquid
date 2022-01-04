@@ -1,42 +1,19 @@
-
-<!-- Google Ads Remarketing Tag By FeedArmy Version 2.11 START -->
-<!-- FeedArmy tutorial found at https://feedarmy.com/kb/adding-google-adwords-remarketing-tag-to-shopify/ -->
-
-<!-- CODE SETTINGS START -->
-
-<!-- Please add your Google Ads Audience Source Tag ID -->
 {% assign fa_google_ads_audience_tag_id = 728171888 %}
-
-<!-- Please add your alpha2 code, you can find it here: https://help.shopify.com/en/api/custom-storefronts/storefront-api/reference/enum/countrycode -->
 {% assign fa_product_id_alpha2_code = 'US' %}
-
-<!-- if you have prices such as 1,000.00 set below to true, if you have prices such as 1.000,00 set below to false -->
 {% assign fa_prices_with_decimal_separator = true %}
-
-<!-- set your product id values are default, product_id, parent_id, sku-->
 {% assign fa_product_id = 'default' %}
-
-<!-- CODE SETTINGS END -->
-
-<!-- ------------------------------------ -->
-<!-- DO NOT EDIT ANYTHING BELOW THIS LINE -->
-
-<!-- Global site tag (gtag.js) - Ads. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-{{ fa_google_ads_audience_tag_id }}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
   function gtag() {
     dataLayer.push(arguments);
   }
-
   gtag('js', new Date());
   gtag('config', 'AW-{{ fa_google_ads_audience_tag_id }}');
        gtag('config', 'AW-605193255');
   gtag('config', 'AW-646050533');
               
 </script>
-<!-- Global site tag (gtag.js) - Ads. -->
 {% if fa_prices_with_decimal_separator == true %}
 	{% if template contains 'product' %}
 		{% assign fa_product_price = product.price_min | money_without_currency | remove:',' %}
@@ -63,7 +40,6 @@
 {% else %}
 {% assign fa_event = 'other' %}
 {% endif %}
-
 <script>
   gtag('event', 'page_view', {
 
@@ -100,4 +76,3 @@
 	{% endif %}
   });
 </script>
-<!-- Google Ads Remarketing Tag By FeedArmy Version 2.11 END -->
