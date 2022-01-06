@@ -2033,7 +2033,7 @@
           "show_product_recommendations": true,
           "product_recommendations_style": "slider",
           "product_recommendations_heading": "",
-          "products_per_row": 4,
+          "products_per_row": 5,
           "recommended_products_limit": 7
         }
       },
