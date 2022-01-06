@@ -26,7 +26,7 @@
     "@type": "Brand",
     "name": "{{ shop.name  | escape}}"
   },
-  {%- if reviewCount > 0 -%}
+  {%- if reviewCount -%}
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "{{ ratingValue }}",
