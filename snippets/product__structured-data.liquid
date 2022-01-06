@@ -1,13 +1,15 @@
 {% assign current_variant = product.selected_or_first_available_variant %}
+{% assign ratingValue = 5 %}
+{% assign reviewCount = 0 %}
 
-{% if product.metafields.loox.num_reviews  %}
-  {% assign ratingValue = product.metafields.loox.avg_rating %}
-  {% assign  reviewCount = product.metafields.loox.num_reviews %}
-{% elsif shop.metafields.loox["global_stats"] %}
+{% if shop.metafields.loox["global_stats"] %}
   {% assign looxstats = shop.metafields.loox["global_stats"] | split: ',' %} 
   {% assign ratingValue = looxstats[0] %}
   {% assign  reviewCount =  looxstats[1] %}
-
+{% endif %}
+{% if product.metafields.loox.num_reviews  %}
+  {% assign ratingValue = product.metafields.loox.avg_rating %}
+  {% assign  reviewCount = product.metafields.loox.num_reviews %}
 {% endif %}
 
 <script type="application/ld+json">
