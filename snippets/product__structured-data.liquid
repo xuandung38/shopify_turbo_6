@@ -19,6 +19,11 @@
     "@type": "Thing",
     "name": "{{ product.vendor | escape }}"
   },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{{ product.metafields.loox.avg_rating }}",
+    "reviewCount": "{{ product.metafields.loox.num_reviews }}"
+  },
   "offers": [
     {%- for variant in product.variants -%}
       {
