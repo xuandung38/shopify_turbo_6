@@ -26,8 +26,8 @@
     "sku": "{{ current_variant.sku }}",
   {%- endif -%}
   "brand": {
-    "@type": "Thing",
-    "name": "{{ product.vendor | escape }}"
+    "@type": "Brand",
+    "name": "{{ shop.name  | escape}}"
   },
   {% if product.metafields.loox.num_reviews %}
 

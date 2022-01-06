@@ -67,11 +67,11 @@
     </a>
     <a href="{{ shop.url }}" title="{{ shop.name | escape }}" class="mobile_logo logo">
       {% if section.settings.logo_mobile != nil %}
-        <img src="{{ section.settings.logo_mobile | img_url: '410x' }}" alt="{{ shop.name | escape }}" class="lazyload" />
+        <h1><img src="{{ section.settings.logo_mobile | img_url: '410x' }}" alt="{{ shop.name | escape }}" class="lazyload" /></h1>
       {% elsif section.settings.logo != nil %}
-        <img src="{{ section.settings.logo | img_url: '410x' }}" alt="{{ shop.name | escape }}" />
+      <h1><img src="{{ section.settings.logo | img_url: '410x' }}" alt="{{ shop.name | escape }}" /></h1>
       {% else %}
-        {{ shop.name }}
+      <h1>{{ shop.name }}</h1>
       {% endif %}
     </a>
     <div class="top_bar--right">
