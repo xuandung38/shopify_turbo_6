@@ -28,7 +28,7 @@
       }
       function replaceUploadKitLinks(match, uuid, modifiers, filename, isImage) {
         if(isImage) {
-          return '<a href="https://cdn.getuploadkit.com/' + uuid + '/' + modifiers + '-/preview/1200x1200" class="uploadkit-preview-link-image" title="' + atob(filename) + '"><img src="https://cdn.getuploadkit.com/' + uuid + '/' + modifiers + '-/resize/300x/" style="max-width: 50px; max-height: 50px; vertical-align: middle;" /></a>';
+          return '<a href="https://cdn.getuploadkit.com/' + uuid + '/' + modifiers + '-/preview/1200x1200" class="uploadkit-preview-link-image" title="' + atob(filename) + '"><img src="https://cdn.getuploadkit.com/' + uuid + '/' + modifiers + '-/resize/300x/" style="max-width: 50px; max-height: 50px; vertical-align: middle;" alt="' + atob(filename) + '"/></a>';
         } else {
           return '<a href="https://cdn.getuploadkit.com/' + uuid + '/' + '" class="uploadkit-preview-link">' + atob(filename) + '</a>'
         }

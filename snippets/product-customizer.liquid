@@ -179,7 +179,7 @@ Check if the first metafield starts with position, which would indicate a v4 met
               <input type="radio" name="properties[{{ option_name }}]" id="{{ option_id }}__image_{{ forloop.index0 }}" value="{{ option_value }}" required="required">
               <label for="{{ option_id }}__image_{{ forloop.index0 }}">
                 <picture>
-                  <img src="{{ option_images[forloop.index0] }}" alt="asd" width="50" height="50">
+                  <img src="{{ option_images[forloop.index0] }}" alt="{{ option_value }}" width="50" height="50">
                 </picture>
                 <span class="option-value">{{ option_value }}</span>
                 {% if option_price != null and option_price[forloop.index0] != null and option_price[forloop.index0] != empty %}

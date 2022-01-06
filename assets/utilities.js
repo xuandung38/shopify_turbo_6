@@ -767,14 +767,14 @@ var searchAutocomplete = {
                   }
 
                   if(item.thumbnail != 'NULL') {
-                    link.append('<div class="thumbnail"><img class="lazyload blur-up" src="' + item.thumbnail + '" /></div>');
+                    link.append('<div class="thumbnail"><img class="lazyload blur-up" src="' + item.thumbnail + '" alt="' + item.title + '"/></div>');
                   }
                   link.append('<div class="title">' + item.title + '<br><span class="item-pricing">'+ itemPrice +'</span></div>');
 
 
                 } else if(item.object_type == 'article') {
                   if(item.thumbnail != 'NULL') {
-                    link.append('<div class="thumbnail"><img class="lazyload blur-up" src="' + item.thumbnail + '" /></div>');
+                    link.append('<div class="thumbnail"><img class="lazyload blur-up" src="' + item.thumbnail + '" alt="' + item.title + '" /></div>');
                   }
                   link.append('<div class="title">' + item.title + '<br><span class="item-pricing">'+ item.text_content +'</span></div>');
 

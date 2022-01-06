@@ -55,7 +55,7 @@
           {% endif %}
         {% endif %}
         <a href="{{ p.last }}" class="option-value {{ file_upload_class }}">{{ original_file_name | default: file_upload_text }}</a>
-        <img class="product-customizer-cart-preview" src="{{ p.last }}">
+        <img class="product-customizer-cart-preview" src="{{ p.last }}" alt="{{ original_file_name | default: file_upload_text }}">
       {% else %}
         <span class="option-value">{{ p.last | newline_to_br }}</span>
       {% endif %}
