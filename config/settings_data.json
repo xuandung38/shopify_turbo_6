@@ -38,7 +38,7 @@
     "table_styles_enabled": true,
     "slideshow_arrow_size": "light",
     "arrow_color": "#333333",
-    "slideshow_button_style": false,
+    "slideshow_button_style": true,
     "slideshow_nav_buttons": false,
     "border_color": "#cccccc",
     "headline_border_color": "#aaaaaa",
@@ -2031,7 +2031,7 @@
         "type": "product-recommendations",
         "settings": {
           "show_product_recommendations": true,
-          "product_recommendations_style": "grid",
+          "product_recommendations_style": "slider",
           "product_recommendations_heading": "",
           "products_per_row": 4,
           "recommended_products_limit": 7
