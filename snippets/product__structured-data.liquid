@@ -3,7 +3,7 @@
 {% if product.metafields.loox.num_reviews  %}
   {% assign ratingValue = product.metafields.loox.avg_rating %}
   {% assign  reviewCount = product.metafields.loox.num_reviews %}
-{% elseif shop.metafields.loox["global_stats"] %}
+{% elsif shop.metafields.loox["global_stats"] %}
   {% assign looxstats = shop.metafields.loox["global_stats"] | split: ',' %} 
   {% assign ratingValue = looxstats[0] %}
   {% assign  reviewCount =  looxstats[1] %}
