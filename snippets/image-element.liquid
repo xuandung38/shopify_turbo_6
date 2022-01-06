@@ -13,8 +13,6 @@ object_fit: <boolean>
 max_height: <number>
 {% endcomment %}
 
-{% assign alt_img = alt %}
-
 {% comment %}Check if image is progressive (does not support transparent pngs){% endcomment %}
 {% if progressive %}
   {%- capture srcset -%}
@@ -77,7 +75,8 @@ max_height: <number>
 
 {% if back_to_basics %}
   <div class="image-element__wrap" style="{{ background_color }}{{ crop_to_aspect_ratio }};">
-      <img  alt="{{ alt_img | escape }}" src="{{ image | img_url: '2000x' }}"
+      <img src="{{ image | img_url: '2000x' }}"
+            alt="{{ alt | escape }}" 
             {% if inline_style %}
               style="{{ inline_style }}"
             {% endif %}
@@ -90,7 +89,7 @@ max_height: <number>
 {% comment %}Build image element{% endcomment %}
 <div class="image-element__wrap" style="{{ background_color }}{{ crop_to_aspect_ratio }} {% unless stretch_width == true or object_fit %}max-width: {{ image.width }}px;{% endunless %}">
   
-  <img  alt="{{ alt_img | escape }}"
+  <img 
         {% if low_quality_image %}
           src="{{ low_quality_image }}"
         {% endif %}
@@ -102,11 +101,12 @@ max_height: <number>
         width="{{ image.width }}"
         style="{{ inline_style }};"
         class="lazyload transition--{{ settings.image_loading_style }} {{ additional_classes }}"
+        alt="{{ alt | escape }}"
   />
 </div>
 {% endif %}
 
 {% comment %}Fallback for no javascript{% endcomment %}
 <noscript>
-  <img src="{{ image | img_url: '2000x' }}" alt="{{ alt_img | escape }}" class="{{ additional_classes }} noscript">
+  <img src="{{ image | img_url: '2000x' }}" alt="{{ alt | escape }}" class="{{ additional_classes }} noscript">
 </noscript>
