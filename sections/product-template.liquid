@@ -286,8 +286,6 @@
         <div class="shopify-reviews reviewsVisibility--{{settings.enable_shopify_review_comments}}">
           <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
         </div>
-      {% endif %}
-    {% if sidebar %}
 
             {% if section.settings.display_related_products %}
               {% include 'related-products' %}
@@ -295,6 +293,10 @@
             {% if section.settings.display_recently_viewed %}
               {% include 'recently-viewed' %}
             {% endif %}
+      {% endif %}
+    </div>
+
+    {% if sidebar %}
 
             <div data-product-recommendations-container></div>
           </div>
@@ -302,8 +304,6 @@
       </div>
 
     {% else %}
-    </div>
-
 
 	{% include "recomatic-app" %}
 
