@@ -86,7 +86,7 @@
       {{ shop.name }}
       {% endif %}
     </a>
-    {% end %}
+    {% endif %}
     <div class="top_bar--right">
       {% if section.settings.search_enabled %}
         <a href="{{ routes.search_url }}" class="icon-search dropdown_link" title="{{ 'general.search.title' | t | escape }}" data-dropdown-rel="search"></a>
