@@ -1,4 +1,6 @@
 {% assign current_variant = product.selected_or_first_available_variant %}
+{% if shop.metafields.loox["global_stats"] %}
+{% assign looxstats = shop.metafields.loox["global_stats"] | split: ',' %} 
 
 <script type="application/ld+json">
 {
@@ -21,8 +23,8 @@
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "{{ product.metafields.loox.avg_rating }}",
-    "reviewCount": "{{ product.metafields.loox.num_reviews }}"
+    "ratingValue": "{{ looxstats[0] }}",
+    "reviewCount": "{{ looxstats[1] }}"
   },
   "offers": [
     {%- for variant in product.variants -%}
