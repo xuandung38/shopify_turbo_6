@@ -65,6 +65,8 @@
       </div>
       <span class="menu_title">{{ 'layout.general.menu' | t }}</span>
     </a>
+
+    {% if template.name == 'index' %}
     <a href="{{ shop.url }}" title="{{ shop.name | escape }}" class="mobile_logo logo">
       {% if section.settings.logo_mobile != nil %}
         <h1><img src="{{ section.settings.logo_mobile | img_url: '410x' }}" alt="{{ shop.name | escape }}" class="lazyload" /></h1>
@@ -74,6 +76,17 @@
       <h1>{{ shop.name }}</h1>
       {% endif %}
     </a>
+    {% else %}
+    <a href="{{ shop.url }}" title="{{ shop.name | escape }}" class="mobile_logo logo">
+      {% if section.settings.logo_mobile != nil %}
+        <img src="{{ section.settings.logo_mobile | img_url: '410x' }}" alt="{{ shop.name | escape }}" class="lazyload" />
+      {% elsif section.settings.logo != nil %}
+      <img src="{{ section.settings.logo | img_url: '410x' }}" alt="{{ shop.name | escape }}" />
+      {% else %}
+      {{ shop.name }}
+      {% endif %}
+    </a>
+    {% end %}
     <div class="top_bar--right">
       {% if section.settings.search_enabled %}
         <a href="{{ routes.search_url }}" class="icon-search dropdown_link" title="{{ 'general.search.title' | t | escape }}" data-dropdown-rel="search"></a>
