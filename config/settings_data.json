@@ -2053,7 +2053,7 @@
         "settings": {
           "show_product_recommendations": true,
           "product_recommendations_style": "slider",
-          "product_recommendations_heading": "Recommended",
+          "product_recommendations_heading": "Recommended products",
           "products_per_row": 4,
           "recommended_products_limit": 7
         }
