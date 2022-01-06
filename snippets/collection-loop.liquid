@@ -58,8 +58,8 @@
                 {% endif %}
               {% endif %}
             {% endif %}
-            {% include 'image-element', image: image_src, alt: link_title, object_fit: section.settings.align_height, max_height: section.settings.collection_height %}
-          {% endcapture %}
+            {% include 'image-element', image: image_src, alt: link.title , object_fit: section.settings.align_height, max_height: section.settings.collection_height %}
+          {% endcapture %}link.title 
 
           {{ link_image }}
         </div>
