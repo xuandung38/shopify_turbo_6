@@ -287,8 +287,6 @@
           <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
         </div>
       {% endif %}
-    </div>
-
     {% if sidebar %}
 
             {% if section.settings.display_related_products %}
@@ -304,6 +302,8 @@
       </div>
 
     {% else %}
+    </div>
+
 
 	{% include "recomatic-app" %}
 
@@ -709,7 +709,7 @@
       "id": "rv_per",
       "label": "Products per row",
       "min": 3,
-      "max": 10,
+      "max": 5,
       "step": 1,
       "default": 4
     },
