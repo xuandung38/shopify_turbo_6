@@ -9,7 +9,7 @@
     For more info check https://easy.roihunter.com/how-to-remove-code-shopify
 
 (KWbv5rJss7HsD7Fs6XDaJ3wOJ){% endcomment %}
-{% include 'rh_easy' %}
+  {% include 'rh_easy' %}
     <meta charset="utf-8">
     <meta http-equiv="cleartype" content="on">
     <meta name="robots" content="index,follow">
@@ -21,7 +21,9 @@
     <title>
       {% if template contains "index" %}{{ page_title }}{% else %}{{ page_title }}{% if current_tags %} {{ 'general.meta.tagged_html' | t: tags: meta_tags }}{% endif %}{% if current_page != 1 %} {{ 'general.meta.page' | t: page_number: current_page }}{% endif %}{% unless page_title contains shop.name %} - {{ shop.name }}{% endunless %}{% endif %}
     </title>
-  {% include "win_ads" %}
+  {%- comment -%}
+    {% include "win_ads" %}
+  {%- endcomment -%}
 
 
     <link rel="preconnect dns-prefetch" href="https://fonts.shopifycdn.com" />
