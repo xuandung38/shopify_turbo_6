@@ -1,8 +1,7 @@
 {% assign current_variant = product.selected_or_first_available_variant %}
-{% assign ratingValue = 0 %}
-{% assign reviewCount = 0 %}
 
-{% if product.metafields.loox.num_reviews > 0 & shop.metafields.loox["global_stats"] %}
+
+{% if product.metafields.loox.num_reviews & shop.metafields.loox["global_stats"] %}
   {% assign looxstats = shop.metafields.loox["global_stats"] | split: ',' %} 
   {% assign ratingValue = looxstats[0] %}
   {% assign reviewCount =  looxstats[1] %}
@@ -38,7 +37,7 @@
     "@type": "Brand",
     "name": "{{ shop.name  | escape}}"
   },
-  {%- if ratingValue > 0 -%}
+  {%- if ratingValue -%}
   "review": {
     "@type": "Review",
     "reviewRating": {
