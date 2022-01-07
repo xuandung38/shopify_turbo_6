@@ -2,8 +2,7 @@
 {% assign ratingValue = 0 %}
 {% assign reviewCount = 0 %}
 
-
-{% if shop.metafields.loox["global_stats"] %}
+{% if (product.metafields.loox.num_reviews > 0) & shop.metafields.loox["global_stats"] %}
   {% assign looxstats = shop.metafields.loox["global_stats"] | split: ',' %} 
   {% assign ratingValue = looxstats[0] %}
   {% assign reviewCount =  looxstats[1] %}
@@ -15,7 +14,16 @@
   "@type": "Product",
   "name": "{{ product.title | escape }}",
   "url": "{{ shop.url }}{{ product.url }}",
-  
+  {%- if product.variants.first.barcode.size == 12 -%}
+    "gtin12": {{ product.variants.first.barcode }},
+  {%- endif -%}
+  {%- if product.variants.first.barcode.size == 13 -%}
+    "gtin13": {{ product.variants.first.barcode }},
+  {%- endif -%}
+  {%- if product.variants.first.barcode.size == 14 -%}
+    "gtin14": {{ product.variants.first.barcode }},
+  {%- endif -%}
+  "description": {{ product.description | strip_html | json }},
   {%- if product.featured_image -%}
   {%- assign image_size = product.featured_image.width | append: 'x' -%}
   "image": [
@@ -30,6 +38,7 @@
     "@type": "Brand",
     "name": "{{ shop.name  | escape}}"
   },
+  {%- if (ratingValue > 0) -%}
   "review": {
     "@type": "Review",
     "reviewRating": {
@@ -47,6 +56,7 @@
     "ratingValue": "{{ ratingValue }}",
     "reviewCount": "{{ reviewCount }}"
   },
+  {%- endif -%}
   "offers": [
     {%- for variant in product.variants -%}
       {
@@ -62,13 +72,21 @@
         {%- if product.description != blank -%}
         "description" : {{ product.description | strip_html | json }},
         {%- endif -%}
+        {%- if fa_current_variant.barcode.size == 12 -%}
+        "gtin12": {{ fa_current_variant.barcode }},
+        {%- endif -%}
+        {%- if fa_current_variant.barcode.size == 13 -%}
+          "gtin13": {{ fa_current_variant.barcode }},
+        {%- endif -%}
+        {%- if fa_current_variant.barcode.size == 14 -%}
+          "gtin14": {{ fa_current_variant.barcode }},
+        {%- endif -%}
         "seller": {
           "@type": "Organization",
           "name": "{{ shop.name  | escape}}"
         }
       }{% unless forloop.last %},{% endunless %}
     {%- endfor -%}
-  ],
-  "description": {{ product.description | strip_html | json }}
+  ]
 }
 </script>
