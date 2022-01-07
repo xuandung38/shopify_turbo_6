@@ -2311,6 +2311,30 @@
       },
       "mega-menu-4": {
         "type": "mega-menu-4",
+        "blocks": {
+          "94f79d0b-78c7-460a-a36d-0f002e01b547": {
+            "type": "column",
+            "settings": {
+              "richtext_top": "<p>Everyday Occasions<\/p>",
+              "image_caption_top": "",
+              "image_link_top": "",
+              "menu_1": "",
+              "menu_1_link": "",
+              "menu_2": "",
+              "menu_2_link": "",
+              "menu_3": "",
+              "menu_3_link": "",
+              "menu_4": "",
+              "menu_4_link": "",
+              "image_caption_bottom": "",
+              "image_link_bottom": "",
+              "richtext_bottom": ""
+            }
+          }
+        },
+        "block_order": [
+          "94f79d0b-78c7-460a-a36d-0f002e01b547"
+        ],
         "settings": {
           "parent": ""
         }
