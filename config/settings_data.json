@@ -2312,10 +2312,10 @@
       "mega-menu-4": {
         "type": "mega-menu-4",
         "blocks": {
-          "94f79d0b-78c7-460a-a36d-0f002e01b547": {
+          "af85c55d-13a7-44b1-9e2c-6a6df188c0de": {
             "type": "column",
             "settings": {
-              "richtext_top": "<p>Everyday Occasions<\/p>",
+              "richtext_top": "",
               "image_caption_top": "",
               "image_link_top": "",
               "menu_1": "occasion",
@@ -2330,13 +2330,33 @@
               "image_link_bottom": "",
               "richtext_bottom": ""
             }
+          },
+          "8545758b-3e81-44a3-a783-ef845d946952": {
+            "type": "column",
+            "settings": {
+              "richtext_top": "",
+              "image_caption_top": "",
+              "image_link_top": "",
+              "menu_1": "seasonal-occasions",
+              "menu_1_link": "",
+              "menu_2": "",
+              "menu_2_link": "",
+              "menu_3": "",
+              "menu_3_link": "",
+              "menu_4": "",
+              "menu_4_link": "",
+              "image_caption_bottom": "",
+              "image_link_bottom": "",
+              "richtext_bottom": ""
+            }
           }
         },
         "block_order": [
-          "94f79d0b-78c7-460a-a36d-0f002e01b547"
+          "af85c55d-13a7-44b1-9e2c-6a6df188c0de",
+          "8545758b-3e81-44a3-a783-ef845d946952"
         ],
         "settings": {
-          "parent": ""
+          "parent": "Occasion"
         }
       },
       "mega-menu-5": {
