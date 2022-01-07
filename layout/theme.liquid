@@ -1,4 +1,4 @@
-{% capture content %}
+{%- capture content -%}
 <!DOCTYPE html>
 <html lang="{{ shop.locale }}">
   <head>
@@ -295,6 +295,6 @@
 {% include 'adroll' %}
 {% include 'simplifyapps-skipcart-snippet' %}</body>
 </html>
-{% endcapture %}
+{%- endcapture -%}
 {% assign content = content | replace_first: '<!DOCTYPE', '!DOCTYPE' | split: ' <' %}
 {% for html in content %}{% assign htmlblock = html | strip | prepend: ' <' %}{{htmlblock | strip_newlines | replace: ' </', '</' | replace: 'judge78d7ca7fme', '<' }}{% endfor %}
