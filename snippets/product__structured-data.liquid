@@ -30,7 +30,7 @@
   ],
   {%- endif -%}
   {%- if current_variant.sku != blank -%}
-  "sku": "{{ current_variant.sku }}",
+  "sku": "{{ current_variant.sku  | replace: '"', '' }}",
   {%- endif -%}
   
   "brand": {
@@ -61,7 +61,7 @@
       {
         "@type" : "Offer",
         {%- if variant.sku != blank -%}
-          "sku": "{{ variant.sku }}",
+          "sku": "{{ variant.sku  | replace: '"', '' }}",
         {%- endif -%}
         "availability" : "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
         "price" : "{{ variant.price | divided_by: 100.00 }}",
