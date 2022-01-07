@@ -1,6 +1,11 @@
 {% assign current_variant = product.selected_or_first_available_variant %}
 
 
+{% if product.metafields.loox.num_reviews and shop.metafields.loox["global_stats"] %}
+  {% assign looxstats = shop.metafields.loox["global_stats"] | split: ',' %} 
+  {% assign ratingValue = looxstats[0] %}
+  {% assign reviewCount =  looxstats[1] %}
+{% endif %}
 
 <script type="application/ld+json">
 {
