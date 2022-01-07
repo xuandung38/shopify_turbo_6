@@ -298,7 +298,7 @@
 {% endcapture %}
 {% assign content = content | replace_first: '<!DOCTYPE', '!DOCTYPE' | split: ' <' %}
 {% for html in content %}
-
 {% assign htmlblock = html | strip | prepend: ' <' %}
 {{htmlblock | replace: ' </', '</' | replace: 'judge78d7ca7fme', '<' }}
+{{ htmlblock | strip_newlines | replace:'	','' | replace:'    ','' | replace:'  ',' ' }}
 {% endfor %}
