@@ -2331,6 +2331,26 @@
               "richtext_bottom": ""
             }
           },
+          "697b3275-6d9d-4fea-b943-ac89ecbf476b": {
+            "type": "column",
+            "settings": {
+              "richtext_top": "",
+              "image_top": "shopify:\/\/shop_images\/1_7f87aeff-7bc8-40ef-912f-4e92d9941c72.png",
+              "image_caption_top": "",
+              "image_link_top": "",
+              "menu_1": "",
+              "menu_1_link": "",
+              "menu_2": "",
+              "menu_2_link": "",
+              "menu_3": "",
+              "menu_3_link": "",
+              "menu_4": "",
+              "menu_4_link": "",
+              "image_caption_bottom": "",
+              "image_link_bottom": "",
+              "richtext_bottom": ""
+            }
+          },
           "8545758b-3e81-44a3-a783-ef845d946952": {
             "type": "column",
             "settings": {
@@ -2349,11 +2369,33 @@
               "image_link_bottom": "",
               "richtext_bottom": ""
             }
+          },
+          "adf67e6d-9598-42d6-938d-1795e53a20ce": {
+            "type": "column",
+            "settings": {
+              "richtext_top": "",
+              "image_top": "shopify:\/\/shop_images\/2_281fa6af-d5c0-45fa-acb6-47a94efc6cc9.png",
+              "image_caption_top": "",
+              "image_link_top": "",
+              "menu_1": "",
+              "menu_1_link": "",
+              "menu_2": "",
+              "menu_2_link": "",
+              "menu_3": "",
+              "menu_3_link": "",
+              "menu_4": "",
+              "menu_4_link": "",
+              "image_caption_bottom": "",
+              "image_link_bottom": "",
+              "richtext_bottom": ""
+            }
           }
         },
         "block_order": [
           "af85c55d-13a7-44b1-9e2c-6a6df188c0de",
-          "8545758b-3e81-44a3-a783-ef845d946952"
+          "697b3275-6d9d-4fea-b943-ac89ecbf476b",
+          "8545758b-3e81-44a3-a783-ef845d946952",
+          "adf67e6d-9598-42d6-938d-1795e53a20ce"
         ],
         "settings": {
           "parent": "Occasion"
