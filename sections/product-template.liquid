@@ -317,7 +317,7 @@
       {% if section.settings.display_recently_viewed %}
         {% include 'recently-viewed' %}
       {% endif %}
-
+		{% if reviewCount %}
         <div class="container">
           <div class="related-products__title sixteen columns"> 
             <h4 class="title center"> Store Reviews </h4> 
@@ -330,6 +330,7 @@
           <div class="clear">
           </div>
         </div>
+		{% endif %}
       </div>
 
     {% endif %}
