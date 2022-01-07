@@ -4,6 +4,12 @@
 - Uses blocks
 {% endcomment %}
 
+{% if product.metafields.loox.num_reviews and shop.metafields.loox["global_stats"] %}
+  {% assign looxstats = shop.metafields.loox["global_stats"] | split: ',' %} 
+  {% assign ratingValue = looxstats[0] %}
+  {% assign reviewCount =  looxstats[1] %}
+{% endif %}
+
 <a name="pagecontent" id="pagecontent"></a>
 
 <div class="container main content product-name--{{ product.handle }}">
