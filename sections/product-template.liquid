@@ -3,11 +3,6 @@
 - Product template
 {% endcomment %}
 
-{% if product.metafields.loox.num_reviews and shop.metafields.loox["global_stats"] %}
-  {% assign looxstats = shop.metafields.loox["global_stats"] | split: ',' %} 
-  {% assign ratingValue = looxstats[0] %}
-  {% assign reviewCount =  looxstats[1] %}
-{% endif %}
 <!-- Group Product -->
 
 {% if section.settings.product_grouping_thumbnails or section.settings.product_grouping_products %}
