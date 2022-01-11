@@ -6,7 +6,7 @@
 {% endif %}
 
 <div class="product-details">
-  <span class="title" itemprop="name">{{ product.title  | truncate: 70}}</span>
+  <h2 class="title" itemprop="name">{{ product.title  | truncate: 70}}</h2>
     {% if ratingValue %}
           	<div class="loox-rating" data-rating="{{ ratingValue }}" data-raters="{{ reviewCount }}"></div>
     {% endif %}
