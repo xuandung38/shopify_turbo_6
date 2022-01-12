@@ -124,7 +124,7 @@
     })(window, document);
     adroll.track("pageView");
 </script>  
-{% render 'vitals-loader' %}
+   {% if template.name != "index" %} {% render 'vitals-loader' %}{% endif %}
 </head>
 {% if template contains "index" %}
     {% assign feature_image = true %}
