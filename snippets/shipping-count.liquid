@@ -18,11 +18,13 @@
   
 const SATURDAY = 6;
 const SUNDAY = 0;
- document.addEventListener("DOMContentLoaded", function(){
+  
+window.addEventListener('load', function () {
   fetch('https://hub.greatestofalltime.co/api/est-delivery?store=familypanda.co&type={{ product.type }}&tag={{ product.tags |where: "est-" | first }}')
   .then(response => response.json())
   .then(data => parseEstimateData(data));
-});
+
+}, false);
 
   
 function parseEstimateData(data){
@@ -33,12 +35,16 @@ function parseEstimateData(data){
   	var standard_ship_max = parseInt(data.standard_ship_max);
   	var express_ship_min = parseInt(data.express_ship_min);
   	var express_ship_max = parseInt(data.express_ship_max);
+      
+    var expressEstimatedDelivery;  
+    var standardEstimatedDelivery;
   
     if(standard_ship_min != 0 || standard_ship_max != 0){
 
       const [standardMinDate, standardMaxDate] = estimatedDeliveryRange(standard_ship_min,standard_ship_max);
       const [standardMinFormat, standardMaxFormat] = [formatDate(standardMinDate), formatDate(standardMaxDate)];
-      let standardEstimatedDelivery;
+   
+      
       if (standardMinFormat === standardMaxFormat) {
           standardEstimatedDelivery = standardMinFormat;
       } else {
@@ -52,7 +58,7 @@ function parseEstimateData(data){
       
       const [expressMinDate, expressMaxDate] = estimatedDeliveryRange(express_ship_min,express_ship_max);
       const [expressMinFormat, expressMaxFormat] = [formatDate(expressMinDate), formatDate(expressMaxDate)];
-      let expressEstimatedDelivery
+      
       if (expressMinFormat === expressMaxFormat) {
           expressEstimatedDelivery = expressMinFormat;
       } else {
@@ -69,8 +75,8 @@ function estimatedDeliveryRange(minWorkDays, maxWorkDays) {
   var from = new Date();
   const time = new Date(from.getTime())
     time.setHours(12, 0, 0, 0)
-    let minDate;
-    let maxDate;
+    let minDate
+    let maxDate
     while (minWorkDays > 0 || maxWorkDays > 0) {
         time.setHours(time.getHours() + 24)
         if (time.getDay() !== SATURDAY && time.getDay() !== SUNDAY) {
