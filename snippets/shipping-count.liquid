@@ -18,6 +18,7 @@
   
 const SATURDAY = 6
 const SUNDAY = 0
+{% comment %}
 //  document.addEventListener("DOMContentLoaded", function(){
 //     const store = "familypanda.co";
 //   let product_type = '{{ product.type }}';
@@ -27,6 +28,8 @@ const SUNDAY = 0
 //   .then(response => response.json())
 //   .then(data => parseEstimateData(data));
 // });
+{% endcomment %}
+
 window.addEventListener('load', function () {
   const store = "familypanda.co";
   let product_type = '{{ product.type }}';
