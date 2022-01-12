@@ -240,7 +240,7 @@
       <script type="text/javascript" src="/services/javascripts/currencies.js" data-no-instant></script>
       <script type="text/javascript" src="{{ "jquery.currencies.min.js" | asset_url }}" data-no-instant></script>
     {% endif %}
-    <script src="{{ 'vendors.js' | asset_url }}"></script>
+   {% if template.name != "index" %} <script src="{{ 'vendors.js' | asset_url }}"></script>{% endif %}
     <script src="{{ 'sections.js' | asset_url }}"></script>
     <script src="{{ 'utilities.js' | asset_url }}"></script>
     <script src="{{ 'app.js' | asset_url }}"></script>
