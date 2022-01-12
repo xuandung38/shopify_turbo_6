@@ -239,7 +239,8 @@
     {% if settings.show_multiple_currencies or settings.show_shipping_calculator %}
       <script type="text/javascript" src="/services/javascripts/currencies.js" data-no-instant></script>
       <script type="text/javascript" src="{{ "jquery.currencies.min.js" | asset_url }}" data-no-instant></script>
-    {% endif %} <script src="{{ 'vendors.js' | asset_url }}"></script>
+    {% endif %}
+    <script src="{{ 'vendors.js' | asset_url }}"></script>
     <script src="{{ 'sections.js' | asset_url }}"></script>
     <script src="{{ 'utilities.js' | asset_url }}"></script>
     <script src="{{ 'app.js' | asset_url }}"></script>
@@ -296,4 +297,4 @@
 </html>
 {%- endcapture -%}
 {% assign content = content | replace_first: '<!DOCTYPE', '!DOCTYPE' | split: ' <' %}
-{% for html in content %}{% assign htmlblock = html | strip | prepend: ' <' %}{{htmlblock  | replace: ' </', '</' | replace: 'judge78d7ca7fme', '<' }}{% endfor %}
+{% for html in content %}{% assign htmlblock = html | strip | prepend: ' <' %}{{htmlblock | strip_newlines | replace: ' </', '</' | replace: 'judge78d7ca7fme', '<' }}{% endfor %}
