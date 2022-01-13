@@ -4256,14 +4256,15 @@ $accordionBg: {{ settings.shop_bg_color }};
         -ms-transform: translateY(-50.1%);
         transform: translateY(-50.1%);
 				left: 15px;
-        font-size: 25px;
+        		font-size: 20px;
 				content: "▼";
-        color: inherit;
+                color: inherit;
+          		transition: 0.4s;
 			}
 			&[aria-expanded="true"]{
 				&::after{
 					content: "▼";
-          			font-size: 25px;
+          			font-size: 20px;
                     transform: rotate(180deg);
                     transform-origin: center;
                     transition: 0.4s;
