@@ -4257,13 +4257,13 @@ $accordionBg: {{ settings.shop_bg_color }};
         transform: translateY(-50.1%);
 				left: 15px;
         font-size: 25px;
-				content: "\f107";
+				content: "\002b";
         color: inherit;
 			}
 			&[aria-expanded="true"]{
 				&::after{
-					content: "\f107";
-          font-size: 30px;	
+					content: "\002d";
+          font-size: 30px;
 				}
 			}
 		}
@@ -4309,8 +4309,7 @@ $accordionBg: {{ settings.shop_bg_color }};
   /* Clearfixing tabs for beautiful stacking */
   ul.tabs:before,
   ul.tabs:after {
-    font-family: FontAwesome;
-    content: "\f107";
+    content: '\0020';
     display: block;
     overflow: hidden;
     visibility: hidden;
