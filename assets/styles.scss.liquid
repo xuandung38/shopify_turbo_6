@@ -4260,11 +4260,13 @@ $accordionBg: {{ settings.shop_bg_color }};
 				content: "▼";
                 color: inherit;
           		transition: 0.4s;
+  			    display: inline-block;
 			}
 			&[aria-expanded="true"]{
 				&::after{
 					content: "▼";
           			font-size: 20px;
+  					display: inline-block;
                     transform: rotate(180deg);
                     transform-origin: center;
                     transition: 0.4s;
