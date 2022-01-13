@@ -4263,7 +4263,10 @@ $accordionBg: {{ settings.shop_bg_color }};
 			&[aria-expanded="true"]{
 				&::after{
 					content: "▼";
-          font-size: 30px;
+          			font-size: 25px;
+                    transform: rotate(180deg);
+                    transform-origin: center;
+                    transition: 0.4s;
 				}
 			}
 		}
