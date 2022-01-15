@@ -296,6 +296,16 @@
       {% endif %}
     </div>
 
+    <p class="tags-list">
+      Tags: 
+      {% for tag in product.tags %}
+      <a href="/collections/all/{{ tag | handleize }}"> 
+      <span class="tag">
+        <span class="el-icon-tag"></span>{{ tag }}
+      </span> 
+      </a>
+      {% endfor %}
+    </p>
     {% if sidebar %}
 
             <div data-product-recommendations-container></div>
@@ -309,16 +319,6 @@
 
           </div>
   
-    <p class="tags-list">
-      Tags: 
-      {% for tag in product.tags %}
-      <a href="/collections/all/{{ tag | handleize }}"> 
-      <span class="tag">
-        <span class="el-icon-tag"></span>{{ tag }}
-      </span> 
-      </a>
-      {% endfor %}
-    </p>
         </div>
       </div>
 
