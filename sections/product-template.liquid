@@ -297,11 +297,11 @@
     </div>
 
     <p class="tags-list">
-      Tags: 
+      <i class="fas fa-tags"></i> Tags: 
       {% for tag in product.tags %}
       <a href="/collections/all/{{ tag | handleize }}"> 
       <span class="tag">
-        <span class="el-icon-tag"></span>{{ tag }}
+        {{ tag }}
       </span> 
       </a>
       {% endfor %}
