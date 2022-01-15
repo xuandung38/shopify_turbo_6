@@ -69,9 +69,9 @@
     {% if template.name == 'index' %}
     <h1><a href="{{ shop.url }}" title="{{ shop.name | escape }}" class="mobile_logo logo">
       {% if section.settings.logo_mobile != nil %}
-        <img src="{{ section.settings.logo_mobile | img_url: '410x' }}" alt="{{ shop.name | escape }}" class="lazyload" />
+        <img src="{{ section.settings.logo_mobile | img_url: '410x' }}" alt="{{ shop.name | escape }}" class="lazyload"  width="410px" height="100px"/>
       {% elsif section.settings.logo != nil %}
-      <img src="{{ section.settings.logo | img_url: '410x' }}" alt="{{ shop.name | escape }}"  class="lazyload"  width="410px" height="auto"/>
+      <img src="{{ section.settings.logo | img_url: '410x' }}" alt="{{ shop.name | escape }}"  class="lazyload" width="410px" height="100px"/>
       {% else %}
       {{ shop.name }}
       {% endif %}
@@ -79,9 +79,9 @@
     {% else %}
     <a href="{{ shop.url }}" title="{{ shop.name | escape }}" class="mobile_logo logo">
       {% if section.settings.logo_mobile != nil %}
-        <img src="{{ section.settings.logo_mobile | img_url: '410x' }}" alt="{{ shop.name | escape }}" class="lazyload" />
+        <img src="{{ section.settings.logo_mobile | img_url: '410x' }}" alt="{{ shop.name | escape }}" class="lazyload"  width="410px" height="100px"/>
       {% elsif section.settings.logo != nil %}
-      <img src="{{ section.settings.logo | img_url: '410x' }}" alt="{{ shop.name | escape }}" class="lazyload"  width="410px" height="auto"/>
+      <img src="{{ section.settings.logo | img_url: '410x' }}" alt="{{ shop.name | escape }}" class="lazyload"   width="410px" height="100px"/>
       {% else %}
       {{ shop.name }}
       {% endif %}
@@ -402,10 +402,10 @@
           <div class="logo {% if section.settings.logo_home == blank and section.settings.logo == blank %}logo--text{% else %}logo--image{% endif %}">
             <a href="{{ shop.url }}" title="{{ shop.name }}">
               {% if section.settings.logo_home != nil %}
-                <img src="{{ section.settings.logo_home | img_url: '410x' }}" class="secondary_logo" alt="{{ shop.name | escape }}" />
+                <img src="{{ section.settings.logo_home | img_url: '410x' }}" class="secondary_logo" alt="{{ shop.name | escape }}"  width="410px" height="100px"/>
               {% endif %}
               {% if section.settings.logo != nil %}
-                <img src="{{ section.settings.logo | img_url: '410x' }}" class="primary_logo lazyload" alt="{{ shop.name | escape }}" width="410px" height="auto"/>
+                <img src="{{ section.settings.logo | img_url: '410x' }}" class="primary_logo lazyload" alt="{{ shop.name | escape }}" width="410px" height="100px"/>
               {% else %}
                 {{ shop.name }}
               {% endif %}
