@@ -22,8 +22,10 @@
    </div>
     <p class="tags-list">
       {% for tag in product.tags %}
-      <a href="/collections/all/{{ tag | handleize }}">
-        <span clsas="el-icon-tag">{{ tag }}</span>
+      <a href="/collections/all/{{ tag | handleize }}"> 
+      <span class="tag">
+        <span class="el-icon-tag"></span>{{ tag }}
+      </span> 
       </a>
       {% endfor %}
     </p>
