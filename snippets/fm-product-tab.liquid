@@ -20,6 +20,17 @@
        {{ section.settings.ti_why_choose_us }}
      </div>
    </div>
+   
+    <p class="tags-list">
+      Product Tags
+      {% for tag in product.tags %}
+      <a href="/collections/all/{{ tag | handleize }}"> 
+      <span class="tag">
+        <span class="el-icon-tag"></span>{{ tag }}
+      </span> 
+      </a>
+      {% endfor %}
+    </p>
 </div>
 
    <style>
