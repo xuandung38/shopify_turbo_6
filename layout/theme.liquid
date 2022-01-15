@@ -97,7 +97,7 @@
 
 {% render 'gsf-conversion-pixels' %}
   {% if content_for_header contains shop.metafields.recomatic.script.filename %}{{ shop.metafields.recomatic.script.contents }}{% endif %}
-    <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=HLrvFC" defer></script>
+    <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=HLrvFC" async></script>
   {% include "trackify_x" %}
     <script type="text/javascript">
     adroll_adv_id = "L4THXCMPIBFTBOKAZYPMCQ";
@@ -238,13 +238,13 @@
 
     <script src="{{ 'jquery.min.js' | asset_url }}"></script>
     {% if settings.show_multiple_currencies or settings.show_shipping_calculator %}
-      <script type="text/javascript" src="/services/javascripts/currencies.js" data-no-instant></script>
-      <script type="text/javascript" src="{{ "jquery.currencies.min.js" | asset_url }}" data-no-instant></script>
+      <script type="text/javascript" src="/services/javascripts/currencies.js" data-no-instant async ></script>
+      <script type="text/javascript" src="{{ "jquery.currencies.min.js" | asset_url }}" data-no-instant async ></script>
     {% endif %}
-    <script src="{{ 'vendors.js' | asset_url }}" ></script>
-    <script src="{{ 'sections.js' | asset_url }}"></script>
-    <script src="{{ 'utilities.js' | asset_url }}"></script>
-    <script src="{{ 'app.js' | asset_url }}"></script>
+    <script src="{{ 'vendors.js' | asset_url }}" async ></script>
+    <script src="{{ 'sections.js' | asset_url }}" async ></script>
+    <script src="{{ 'utilities.js' | asset_url }}" async ></script>
+    <script src="{{ 'app.js' | asset_url }}" async></script>
 
     {% if settings.show_shipping_calculator and template contains "cart" %}
       {% include 'cart-shipping-scripts' %}
