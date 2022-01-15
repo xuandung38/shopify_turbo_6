@@ -335,6 +335,15 @@
 
     {% endif %}
 
+    <p class="tags-list">
+      {% for tag in product.tags %}
+      <a href="/collections/all/{{ tag | handleize }}"> 
+      <span class="tag">
+        <span class="el-icon-tag"></span>{{ tag }}
+      </span> 
+      </a>
+      {% endfor %}
+    </p>
 {% if section.settings.set_product_height %}
   {% style %}
     .gallery-wrap model-viewer {
