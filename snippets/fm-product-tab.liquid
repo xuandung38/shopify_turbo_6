@@ -20,6 +20,15 @@
        {{ section.settings.ti_why_choose_us }}
      </div>
    </div>
+    <p class="tags-list">
+      {% for tag in product.tags %}
+      <a href="/collections/all/{{ tag | handleize }}">
+        <span clsas="el-icon-tag">{{ tag }}</span>
+      </a>
+      {% endfor %}
+    </p>
+</div>
+
    <style>
      * {
        box-sizing: border-box;
@@ -89,9 +98,6 @@
      }
 
    </style>
-
-</div>
-
 <script>        
 window.addEventListener('load', function () {
       if($(window).width() > 600) {
