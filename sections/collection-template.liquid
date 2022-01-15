@@ -196,7 +196,7 @@
     {% assign models = product.media | where: 'media_type', 'model' | json %}
     ShopifyXR('addModels', {{ models }});
 </script>
-<script defer src="https://cdn.shopify.com/shopifycloud/shopify-xr-js/assets/v1.0/shopify-xr.en.js"></script>
+<script async src="https://cdn.shopify.com/shopifycloud/shopify-xr-js/assets/v1.0/shopify-xr.en.js"></script>
 <script async src="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.en.js"></script>
 
 
