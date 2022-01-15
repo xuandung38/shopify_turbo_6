@@ -36,9 +36,9 @@
       <link rel="preconnect dns-prefetch" href="https://productreviews.shopifycdn.com" />
     {% endif %}
 
-    <link href="{{  'styles.scss.css' | asset_url }}" rel="stylesheet" type="text/css" media="screen" />
+    {{ 'styles.scss.css' | asset_url | stylesheet_tag }}
     <link rel="preload stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.6/jquery.fancybox.css" media="screen">
-   {% include 'ga-remaketing' %}
+	{% include 'ga-remaketing' %}
     {% include 'tracking-hotjar' %}
     {% include 'addtional-scripts' %}
       {% include 'pinterest-tag' %}
