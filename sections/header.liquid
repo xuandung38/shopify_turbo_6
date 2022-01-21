@@ -383,7 +383,7 @@
       <ul class="menu right">
         {% if settings.show_multiple_currencies %}
           <li>
-            <div class="doubly-wrapper"></div>
+            {% include 'currencies-switcher' %}
           </li>
         {% endif %}
         {% if shop.customer_accounts_enabled %}
