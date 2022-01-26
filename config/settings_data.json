@@ -934,7 +934,7 @@
           "thumbnail_position": "left",
           "enable_thumbnail_slider": true,
           "display_vendor": false,
-          "product_breadcrumb": false,
+          "product_breadcrumb": true,
           "display_sku": false,
           "display_collections": false,
           "display_type": false,
