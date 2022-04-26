@@ -303,6 +303,7 @@
 <script type="text/javascript">
 
   if (typeof window.sn === 'undefined') window.sn = {}
+  var selectors = window.sn.datastore.shop.selectors
 
   function Helper() {
     var self = this;
@@ -361,7 +362,7 @@
   function ProductPage() {
     var self = this;
 
-    self.variantElement = document.querySelector('[name=id]');
+    self.variantElement = document.querySelector(selectors.variant_element || '[name=id]');
 
     self.variantPrices = {};
     self.variantSellingPlanGroupIds = {};

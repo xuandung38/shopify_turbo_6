@@ -172,7 +172,7 @@
       }
     </style>
   </noscript>
-  {% render 'subscriptions-now.settings' %} <body class="{% if template == '404' %}error-404{% else %}{{ template | replace: '.', '-' | handle }}{% endif %}"
+   {% render 'subscriptions-now.settings' %} <body class="{% if template == '404' %}error-404{% else %}{{ template | replace: '.', '-' | handle }}{% endif %}"
         data-money-format="
         {%- if settings.show_multiple_currencies == true and settings.currency_format == 'money_with_currency_format' -%}
           {{ shop.money_with_currency_format | strip_html }}
