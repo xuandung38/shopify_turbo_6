@@ -388,8 +388,13 @@
       {% if adminPreview %}
         return Object.keys(self.variantPrices)[0];
       {% else %}
-        if (self.variantElement) return parseInt(self.variantElement.value);
-        if (self.variantPrices && Object.keys(self.variantPrices)) return Object.keys(self.variantPrices)[0];
+      var currentVariant = window.location.search.match(/variant=([0-9]+)/)
+        if (currentVariant != null) {
+          return currentVariant[1]
+        } else {
+          if (self.variantElement) return parseInt(self.variantElement.value);
+          if (self.variantPrices && Object.keys(self.variantPrices)) return Object.keys(self.variantPrices)[0];
+        }
         return null; // Should not be reached
       {% endif %}
     }
