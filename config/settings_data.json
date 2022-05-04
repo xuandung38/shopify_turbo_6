@@ -165,7 +165,7 @@
     "show_payment_button": true,
     "product_images_position": "left",
     "video_looping": false,
-    "cart_action": "ajax",
+    "cart_action": "reload_page",
     "show_lock_icon": true,
     "display_tos_checkbox": false,
     "tos_page": "",
