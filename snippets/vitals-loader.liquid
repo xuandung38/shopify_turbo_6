@@ -13,5 +13,16 @@ var vitals_product_data={"id": {{ product.id | json }}, "available": {{ product.
 
 
 {{ shop.metafields.vitals["setupScript"] }}
-<script src="https://appsolve.io{{ content_for_header | split: 'appsolve.io' | last | split: '"' | first | replace: '\u0026' : '&' | replace: '\/' : '/' }}" async></script>
-{% endif %}
+<script src="https://appsolve.io{{ content_for_header | split: 'appsolve.io' | last | split: '"' | first | replace: '\u0026', '&' | replace: '\/', '/' }}" async></script>
+{% endif %}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: '{{ content_for_header | split: ''appsolve.io'' | last | split: ''"'' | first
+    | replace: ''\u0026'' : ''&'' | replace: ''\/'' : ''/'' }}'
+  to: '{{ content_for_header | split: ''appsolve.io'' | last | split: ''"'' | first
+    | replace: ''\u0026'', ''&'' | replace: ''\/'', ''/'' }}'
+  position: 1883..2004
+{%- endcomment -%}
